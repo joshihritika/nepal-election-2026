@@ -154,35 +154,6 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
                 </div>
               )}
 
-              {/* Achievements */}
-              {enrichment.achievements.length > 0 && (
-                <div>
-                  <h3 className="text-sm font-semibold text-green-700 mb-2">उपलब्धि</h3>
-                  <ul className="space-y-1.5">
-                    {enrichment.achievements.map((a, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 flex-shrink-0" />
-                        {a}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Controversies */}
-              {enrichment.controversies.length > 0 && (
-                <div>
-                  <h3 className="text-sm font-semibold text-red-700 mb-2">विवाद</h3>
-                  <ul className="space-y-1.5">
-                    {enrichment.controversies.map((c, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-500 mt-1.5 flex-shrink-0" />
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
 
             </div>
           )}

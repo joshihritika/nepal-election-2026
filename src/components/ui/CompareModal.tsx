@@ -93,40 +93,6 @@ export default function CompareModal({ candidates, onClose }: CompareModalProps)
         );
       },
     },
-    {
-      label: "उपलब्धि",
-      render: (_c, i) => {
-        const e = enrichments[i];
-        if (!e || e.achievements.length === 0) return "—";
-        return (
-          <ul className="space-y-1">
-            {e.achievements.map((a, j) => (
-              <li key={j} className="flex items-start gap-1.5 text-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1 flex-shrink-0" />
-                {a}
-              </li>
-            ))}
-          </ul>
-        );
-      },
-    },
-    {
-      label: "विवाद",
-      render: (_c, i) => {
-        const e = enrichments[i];
-        if (!e || e.controversies.length === 0) return "—";
-        return (
-          <ul className="space-y-1">
-            {e.controversies.map((v, j) => (
-              <li key={j} className="flex items-start gap-1.5 text-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-1 flex-shrink-0" />
-                {v}
-              </li>
-            ))}
-          </ul>
-        );
-      },
-    },
   ];
 
   return (
