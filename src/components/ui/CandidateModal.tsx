@@ -187,6 +187,15 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
             </div>
           )}
 
+          {/* First-time candidate note */}
+          {history.length === 0 && (
+            <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
+              <p className="text-sm text-blue-800">
+                {candidate.name}ले पहिलो पटक प्रतिनिधि सभा चुनावको लागि आफ्नो उम्मेदवारी दिएका हुन।
+              </p>
+            </div>
+          )}
+
           {/* Election History (from 2074/2079 data) */}
           {history.length > 0 && (
             <div className="mt-6">
