@@ -94,10 +94,10 @@ function HomeContent() {
         <div className="relative">
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm relative">
             {/* Election Info — fixed to top-right corner, doesn't scroll with map */}
-            <div className="absolute top-0 right-0 z-10 bg-white/90 backdrop-blur rounded-bl-lg rounded-tr-xl shadow-sm px-1.5 py-1 border-b border-l border-gray-100 pointer-events-none">
-              <div className="text-[8px] text-gray-500 uppercase tracking-wide leading-tight">आम निर्वाचन</div>
-              <div className="text-[10px] font-bold text-blue-900 leading-tight">२०८२ फागुन २१</div>
-              <div className="text-[8px] text-gray-500 leading-tight">७७ जिल्ला • १६५ क्षेत्र</div>
+            <div className="absolute top-0 right-0 z-10 bg-white/90 backdrop-blur rounded-bl-lg rounded-tr-xl shadow-sm px-1.5 py-1 md:px-4 md:py-3 border-b border-l border-gray-100 pointer-events-none">
+              <div className="text-[8px] md:text-xs text-gray-500 uppercase tracking-wide leading-tight">आम निर्वाचन</div>
+              <div className="text-[10px] md:text-lg font-bold text-blue-900 leading-tight">२०८२ फागुन २१</div>
+              <div className="text-[8px] md:text-xs text-gray-500 leading-tight">७७ जिल्ला • १६५ <span className="hidden md:inline">निर्वाचन </span>क्षेत्र</div>
             </div>
             <div className="overflow-x-auto min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
               <NepalMap
