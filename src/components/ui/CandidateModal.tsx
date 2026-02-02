@@ -146,8 +146,8 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
           {/* Enrichment sections */}
           {enrichment && (
             <div className="mt-6 space-y-5">
-              {/* Summary */}
-              {enrichment.summary && (
+              {/* Summary (hide for first-time candidates since they get the dedicated note) */}
+              {enrichment.summary && history.length > 0 && (
                 <div>
                   <h3 className="text-sm font-semibold text-gray-700 mb-2">सारांश</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{enrichment.summary}</p>
