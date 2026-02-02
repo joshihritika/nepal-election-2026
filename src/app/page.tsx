@@ -80,7 +80,7 @@ function HomeContent() {
         {/* Introduction */}
         <div className="mb-6 text-center sm:text-left">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-            अन्तरक्रियात्मक निर्वाचन नक्सा
+            प्रतिनिधि सभा सदस्य निर्वाचन २०८२
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
             २०८२ फागुन २१ गतेको आम निर्वाचनमा प्रतिस्पर्धा गर्ने उम्मेदवारहरू हेर्न कुनै पनि जिल्लामा क्लिक गर्नुहोस्।
