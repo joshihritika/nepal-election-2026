@@ -78,19 +78,33 @@ function HomeContent() {
       <Header />
 
       <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
+        {/* Title */}
+        <div className="mb-4 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            प्रतिनिधि सभा सदस्य निर्वाचन २०८२
+          </h1>
+          {/* Key Stats */}
+          <div className="flex items-center justify-center gap-6 sm:gap-10 mb-4">
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-blue-600">७</div>
+              <div className="text-xs sm:text-sm text-gray-500">प्रदेश</div>
+            </div>
+            <div className="w-px h-8 bg-gray-200" />
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-green-600">७७</div>
+              <div className="text-xs sm:text-sm text-gray-500">जिल्ला</div>
+            </div>
+            <div className="w-px h-8 bg-gray-200" />
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-purple-600">१६५</div>
+              <div className="text-xs sm:text-sm text-gray-500">निर्वाचन क्षेत्र</div>
+            </div>
+          </div>
+        </div>
+
         {/* Election Countdown */}
         <div className="mb-4">
           <ElectionCountdown />
-        </div>
-
-        {/* Title */}
-        <div className="mb-4 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            प्रतिनिधि सभा सदस्य निर्वाचन २०८२
-          </h1>
-          <p className="text-sm sm:text-base text-gray-600">
-            उम्मेदवारहरू हेर्न कुनै पनि जिल्लामा क्लिक गर्नुहोस्
-          </p>
         </div>
 
         {/* Search & Filter */}
@@ -135,25 +149,6 @@ function HomeContent() {
           )}
         </div>
 
-        {/* Quick Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-4">
-          <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-blue-600">७</div>
-            <div className="text-xs sm:text-sm text-gray-500">प्रदेश</div>
-          </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-green-600">७७</div>
-            <div className="text-xs sm:text-sm text-gray-500">जिल्ला</div>
-          </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-purple-600">१६५</div>
-            <div className="text-xs sm:text-sm text-gray-500">निर्वाचन क्षेत्र</div>
-          </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 text-center">
-            <div className="text-xl sm:text-3xl font-bold text-amber-600">१.८९ कराेड</div>
-            <div className="text-xs sm:text-sm text-gray-500">मतदाता</div>
-          </div>
-        </div>
 
         {/* Voter Demographics */}
         <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 mt-4">

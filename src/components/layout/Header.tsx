@@ -48,21 +48,6 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Stats */}
-          <div className="hidden lg:flex items-center gap-6 text-sm">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600">७</div>
-              <div className="text-xs text-gray-500">प्रदेश</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600">७७</div>
-              <div className="text-xs text-gray-500">जिल्ला</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600">१६५</div>
-              <div className="text-xs text-gray-500">निर्वाचन क्षेत्र</div>
-            </div>
-          </div>
         </div>
 
         {/* Breadcrumbs */}
