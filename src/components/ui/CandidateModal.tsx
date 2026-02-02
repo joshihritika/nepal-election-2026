@@ -193,6 +193,7 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
               <p className="text-sm text-blue-800">
                 {candidate.name}ले पहिलो पटक प्रतिनिधि सभा चुनावको लागि आफ्नो उम्मेदवारी {candidate.gender === "महिला" ? "दिएकी हुन्" : "दिएका हुन्"}।
               </p>
+              <p className="text-xs text-blue-600 mt-1">* विगत दुई निर्वाचन (२०७४ र २०७९) को तथ्यांकमा आधारित</p>
             </div>
           )}
 
@@ -242,6 +243,7 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
                   </tbody>
                 </table>
               </div>
+              <p className="text-xs text-gray-400 mt-2">* विगत दुई निर्वाचन (२०७४ र २०७९) को तथ्यांकमा आधारित</p>
             </div>
           )}
         </div>
