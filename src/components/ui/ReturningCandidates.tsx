@@ -162,20 +162,35 @@ export default function ReturningCandidates() {
               </button>
             </div>
             <div className="max-h-64 overflow-y-auto space-y-1">
-              {expandedStat.data.map((c) => (
-                <button
-                  key={c.id}
-                  onClick={() => openCandidate(c)}
-                  className="w-full text-left flex items-center justify-between px-2.5 py-1.5 rounded-md hover:bg-gray-50 transition-colors text-xs"
-                >
-                  <span className="font-medium text-gray-800 truncate">
-                    {c.name}
-                  </span>
-                  <span className="text-gray-400 flex-shrink-0 ml-2 truncate max-w-[40%] text-right">
-                    {c.district}-{c.constituency}
-                  </span>
-                </button>
-              ))}
+              {expandedStat.data.map((c) => {
+                const isSwitcher = expanded === "switchers";
+                const oldParty = isSwitcher
+                  ? [...new Set(c.history.map((h) => h.party))].find((p) => p !== c.party) || c.history[0]?.party
+                  : null;
+
+                return (
+                  <button
+                    key={c.id}
+                    onClick={() => openCandidate(c)}
+                    className="w-full text-left flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-md hover:bg-gray-50 transition-colors text-xs"
+                  >
+                    <span className="font-medium text-gray-800 truncate flex-shrink-0">
+                      {c.name}
+                    </span>
+                    {isSwitcher && oldParty ? (
+                      <span className="text-gray-400 truncate text-right text-[11px] leading-tight">
+                        <span className="truncate">{oldParty}</span>
+                        <span className="text-orange-500 mx-0.5">→</span>
+                        <span className="text-gray-600 truncate">{c.party}</span>
+                      </span>
+                    ) : (
+                      <span className="text-gray-400 flex-shrink-0 truncate max-w-[40%] text-right">
+                        {c.district}-{c.constituency}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
             </div>
           </div>
         )}
