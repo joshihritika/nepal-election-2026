@@ -9,6 +9,7 @@ import CandidateModal from "@/components/ui/CandidateModal";
 import NepalMap from "@/components/map/NepalMap";
 import BattleCard from "@/components/ui/BattleCard";
 import BattleDossierModal from "@/components/ui/BattleDossierModal";
+import CommentSection from "@/components/ui/CommentSection";
 import { KEY_BATTLES, KeyBattle } from "@/data/key-battles";
 import { CandidateData } from "@/data/candidates-scraped";
 
@@ -177,6 +178,9 @@ function HomeContent() {
             ))}
           </div>
         </section>
+
+        {/* Comments */}
+        <CommentSection />
 
         {/* Data Source Notice */}
         <footer className="mt-10 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
