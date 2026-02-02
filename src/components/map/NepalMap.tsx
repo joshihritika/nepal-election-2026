@@ -58,11 +58,22 @@ const NepalMap = memo(function NepalMap({
   });
 
   const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
+  const [tappedDistrict, setTappedDistrict] = useState<{
+    name: string;
+    province: string;
+    hq: string;
+  } | null>(null);
 
   const handleDistrictClick = useCallback(
-    (districtId: string) => {
+    (district: typeof DISTRICT_PATHS[0]) => {
+      // Show fixed label on tap (works for touch and click)
+      setTappedDistrict({
+        name: district.name,
+        province: provinceNames[district.province],
+        hq: district.hq,
+      });
       if (onDistrictClick) {
-        onDistrictClick(districtId);
+        onDistrictClick(district.id);
       }
     },
     [onDistrictClick]
@@ -122,6 +133,29 @@ const NepalMap = memo(function NepalMap({
 
   return (
     <div className={`relative bg-white rounded-xl ${className}`}>
+      {/* Fixed label for touch devices */}
+      {tappedDistrict && (
+        <div className="flex items-center justify-between bg-blue-50 border-b border-blue-200 px-4 py-2 rounded-t-xl">
+          <div className="flex items-center gap-2 text-sm">
+            <span className="font-bold text-gray-900">{tappedDistrict.name}</span>
+            <span className="text-gray-500">•</span>
+            <span className="text-gray-600">{tappedDistrict.province} प्रदेश</span>
+            {tappedDistrict.hq && (
+              <>
+                <span className="text-gray-500 hidden sm:inline">•</span>
+                <span className="text-gray-500 hidden sm:inline text-xs">सदरमुकाम: {tappedDistrict.hq}</span>
+              </>
+            )}
+          </div>
+          <button
+            onClick={() => setTappedDistrict(null)}
+            className="text-gray-400 hover:text-gray-600 text-lg leading-none"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+      )}
       <svg
         viewBox="0 0 800 400"
         className="w-full h-full"
@@ -146,7 +180,7 @@ const NepalMap = memo(function NepalMap({
                 stroke={isSelected ? "#1E40AF" : isHovered ? "#ffffff" : "rgba(255,255,255,0.6)"}
                 strokeWidth={isSelected ? 2 : isHovered ? 1.5 : 0.5}
                 className="cursor-pointer"
-                onClick={() => handleDistrictClick(district.id)}
+                onClick={() => handleDistrictClick(district)}
                 onMouseEnter={(e) => handleDistrictMouseEnter(district, e)}
                 onMouseLeave={handleMouseLeave}
                 onMouseMove={handleMouseMove}
