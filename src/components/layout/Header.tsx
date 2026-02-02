@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import SearchBar from "@/components/ui/SearchBar";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 
 export default function Header() {
@@ -54,11 +53,6 @@ export default function Header() {
               <p className="text-xs text-gray-500">आम निर्वाचन</p>
             </div>
           </Link>
-
-          {/* Search */}
-          <div className="flex-1 max-w-xl">
-            <SearchBar />
-          </div>
 
           {/* Stats */}
           <div className="hidden lg:flex items-center gap-6 text-sm">

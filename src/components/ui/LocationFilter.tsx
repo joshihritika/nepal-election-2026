@@ -45,8 +45,8 @@ export default function LocationFilter({ onSelect }: LocationFilterProps) {
   };
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-4">
-      <h3 className="text-sm sm:text-sm font-semibold text-gray-700 mb-3">उम्मेदवार खोज्नुहोस्</h3>
+    <div>
+      <h3 className="text-sm font-semibold text-gray-700 mb-3">वा फिल्टर गर्नुहोस्</h3>
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-3">
         {/* Province */}
         <select

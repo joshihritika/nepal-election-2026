@@ -11,6 +11,7 @@ import BattleCard from "@/components/ui/BattleCard";
 import BattleDossierModal from "@/components/ui/BattleDossierModal";
 import CommentSection from "@/components/ui/CommentSection";
 import LocationFilter from "@/components/ui/LocationFilter";
+import SearchBar from "@/components/ui/SearchBar";
 import { KEY_BATTLES, KeyBattle } from "@/data/key-battles";
 import { CandidateData } from "@/data/candidates-scraped";
 
@@ -77,8 +78,13 @@ function HomeContent() {
       <Header />
 
       <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
+        {/* Election Countdown */}
+        <div className="mb-4">
+          <ElectionCountdown />
+        </div>
+
         {/* Introduction */}
-        <div className="mb-6 text-center sm:text-left">
+        <div className="mb-4 text-center sm:text-left">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
             प्रतिनिधि सभा सदस्य निर्वाचन २०८२
           </h2>
@@ -87,13 +93,11 @@ function HomeContent() {
           </p>
         </div>
 
-        {/* Election Countdown */}
-        <div className="mb-4">
-          <ElectionCountdown />
-        </div>
-
-        {/* Location Filter */}
-        <div className="mb-4">
+        {/* Search & Filter */}
+        <div className="mb-4 bg-white rounded-xl border border-gray-200 p-4 sm:p-5 space-y-4">
+          <div>
+            <SearchBar />
+          </div>
           <LocationFilter onSelect={(districtId, constituencyNum) => {
             setSelectedDistrict(districtId);
             setSelectedConstituency(constituencyNum);
