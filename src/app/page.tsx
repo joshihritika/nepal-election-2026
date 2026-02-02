@@ -14,6 +14,7 @@ import LocationFilter from "@/components/ui/LocationFilter";
 import SearchBar from "@/components/ui/SearchBar";
 import { KEY_BATTLES, KeyBattle } from "@/data/key-battles";
 import ReturningCandidates from "@/components/ui/ReturningCandidates";
+import { CompareProvider } from "@/contexts/CompareContext";
 import { CandidateData } from "@/data/candidates-scraped";
 
 function HomeContent() {
@@ -75,6 +76,7 @@ function HomeContent() {
   }, []);
 
   return (
+    <CompareProvider>
     <div className="min-h-screen bg-gray-50">
       <Header />
 
@@ -233,7 +235,9 @@ function HomeContent() {
           onClose={() => setSelectedCandidate(null)}
         />
       )}
+
     </div>
+    </CompareProvider>
   );
 }
 

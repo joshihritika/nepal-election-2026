@@ -1,6 +1,7 @@
 "use client";
 
 import { CandidateData } from "@/data/candidates-scraped";
+import { useCompare } from "@/contexts/CompareContext";
 
 // Party color mapping for major Nepali parties
 const PARTY_COLORS: Record<string, string> = {
@@ -52,42 +53,28 @@ interface ScrapedCandidateCardProps {
   candidate: CandidateData;
   rank?: number;
   onClick?: () => void;
-  onVote?: () => void;
-  isVoted?: boolean;
-  voteCount?: number;
-  totalVotes?: number;
 }
 
 export default function ScrapedCandidateCard({
   candidate,
   rank,
   onClick,
-  onVote,
-  isVoted,
-  voteCount = 0,
-  totalVotes = 0,
 }: ScrapedCandidateCardProps) {
   const partyColor = getPartyColor(candidate.party);
   const partyShort = getPartyShort(candidate.party);
   const symbolDisplay = candidate.symbol ? getSymbolDisplay(candidate.symbol) : null;
-  const votePercent = totalVotes > 0 ? Math.round((voteCount / totalVotes) * 100) : 0;
+
+  const { isSelected, addCandidate, removeCandidate, canAdd } = useCompare();
+  const compared = isSelected(candidate.id);
 
   return (
     <div
       className={`relative flex items-center gap-2 sm:gap-4 px-2.5 sm:px-4 py-3 sm:py-3.5 rounded-xl border transition-colors overflow-hidden
-        ${isVoted ? "border-blue-500 bg-blue-50/50" : candidate.elected ? "border-green-500 bg-green-50/50" : "border-gray-200 bg-white"}
+        ${candidate.elected ? "border-green-500 bg-green-50/50" : "border-gray-200 bg-white"}
         ${onClick ? "cursor-pointer hover:bg-gray-50" : ""}`}
-      style={{ borderLeft: `4px solid ${isVoted ? "#3B82F6" : partyColor}` }}
+      style={{ borderLeft: `4px solid ${partyColor}` }}
       onClick={onClick}
     >
-      {/* Vote percentage bar background */}
-      {totalVotes > 0 && votePercent > 0 && (
-        <div
-          className="absolute inset-0 bg-blue-100/40 transition-all duration-500"
-          style={{ width: `${votePercent}%` }}
-        />
-      )}
-
       {/* Rank */}
       {rank && (
         <span className="relative text-base font-bold text-gray-400 w-6 text-right flex-shrink-0">
@@ -118,11 +105,6 @@ export default function ScrapedCandidateCard({
               विजेता
             </span>
           )}
-          {isVoted && (
-            <span className="text-xs font-medium text-blue-700 bg-blue-100 px-2 py-0.5 rounded flex-shrink-0">
-              ✓ मेरो भोट
-            </span>
-          )}
         </div>
         <div className="flex items-center gap-2 mt-1">
           <span
@@ -146,38 +128,31 @@ export default function ScrapedCandidateCard({
         )}
       </div>
 
-      {/* Vote count display */}
-      {totalVotes > 0 && (
-        <div className="relative flex-shrink-0 text-right min-w-[3rem]">
-          <div className="text-sm font-bold text-blue-700">{votePercent}%</div>
-          <div className="text-xs text-gray-400">{voteCount} भोट</div>
-        </div>
-      )}
-
       {/* Official votes */}
-      {candidate.votes > 0 && totalVotes === 0 && (
+      {candidate.votes > 0 && (
         <div className="relative flex-shrink-0 text-right">
           <div className="text-base font-bold text-gray-900">{candidate.votes.toLocaleString()}</div>
           <div className="text-xs text-gray-400">मत</div>
         </div>
       )}
 
-      {/* Vote button */}
-      {onVote && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onVote();
-          }}
-          className={`relative flex-shrink-0 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-medium transition-colors min-h-[44px] sm:min-h-0 flex items-center
-            ${isVoted
-              ? "bg-blue-600 text-white hover:bg-blue-700"
-              : "bg-gray-100 text-gray-600 hover:bg-blue-100 hover:text-blue-700"
-            }`}
-        >
-          {isVoted ? "✓ भोट दिइयो" : "भोट दिनुहोस्"}
-        </button>
-      )}
+      {/* Compare checkbox */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          if (compared) removeCandidate(candidate.id);
+          else addCandidate(candidate.id);
+        }}
+        disabled={!compared && !canAdd}
+        title={compared ? "तुलनाबाट हटाउनुहोस्" : "तुलनामा थप्नुहोस्"}
+        className={`absolute top-1.5 right-1.5 z-10 w-6 h-6 rounded flex items-center justify-center transition-colors text-xs
+          ${compared
+            ? "bg-blue-600 text-white hover:bg-blue-700"
+            : "bg-white/80 border border-gray-300 text-gray-400 hover:border-blue-400 hover:text-blue-600"
+          } disabled:opacity-30 disabled:cursor-not-allowed`}
+      >
+        {compared ? "✓" : "+"}
+      </button>
     </div>
   );
 }

@@ -1,19 +1,22 @@
 "use client";
 
-import { useMemo, useEffect, useState, useCallback } from "react";
+import { useMemo, useEffect, useState } from "react";
 import { getDistrictById, getProvinceById } from "@/data/districts";
-import { getCandidates, getConstituencies, CandidateData } from "@/data/candidates-scraped";
+import { getCandidates, getConstituencies, CANDIDATES, CandidateData } from "@/data/candidates-scraped";
 import ScrapedCandidateCard from "./ScrapedCandidateCard";
 import CandidateModal from "./CandidateModal";
+import CompareModal from "./CompareModal";
+import { useCompare } from "@/contexts/CompareContext";
 
-function getVoterId(): string {
-  if (typeof window === "undefined") return "";
-  let id = localStorage.getItem("nepal_election_voter_id");
-  if (!id) {
-    id = crypto.randomUUID();
-    localStorage.setItem("nepal_election_voter_id", id);
-  }
-  return id;
+let allCandidatesCache: CandidateData[] | null = null;
+function getAllCandidates(): CandidateData[] {
+  if (allCandidatesCache) return allCandidatesCache;
+  allCandidatesCache = Object.values(CANDIDATES).flat();
+  return allCandidatesCache;
+}
+
+function findCandidate(id: string): CandidateData | undefined {
+  return getAllCandidates().find((c) => c.id === id);
 }
 
 interface DistrictPanelProps {
@@ -26,9 +29,8 @@ interface DistrictPanelProps {
 
 export default function DistrictPanel({ districtId, constituencyNum, onClose, onBack, onSelectConstituency }: DistrictPanelProps) {
   const [selectedCandidate, setSelectedCandidate] = useState<CandidateData | null>(null);
-  const [voteCounts, setVoteCounts] = useState<Record<string, number>>({});
-  const [userVote, setUserVote] = useState<string | null>(null);
-  const [voting, setVoting] = useState(false);
+  const [showCompareModal, setShowCompareModal] = useState(false);
+  const { selectedIds, removeCandidate, clearAll } = useCompare();
 
   const district = useMemo(() => getDistrictById(districtId), [districtId]);
   const province = useMemo(
@@ -44,54 +46,6 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
     if (!constituencyNum) return [];
     return getCandidates(districtId, constituencyNum);
   }, [districtId, constituencyNum]);
-
-  const constituencyKey = constituencyNum ? `${districtId}-${constituencyNum}` : "";
-
-  // Fetch votes when constituency changes
-  const fetchVotes = useCallback(async () => {
-    if (!constituencyKey) return;
-    const voterId = getVoterId();
-    try {
-      const res = await fetch(`/api/votes?constituency=${constituencyKey}&voterId=${voterId}`);
-      if (res.ok) {
-        const data = await res.json();
-        setVoteCounts(data.votes || {});
-        setUserVote(data.userVote || null);
-      }
-    } catch {
-      // Silently fail
-    }
-  }, [constituencyKey]);
-
-  useEffect(() => {
-    fetchVotes();
-  }, [fetchVotes]);
-
-  const handleVote = async (candidateId: string) => {
-    if (voting) return;
-    setVoting(true);
-    const voterId = getVoterId();
-    // Toggle: if already voted for this candidate, remove the vote
-    const isUnvote = userVote === candidateId;
-    try {
-      const res = await fetch("/api/votes", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ constituency: constituencyKey, candidateId: isUnvote ? null : candidateId, voterId }),
-      });
-      if (res.ok) {
-        const data = await res.json();
-        setVoteCounts(data.votes || {});
-        setUserVote(data.userVote || null);
-      }
-    } catch {
-      // Silently fail
-    } finally {
-      setVoting(false);
-    }
-  };
-
-  const totalVotes = Object.values(voteCounts).reduce((a, b) => a + b, 0);
 
   // Lock body scroll when popup is open
   useEffect(() => {
@@ -256,19 +210,10 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
           ) : (
             /* Candidate List */
             <div>
-              {/* Voting prompt */}
               {selectedCandidates.length > 0 && (
-                <div className="mb-4 p-3 bg-blue-50 rounded-xl border border-blue-200">
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">🗳️</span>
-                    <div>
-                      <h4 className="text-sm font-semibold text-blue-800">कसले जित्ला? आफ्नो भोट दिनुहोस्</h4>
-                      {totalVotes > 0 && (
-                        <p className="text-xs text-blue-600 mt-0.5">कुल {totalVotes} जनाले भोट दिएका छन्</p>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-sm font-semibold text-gray-700 mb-3 tracking-wide">
+                  उम्मेदवारहरूको तुलना गर्न <span className="inline-flex items-center justify-center w-5 h-5 rounded bg-white/80 border border-gray-300 text-gray-400 text-xs align-middle mx-0.5">+</span> मा थिच्नुहोस्
+                </h3>
               )}
 
               <div className="space-y-2">
@@ -278,10 +223,6 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
                     candidate={candidate}
                     rank={index + 1}
                     onClick={() => setSelectedCandidate(candidate)}
-                    onVote={() => handleVote(candidate.id)}
-                    isVoted={userVote === candidate.id}
-                    voteCount={voteCounts[candidate.id] || 0}
-                    totalVotes={totalVotes}
                   />
                 ))}
 
@@ -295,12 +236,63 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
             </div>
           )}
         </div>
+
+        {/* Compare bar inside the panel */}
+        {constituencyNum && selectedIds.length > 0 && (
+          <div className="flex-shrink-0 border-t border-gray-200 bg-blue-600 text-white px-4 py-3">
+            {selectedIds.length === 1 && (
+              <div className="text-center text-blue-100 text-xs mb-2">
+                अर्को उम्मेदवारको <span className="inline-flex items-center justify-center w-4 h-4 rounded bg-white/20 text-white text-[10px] align-middle mx-0.5">+</span> मा थिच्नुहोस्
+              </div>
+            )}
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 flex-wrap flex-1 min-w-0">
+                {selectedIds.map((id) => {
+                  const c = findCandidate(id);
+                  if (!c) return null;
+                  return (
+                    <span key={id} className="inline-flex items-center gap-1 bg-white/20 text-white text-xs px-2 py-1 rounded-full">
+                      <span className="truncate max-w-[80px]">{c.name}</span>
+                      <button onClick={() => removeCandidate(id)} className="hover:text-red-200">
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </span>
+                  );
+                })}
+                <span className="text-xs text-blue-200">{selectedIds.length}/4</span>
+              </div>
+              <button onClick={clearAll} className="text-xs text-blue-200 hover:text-white px-1.5 py-1">
+                हटाउनुहोस्
+              </button>
+              <button
+                onClick={() => setShowCompareModal(true)}
+                disabled={selectedIds.length < 2}
+                className={`px-4 py-2 text-sm font-bold rounded-lg transition-all ${
+                  selectedIds.length >= 2
+                    ? "bg-white text-blue-700 hover:bg-blue-50 shadow-lg"
+                    : "bg-white/20 text-blue-200 cursor-not-allowed"
+                }`}
+              >
+                तुलना गर्नुहोस्
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       {selectedCandidate && (
         <CandidateModal
           candidate={selectedCandidate}
           onClose={() => setSelectedCandidate(null)}
+        />
+      )}
+
+      {showCompareModal && selectedIds.length >= 2 && (
+        <CompareModal
+          candidates={selectedIds.map(findCandidate).filter(Boolean) as CandidateData[]}
+          onClose={() => setShowCompareModal(false)}
         />
       )}
     </>
