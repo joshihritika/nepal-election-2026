@@ -13,6 +13,7 @@ import CommentSection from "@/components/ui/CommentSection";
 import LocationFilter from "@/components/ui/LocationFilter";
 import SearchBar from "@/components/ui/SearchBar";
 import { KEY_BATTLES, KeyBattle } from "@/data/key-battles";
+import ReturningCandidates from "@/components/ui/ReturningCandidates";
 import { CandidateData } from "@/data/candidates-scraped";
 
 function HomeContent() {
@@ -83,6 +84,7 @@ function HomeContent() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             प्रतिनिधि सभा सदस्य निर्वाचन २०८२
           </h1>
+          <p className="text-base sm:text-lg italic text-blue-700/80 mb-4">प्रत्येक मत महत्त्वपूर्ण छ। मतदान गर्न नभुल्नुहोला।</p>
           {/* Key Stats */}
           <div className="flex items-center justify-center gap-6 sm:gap-10 mb-4">
             <div className="text-center">
@@ -98,6 +100,11 @@ function HomeContent() {
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-purple-600">१६५</div>
               <div className="text-xs sm:text-sm text-gray-500">निर्वाचन क्षेत्र</div>
+            </div>
+            <div className="w-px h-8 bg-gray-200" />
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-bold text-orange-600">१.८९ कराेड</div>
+              <div className="text-xs sm:text-sm text-gray-500">मतदाता</div>
             </div>
           </div>
         </div>
@@ -149,6 +156,9 @@ function HomeContent() {
           )}
         </div>
 
+
+        {/* Returning Candidates */}
+        <ReturningCandidates />
 
         {/* Voter Demographics */}
         <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 mt-4">
