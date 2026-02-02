@@ -58,31 +58,31 @@ function toNepali(n: number): string {
 
 function Donut({ count, color }: { count: number; color: string }) {
   const pct = count / TOTAL;
-  const r = 20;
+  const r = 30;
   const circ = 2 * Math.PI * r;
   const filled = circ * pct;
   const gap = circ - filled;
 
   return (
-    <svg width="56" height="56" viewBox="0 0 56 56" className="flex-shrink-0">
-      <circle cx="28" cy="28" r={r} fill="none" stroke="#e5e7eb" strokeWidth="6" />
+    <svg width="80" height="80" viewBox="0 0 80 80" className="flex-shrink-0">
+      <circle cx="40" cy="40" r={r} fill="none" stroke="#e5e7eb" strokeWidth="7" />
       <circle
-        cx="28"
-        cy="28"
+        cx="40"
+        cy="40"
         r={r}
         fill="none"
         stroke={color}
-        strokeWidth="6"
+        strokeWidth="7"
         strokeDasharray={`${filled} ${gap}`}
         strokeDashoffset={circ * 0.25}
         strokeLinecap="round"
       />
       <text
-        x="28"
-        y="29"
+        x="40"
+        y="41"
         textAnchor="middle"
         dominantBaseline="central"
-        fontSize="11"
+        fontSize="15"
         fontWeight="700"
         fill={color}
       >
@@ -118,18 +118,18 @@ export default function ReturningCandidates() {
           {STATS.map((s) => (
             <div key={s.key}>
               <div
-                className="flex items-center gap-3 rounded-lg p-3"
+                className="flex items-center gap-3 rounded-lg p-3 h-28 sm:h-32"
                 style={{ backgroundColor: s.bg }}
               >
                 <Donut count={s.data.length} color={s.color} />
                 <div className="min-w-0">
-                  <div className="text-2xl font-bold" style={{ color: s.color }}>
+                  <div className="text-3xl sm:text-4xl font-bold" style={{ color: s.color }}>
                     {toNepali(s.data.length)}
                   </div>
-                  <div className="text-xs text-gray-700 leading-tight">
+                  <div className="text-sm text-gray-700 leading-tight">
                     {s.label}
                   </div>
-                  <div className="text-[11px] text-gray-400 mt-0.5">
+                  <div className="text-xs text-gray-400 mt-0.5">
                     ५५९ मध्ये
                   </div>
                 </div>
