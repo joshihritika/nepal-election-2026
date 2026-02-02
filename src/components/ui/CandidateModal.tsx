@@ -3,6 +3,7 @@
 import { useEffect, useMemo } from "react";
 import { CandidateData } from "@/data/candidates-scraped";
 import { getEnrichment } from "@/data/candidate-enrichments";
+import { getHistory } from "@/data/candidate-history";
 
 const PARTY_COLORS: Record<string, string> = {
   "नेपाली काँग्रेस": "#2563EB",
@@ -48,6 +49,7 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
   const partyColor = getPartyColor(candidate.party);
   const symbolDisplay = candidate.symbol ? SYMBOL_MAP[candidate.symbol] || null : null;
   const enrichment = useMemo(() => getEnrichment(candidate.id), [candidate.id]);
+  const history = useMemo(() => getHistory(candidate.id), [candidate.id]);
 
   const details: [string, string][] = [
     ["उमेर", candidate.age > 0 ? `${candidate.age} वर्ष` : ""],
@@ -94,7 +96,7 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
                       विजेता
                     </span>
                   )}
-                  {enrichment?.firstTimeCandidate && (
+                  {history.length === 0 && (
                     <span className="text-xs font-medium text-blue-700 bg-blue-100 px-2.5 py-0.5 rounded-full flex-shrink-0">
                       पहिलो पटक उम्मेदवार
                     </span>
@@ -182,38 +184,39 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
                 </div>
               )}
 
-              {/* Election History */}
-              {enrichment.electionHistory.length > 0 && (
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-700 mb-2">निर्वाचन इतिहास</h3>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm border-collapse">
-                      <thead>
-                        <tr className="bg-gray-50 text-left">
-                          <th className="px-3 py-1.5 font-medium text-gray-500 text-xs">वर्ष</th>
-                          <th className="px-3 py-1.5 font-medium text-gray-500 text-xs">क्षेत्र</th>
-                          <th className="px-3 py-1.5 font-medium text-gray-500 text-xs">पार्टी</th>
-                          <th className="px-3 py-1.5 font-medium text-gray-500 text-xs">नतिजा</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {enrichment.electionHistory.map((h, i) => (
-                          <tr key={i} className="border-t border-gray-100">
-                            <td className="px-3 py-1.5 text-gray-900">{h.year}</td>
-                            <td className="px-3 py-1.5 text-gray-600">{h.district} {h.constituency}</td>
-                            <td className="px-3 py-1.5 text-gray-600">{h.party}</td>
-                            <td className="px-3 py-1.5">
-                              <span className={h.result === "विजयी" ? "text-green-700 font-medium" : "text-gray-600"}>
-                                {h.result}
-                              </span>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              )}
+            </div>
+          )}
+
+          {/* Election History (from 2074/2079 data) */}
+          {history.length > 0 && (
+            <div className="mt-6">
+              <h3 className="text-sm font-semibold text-gray-700 mb-2">निर्वाचन इतिहास</h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-gray-50 text-left">
+                      <th className="px-3 py-1.5 font-medium text-gray-500 text-xs">वर्ष</th>
+                      <th className="px-3 py-1.5 font-medium text-gray-500 text-xs">क्षेत्र</th>
+                      <th className="px-3 py-1.5 font-medium text-gray-500 text-xs">पार्टी</th>
+                      <th className="px-3 py-1.5 font-medium text-gray-500 text-xs">नतिजा</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {history.map((h, i) => (
+                      <tr key={i} className="border-t border-gray-100">
+                        <td className="px-3 py-1.5 text-gray-900">{h.year}</td>
+                        <td className="px-3 py-1.5 text-gray-600">{h.district} {h.constituency}</td>
+                        <td className="px-3 py-1.5 text-gray-600">{h.party}</td>
+                        <td className="px-3 py-1.5">
+                          <span className={h.result === "विजयी" ? "text-green-700 font-medium" : "text-gray-600"}>
+                            {h.result}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           )}
         </div>
