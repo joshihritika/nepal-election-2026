@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, memo } from "react";
+import { useState, useCallback, useRef, memo } from "react";
 import { DISTRICT_PATHS } from "@/data/district-paths";
 
 interface TooltipState {
@@ -59,25 +59,50 @@ const NepalMap = memo(function NepalMap({
 
   const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
   const [tappedDistrict, setTappedDistrict] = useState<{
+    id: string;
     name: string;
     province: string;
     hq: string;
   } | null>(null);
+  const isTouchRef = useRef(false);
 
   const handleDistrictClick = useCallback(
     (district: typeof DISTRICT_PATHS[0]) => {
-      // Show fixed label on tap (works for touch and click)
-      setTappedDistrict({
-        name: district.name,
-        province: provinceNames[district.province],
-        hq: district.hq,
-      });
-      if (onDistrictClick) {
-        onDistrictClick(district.id);
+      // On touch devices: first tap shows label, second tap on same district opens panel
+      if (isTouchRef.current) {
+        if (tappedDistrict?.id === district.id) {
+          // Second tap on same district — open the panel
+          if (onDistrictClick) {
+            onDistrictClick(district.id);
+          }
+        } else {
+          // First tap or different district — just show the label
+          setTappedDistrict({
+            id: district.id,
+            name: district.name,
+            province: provinceNames[district.province],
+            hq: district.hq,
+          });
+        }
+      } else {
+        // Desktop click — open immediately
+        setTappedDistrict({
+          id: district.id,
+          name: district.name,
+          province: provinceNames[district.province],
+          hq: district.hq,
+        });
+        if (onDistrictClick) {
+          onDistrictClick(district.id);
+        }
       }
     },
-    [onDistrictClick]
+    [onDistrictClick, tappedDistrict?.id]
   );
+
+  const handleTouchStart = useCallback(() => {
+    isTouchRef.current = true;
+  }, []);
 
   const handleDistrictMouseEnter = useCallback(
     (district: typeof DISTRICT_PATHS[0], evt: React.MouseEvent) => {
@@ -146,6 +171,7 @@ const NepalMap = memo(function NepalMap({
                 <span className="text-gray-500 hidden sm:inline text-xs truncate">सदरमुकाम: {tappedDistrict.hq}</span>
               </>
             )}
+            <span className="text-blue-600 flex-shrink-0 sm:hidden">· फेरि ट्याप गर्नुहोस्</span>
           </div>
           <button
             onClick={() => setTappedDistrict(null)}
@@ -180,6 +206,7 @@ const NepalMap = memo(function NepalMap({
                 stroke={isSelected ? "#1E40AF" : isHovered ? "#ffffff" : "rgba(255,255,255,0.6)"}
                 strokeWidth={isSelected ? 2 : isHovered ? 1.5 : 0.5}
                 className="cursor-pointer"
+                onTouchStart={handleTouchStart}
                 onClick={() => handleDistrictClick(district)}
                 onMouseEnter={(e) => handleDistrictMouseEnter(district, e)}
                 onMouseLeave={handleMouseLeave}
