@@ -200,7 +200,23 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
           {history.length > 0 && (
             <div className="mt-6">
               <h3 className="text-sm font-semibold text-gray-700 mb-2">निर्वाचन इतिहास</h3>
-              <div className="overflow-x-auto">
+              {/* Card layout for mobile */}
+              <div className="space-y-3 sm:hidden">
+                {history.map((h, i) => (
+                  <div key={i} className="p-3 bg-gray-50 rounded-lg border border-gray-100">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-sm font-medium text-gray-900">{h.year}</span>
+                      <span className={h.result === "विजयी" ? "text-xs font-medium text-green-700 bg-green-100 px-2 py-0.5 rounded-full" : "text-xs text-gray-600 bg-gray-200 px-2 py-0.5 rounded-full"}>
+                        {h.result}
+                      </span>
+                    </div>
+                    <div className="text-sm text-gray-600">{h.district} {h.constituency}</div>
+                    <div className="text-xs text-gray-500 mt-1">{h.party}</div>
+                  </div>
+                ))}
+              </div>
+              {/* Table layout for larger screens */}
+              <div className="hidden sm:block overflow-x-auto">
                 <table className="w-full text-sm border-collapse">
                   <thead>
                     <tr className="bg-gray-50 text-left">
