@@ -213,10 +213,10 @@ const NepalMap = memo(function NepalMap({
       )}
 
       {/* Election Info */}
-      <div className="absolute top-4 right-4 bg-white/95 backdrop-blur rounded-xl shadow-lg px-4 py-3 border border-gray-100">
-        <div className="text-xs text-gray-500 uppercase tracking-wide">आम निर्वाचन</div>
-        <div className="text-lg font-bold text-blue-900">२०८२ फागुन २१</div>
-        <div className="text-xs text-gray-500 mt-1">७७ जिल्ला • १६५ निर्वाचन क्षेत्र</div>
+      <div className="absolute top-2 right-2 bg-white/90 backdrop-blur rounded-lg shadow-sm px-2 py-1.5 border border-gray-100">
+        <div className="text-[9px] text-gray-500 uppercase tracking-wide leading-tight">आम निर्वाचन</div>
+        <div className="text-xs font-bold text-blue-900 leading-tight">२०८२ फागुन २१</div>
+        <div className="text-[9px] text-gray-500 leading-tight">७७ जिल्ला • १६५ क्षेत्र</div>
       </div>
 
     </div>
