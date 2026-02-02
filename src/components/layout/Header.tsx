@@ -46,12 +46,6 @@ export default function Header() {
                 />
               </svg>
             </div>
-            <div>
-              <h1 className="text-lg font-bold text-gray-900 leading-tight">
-                नेपाल निर्वाचन २०८२
-              </h1>
-              <p className="text-xs text-gray-500">आम निर्वाचन</p>
-            </div>
           </Link>
 
           {/* Stats */}
