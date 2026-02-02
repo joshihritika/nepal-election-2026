@@ -92,8 +92,8 @@ function HomeContent() {
 
         {/* Map */}
         <div className="relative">
-          <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-            <div className="aspect-[16/10] min-h-[400px] lg:min-h-[500px]">
+          <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
+            <div className="overflow-x-auto min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
               <NepalMap
                 selectedProvince={selectedProvince}
                 selectedDistrict={selectedDistrict}

@@ -121,11 +121,11 @@ const NepalMap = memo(function NepalMap({
   };
 
   return (
-    <div className={`relative bg-white rounded-xl overflow-x-auto ${className}`}>
+    <div className={`relative bg-white rounded-xl ${className}`}>
       <svg
         viewBox="0 0 800 400"
-        className="w-full h-full md:min-w-0"
-        style={{ minHeight: "300px", minWidth: "600px" }}
+        className="w-full h-full"
+        style={{ minWidth: "580px", minHeight: "280px" }}
         preserveAspectRatio="xMidYMid meet"
       >
         {/* Background */}
