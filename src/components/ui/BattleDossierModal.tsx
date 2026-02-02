@@ -67,16 +67,16 @@ export default function BattleDossierModal({ battle, onClose }: BattleDossierMod
       {/* Modal */}
       <div className="fixed inset-3 sm:inset-6 md:inset-y-8 md:inset-x-[8%] lg:inset-y-8 lg:inset-x-[15%] z-50 flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
-        <div className="px-6 py-4 border-b border-gray-200 bg-gradient-to-r from-gray-900 to-gray-800 text-white flex-shrink-0">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-medium bg-white/20 px-2.5 py-1 rounded-full">
+        <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200 bg-gradient-to-r from-gray-900 to-gray-800 text-white flex-shrink-0">
+          <div className="flex items-center justify-between gap-2">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                <span className="text-[10px] sm:text-xs font-medium bg-white/20 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
                   प्रमुख प्रतिस्पर्धा
                 </span>
-                <h2 className="text-xl font-bold">{battle.constituency}</h2>
+                <h2 className="text-base sm:text-xl font-bold truncate">{battle.constituency}</h2>
               </div>
-              <p className="text-sm text-gray-300 mt-1">{battle.tagline}</p>
+              <p className="text-xs sm:text-sm text-gray-300 mt-1 truncate">{battle.tagline}</p>
             </div>
             <button
               onClick={onClose}
@@ -95,59 +95,64 @@ export default function BattleDossierModal({ battle, onClose }: BattleDossierMod
           <div className="bg-gray-50 border-b border-gray-200">
             <div className="grid grid-cols-[1fr_auto_1fr] items-stretch max-w-2xl mx-auto">
               {/* Candidate 1 */}
-              <div className="p-6 text-center">
+              <div className="p-3 sm:p-6 text-center">
                 <div
-                  className="w-16 h-16 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold shadow-lg"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto flex items-center justify-center text-white text-lg sm:text-2xl font-bold shadow-lg"
                   style={{ backgroundColor: battle.candidates[0].partyColor }}
                 >
                   {battle.candidates[0].name.charAt(0)}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mt-3">
+                <h3 className="text-sm sm:text-lg font-bold text-gray-900 mt-2 sm:mt-3">
                   {battle.candidates[0].name}
                 </h3>
                 <span
-                  className="inline-block mt-1.5 text-xs font-medium text-white px-3 py-1 rounded-full"
+                  className="inline-block mt-1 sm:mt-1.5 text-[10px] sm:text-xs font-medium text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full"
                   style={{ backgroundColor: battle.candidates[0].partyColor }}
                 >
                   {battle.candidates[0].partyShort}
                 </span>
-                <p className="text-sm text-gray-600 mt-3 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3 leading-relaxed hidden sm:block">
                   {battle.candidates[0].description}
                 </p>
               </div>
 
               {/* VS divider */}
-              <div className="flex items-center justify-center px-3">
-                <div className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-sm shadow-lg">
+              <div className="flex items-center justify-center px-1 sm:px-3">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-lg">
                   VS
                 </div>
               </div>
 
               {/* Candidate 2 */}
-              <div className="p-6 text-center">
+              <div className="p-3 sm:p-6 text-center">
                 <div
-                  className="w-16 h-16 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold shadow-lg"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto flex items-center justify-center text-white text-lg sm:text-2xl font-bold shadow-lg"
                   style={{ backgroundColor: battle.candidates[1].partyColor }}
                 >
                   {battle.candidates[1].name.charAt(0)}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mt-3">
+                <h3 className="text-sm sm:text-lg font-bold text-gray-900 mt-2 sm:mt-3">
                   {battle.candidates[1].name}
                 </h3>
                 <span
-                  className="inline-block mt-1.5 text-xs font-medium text-white px-3 py-1 rounded-full"
+                  className="inline-block mt-1 sm:mt-1.5 text-[10px] sm:text-xs font-medium text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full"
                   style={{ backgroundColor: battle.candidates[1].partyColor }}
                 >
                   {battle.candidates[1].partyShort}
                 </span>
-                <p className="text-sm text-gray-600 mt-3 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3 leading-relaxed hidden sm:block">
                   {battle.candidates[1].description}
                 </p>
               </div>
             </div>
+            {/* Descriptions below face-off on mobile */}
+            <div className="sm:hidden px-4 pb-3 space-y-2">
+              <p className="text-xs text-gray-600 leading-relaxed"><span className="font-semibold">{battle.candidates[0].name}:</span> {battle.candidates[0].description}</p>
+              <p className="text-xs text-gray-600 leading-relaxed"><span className="font-semibold">{battle.candidates[1].name}:</span> {battle.candidates[1].description}</p>
+            </div>
           </div>
 
-          <div className="px-6 py-6 space-y-8 max-w-2xl mx-auto">
+          <div className="px-4 sm:px-6 py-4 sm:py-6 space-y-6 sm:space-y-8 max-w-2xl mx-auto">
             {/* Context */}
             <section>
               <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">

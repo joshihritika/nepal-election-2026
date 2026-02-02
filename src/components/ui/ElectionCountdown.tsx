@@ -35,15 +35,15 @@ export default function ElectionCountdown() {
 
   if (!hasMounted) {
     return (
-      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 rounded-xl border border-blue-700 p-5 text-white">
+      <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 rounded-xl border border-blue-700 p-3 sm:p-5 text-white">
         <div className="text-center">
-          <h3 className="text-sm font-medium text-blue-200 tracking-wide mb-3">
+          <h3 className="text-xs sm:text-sm font-medium text-blue-200 tracking-wide mb-2 sm:mb-3">
             निर्वाचनमा बाँकी समय
           </h3>
-          <div className="flex justify-center gap-3 sm:gap-5 h-12 items-center">
-            <span className="text-blue-300 text-sm animate-pulse">गणना सुरु हुँदैछ...</span>
+          <div className="flex justify-center gap-2 sm:gap-5 h-10 sm:h-12 items-center">
+            <span className="text-blue-300 text-xs sm:text-sm animate-pulse">गणना सुरु हुँदैछ...</span>
           </div>
-          <div className="text-xs text-blue-300 mt-3">
+          <div className="text-[10px] sm:text-xs text-blue-300 mt-2 sm:mt-3">
             २०८२ फागुन २१ गते (मार्च ५, २०२६) · आम निर्वाचन
           </div>
         </div>
@@ -54,45 +54,45 @@ export default function ElectionCountdown() {
   const isElectionDay = timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0;
 
   return (
-    <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 rounded-xl border border-blue-700 p-5 text-white">
+    <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 rounded-xl border border-blue-700 p-3 sm:p-5 text-white">
       <div className="text-center">
-        <h3 className="text-sm font-medium text-blue-200 tracking-wide mb-3">
+        <h3 className="text-xs sm:text-sm font-medium text-blue-200 tracking-wide mb-2 sm:mb-3">
           {isElectionDay ? "आज निर्वाचन दिन हो!" : "निर्वाचनमा बाँकी समय"}
         </h3>
 
         {!isElectionDay && (
-          <div className="flex justify-center gap-3 sm:gap-5">
+          <div className="flex justify-center gap-2 sm:gap-5">
             <div className="flex flex-col items-center">
-              <div className="text-3xl sm:text-4xl font-bold tabular-nums">
+              <div className="text-2xl sm:text-4xl font-bold tabular-nums">
                 {timeLeft.days}
               </div>
-              <div className="text-xs text-blue-300 mt-1">दिन</div>
+              <div className="text-[10px] sm:text-xs text-blue-300 mt-0.5 sm:mt-1">दिन</div>
             </div>
-            <div className="text-2xl sm:text-3xl font-light text-blue-400 self-start mt-1">:</div>
+            <div className="text-xl sm:text-3xl font-light text-blue-400 self-start mt-0.5 sm:mt-1">:</div>
             <div className="flex flex-col items-center">
-              <div className="text-3xl sm:text-4xl font-bold tabular-nums">
+              <div className="text-2xl sm:text-4xl font-bold tabular-nums">
                 {String(timeLeft.hours).padStart(2, "0")}
               </div>
-              <div className="text-xs text-blue-300 mt-1">घण्टा</div>
+              <div className="text-[10px] sm:text-xs text-blue-300 mt-0.5 sm:mt-1">घण्टा</div>
             </div>
-            <div className="text-2xl sm:text-3xl font-light text-blue-400 self-start mt-1">:</div>
+            <div className="text-xl sm:text-3xl font-light text-blue-400 self-start mt-0.5 sm:mt-1">:</div>
             <div className="flex flex-col items-center">
-              <div className="text-3xl sm:text-4xl font-bold tabular-nums">
+              <div className="text-2xl sm:text-4xl font-bold tabular-nums">
                 {String(timeLeft.minutes).padStart(2, "0")}
               </div>
-              <div className="text-xs text-blue-300 mt-1">मिनेट</div>
+              <div className="text-[10px] sm:text-xs text-blue-300 mt-0.5 sm:mt-1">मिनेट</div>
             </div>
-            <div className="text-2xl sm:text-3xl font-light text-blue-400 self-start mt-1">:</div>
+            <div className="text-xl sm:text-3xl font-light text-blue-400 self-start mt-0.5 sm:mt-1">:</div>
             <div className="flex flex-col items-center">
-              <div className="text-3xl sm:text-4xl font-bold tabular-nums">
+              <div className="text-2xl sm:text-4xl font-bold tabular-nums">
                 {String(timeLeft.seconds).padStart(2, "0")}
               </div>
-              <div className="text-xs text-blue-300 mt-1">सेकेन्ड</div>
+              <div className="text-[10px] sm:text-xs text-blue-300 mt-0.5 sm:mt-1">सेकेन्ड</div>
             </div>
           </div>
         )}
 
-        <div className="text-xs text-blue-300 mt-3">
+        <div className="text-[10px] sm:text-xs text-blue-300 mt-2 sm:mt-3">
           २०८२ फागुन २१ गते (मार्च ५, २०२६) · आम निर्वाचन
         </div>
       </div>

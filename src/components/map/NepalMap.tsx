@@ -135,21 +135,21 @@ const NepalMap = memo(function NepalMap({
     <div className={`relative bg-white rounded-xl ${className}`}>
       {/* Fixed label for touch devices */}
       {tappedDistrict && (
-        <div className="flex items-center justify-between bg-blue-50 border-b border-blue-200 px-4 py-2 rounded-t-xl">
-          <div className="flex items-center gap-2 text-sm">
-            <span className="font-bold text-gray-900">{tappedDistrict.name}</span>
-            <span className="text-gray-500">•</span>
-            <span className="text-gray-600">{tappedDistrict.province} प्रदेश</span>
+        <div className="flex items-center justify-between gap-2 bg-blue-50 border-b border-blue-200 px-3 sm:px-4 py-1.5 sm:py-2 rounded-t-xl">
+          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm min-w-0">
+            <span className="font-bold text-gray-900 truncate">{tappedDistrict.name}</span>
+            <span className="text-gray-500 flex-shrink-0">•</span>
+            <span className="text-gray-600 truncate">{tappedDistrict.province}</span>
             {tappedDistrict.hq && (
               <>
-                <span className="text-gray-500 hidden sm:inline">•</span>
-                <span className="text-gray-500 hidden sm:inline text-xs">सदरमुकाम: {tappedDistrict.hq}</span>
+                <span className="text-gray-500 hidden sm:inline flex-shrink-0">•</span>
+                <span className="text-gray-500 hidden sm:inline text-xs truncate">सदरमुकाम: {tappedDistrict.hq}</span>
               </>
             )}
           </div>
           <button
             onClick={() => setTappedDistrict(null)}
-            className="text-gray-400 hover:text-gray-600 text-lg leading-none"
+            className="text-gray-400 hover:text-gray-600 text-lg leading-none flex-shrink-0 p-1"
             aria-label="Close"
           >
             ×

@@ -74,13 +74,13 @@ function HomeContent() {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className="max-w-7xl mx-auto px-3 sm:px-4 py-4 sm:py-6">
         {/* Introduction */}
         <div className="mb-6 text-center sm:text-left">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
             अन्तरक्रियात्मक निर्वाचन नक्सा
           </h2>
-          <p className="text-gray-600 max-w-2xl">
+          <p className="text-sm sm:text-base text-gray-600 max-w-2xl">
             २०८२ फागुन २१ गतेको आम निर्वाचनमा प्रतिस्पर्धा गर्ने उम्मेदवारहरू हेर्न कुनै पनि जिल्लामा क्लिक गर्नुहोस्।
           </p>
         </div>
@@ -116,30 +116,30 @@ function HomeContent() {
         </div>
 
         {/* Quick Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-            <div className="text-3xl font-bold text-blue-600">७</div>
-            <div className="text-sm text-gray-500">प्रदेश</div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-4">
+          <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 text-center">
+            <div className="text-2xl sm:text-3xl font-bold text-blue-600">७</div>
+            <div className="text-xs sm:text-sm text-gray-500">प्रदेश</div>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-            <div className="text-3xl font-bold text-green-600">७७</div>
-            <div className="text-sm text-gray-500">जिल्ला</div>
+          <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 text-center">
+            <div className="text-2xl sm:text-3xl font-bold text-green-600">७७</div>
+            <div className="text-xs sm:text-sm text-gray-500">जिल्ला</div>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-            <div className="text-3xl font-bold text-purple-600">१६५</div>
-            <div className="text-sm text-gray-500">निर्वाचन क्षेत्र</div>
+          <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 text-center">
+            <div className="text-2xl sm:text-3xl font-bold text-purple-600">१६५</div>
+            <div className="text-xs sm:text-sm text-gray-500">निर्वाचन क्षेत्र</div>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-            <div className="text-3xl font-bold text-amber-600">१.८९ कराेड</div>
-            <div className="text-sm text-gray-500">मतदाता</div>
+          <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 text-center">
+            <div className="text-xl sm:text-3xl font-bold text-amber-600">१.८९ कराेड</div>
+            <div className="text-xs sm:text-sm text-gray-500">मतदाता</div>
           </div>
         </div>
 
         {/* Voter Demographics */}
-        <div className="bg-white rounded-xl border border-gray-200 p-5 mt-4">
+        <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 mt-4">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-sm font-semibold text-gray-700">मतदाता विवरण</h3>
-            <span className="text-lg font-bold text-gray-900">१,८९,०३,६८९</span>
+            <h3 className="text-xs sm:text-sm font-semibold text-gray-700">मतदाता विवरण</h3>
+            <span className="text-sm sm:text-lg font-bold text-gray-900">१,८९,०३,६८९</span>
           </div>
 
           {/* Stacked bar */}
@@ -149,7 +149,7 @@ function HomeContent() {
           </div>
 
           {/* Legend */}
-          <div className="flex items-center gap-6 mt-3 text-sm text-gray-500">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-6 mt-3 text-xs sm:text-sm text-gray-500">
             <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-blue-500" />पुरुष ५१.१%</span>
             <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-pink-500" />महिला ४८.९%</span>
             <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-purple-500" />अन्य २००</span>

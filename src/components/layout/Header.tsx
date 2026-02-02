@@ -10,9 +10,9 @@ export default function Header() {
       {/* Top bar */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-2 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between text-sm">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span>निर्वाचन दिन: २०८२ फागुन २१ (मार्च ५, २०२६)</span>
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
+            <span className="truncate">निर्वाचन दिन: २०८२ फागुन २१ <span className="hidden sm:inline">(मार्च ५, २०२६)</span></span>
           </div>
           <div className="hidden sm:flex items-center gap-4">
             <a

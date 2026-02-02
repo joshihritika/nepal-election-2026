@@ -129,10 +129,10 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
       />
 
       {/* Popup */}
-      <div className="fixed inset-4 sm:inset-8 md:inset-y-12 md:inset-x-[10%] lg:inset-y-12 lg:inset-x-[20%] z-50 flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="fixed inset-2 sm:inset-8 md:inset-y-12 md:inset-x-[10%] lg:inset-y-12 lg:inset-x-[20%] z-50 flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
         <div
-          className="px-5 py-4 border-b border-gray-200 flex-shrink-0"
+          className="px-4 sm:px-5 py-3 sm:py-4 border-b border-gray-200 flex-shrink-0"
           style={{ backgroundColor: province?.color + "15" }}
         >
           <div className="flex items-center justify-between">
@@ -148,11 +148,11 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
                 </button>
               )}
               <div>
-                <h2 className="text-xl font-bold text-gray-900">
+                <h2 className="text-base sm:text-xl font-bold text-gray-900 truncate">
                   {district.nameNepali || district.name}
                   {constituencyNum && `-${constituencyNum}`}
                 </h2>
-                <p className="text-sm text-gray-600">
+                <p className="text-xs sm:text-sm text-gray-600 truncate">
                   {province?.nameNepali || province?.name} प्रदेश
                   {!constituencyNum && (
                     <>
@@ -178,7 +178,7 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
         </div>
 
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto p-5">
+        <div className="flex-1 overflow-y-auto p-3 sm:p-5">
           {!constituencyNum ? (
             /* Constituency List */
             <div>

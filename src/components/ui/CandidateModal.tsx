@@ -68,10 +68,10 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
         onClick={onClose}
       />
 
-      <div className="fixed inset-6 sm:inset-10 md:inset-y-14 md:inset-x-[15%] lg:inset-y-14 lg:inset-x-[25%] z-[70] flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      <div className="fixed inset-2 sm:inset-6 md:inset-y-14 md:inset-x-[15%] lg:inset-y-14 lg:inset-x-[25%] z-[70] flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
         <div
-          className="px-6 py-4 border-b border-gray-200 flex-shrink-0"
+          className="px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200 flex-shrink-0"
           style={{ backgroundColor: partyColor + "15" }}
         >
           <div className="flex items-center justify-between">
@@ -88,7 +88,7 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
               )}
               <div className="min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <h2 className="text-xl font-bold text-gray-900 truncate">{candidate.name}</h2>
+                  <h2 className="text-base sm:text-xl font-bold text-gray-900 truncate">{candidate.name}</h2>
                   {candidate.elected && (
                     <span className="text-xs font-medium text-green-700 bg-green-100 px-2.5 py-0.5 rounded-full flex-shrink-0">
                       विजेता
@@ -122,7 +122,7 @@ export default function CandidateModal({ candidate, onClose }: CandidateModalPro
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6">
           {/* Vote count */}
           {candidate.votes > 0 && (
             <div className="mb-6 p-4 bg-gray-50 rounded-xl border border-gray-200 text-center">

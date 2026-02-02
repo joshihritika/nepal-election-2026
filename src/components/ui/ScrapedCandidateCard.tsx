@@ -74,10 +74,10 @@ export default function ScrapedCandidateCard({
 
   return (
     <div
-      className={`relative flex items-center gap-4 px-4 py-3.5 rounded-xl border transition-colors overflow-hidden
+      className={`relative flex items-center gap-2 sm:gap-4 px-2.5 sm:px-4 py-3 sm:py-3.5 rounded-xl border transition-colors overflow-hidden
         ${isVoted ? "border-blue-500 bg-blue-50/50" : candidate.elected ? "border-green-500 bg-green-50/50" : "border-gray-200 bg-white"}
         ${onClick ? "cursor-pointer hover:bg-gray-50" : ""}`}
-      style={{ borderLeft: `5px solid ${isVoted ? "#3B82F6" : partyColor}` }}
+      style={{ borderLeft: `4px solid ${isVoted ? "#3B82F6" : partyColor}` }}
       onClick={onClick}
     >
       {/* Vote percentage bar background */}
@@ -112,7 +112,7 @@ export default function ScrapedCandidateCard({
       {/* Name + Party */}
       <div className="relative flex-1 min-w-0">
         <div className="flex items-center gap-2">
-          <h3 className="font-semibold text-gray-900 text-base truncate">{candidate.name}</h3>
+          <h3 className="font-semibold text-gray-900 text-sm sm:text-base truncate">{candidate.name}</h3>
           {candidate.elected && (
             <span className="text-xs font-medium text-green-700 bg-green-100 px-2 py-0.5 rounded flex-shrink-0">
               विजेता
@@ -169,7 +169,7 @@ export default function ScrapedCandidateCard({
             e.stopPropagation();
             onVote();
           }}
-          className={`relative flex-shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors
+          className={`relative flex-shrink-0 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-medium transition-colors min-h-[44px] sm:min-h-0 flex items-center
             ${isVoted
               ? "bg-blue-600 text-white hover:bg-blue-700"
               : "bg-gray-100 text-gray-600 hover:bg-blue-100 hover:text-blue-700"
