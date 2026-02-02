@@ -239,12 +239,6 @@ const NepalMap = memo(function NepalMap({
         </div>
       )}
 
-      {/* Election Info */}
-      <div className="absolute top-2 right-2 bg-white/90 backdrop-blur rounded-lg shadow-sm px-2 py-1.5 border border-gray-100">
-        <div className="text-[9px] text-gray-500 uppercase tracking-wide leading-tight">आम निर्वाचन</div>
-        <div className="text-xs font-bold text-blue-900 leading-tight">२०८२ फागुन २१</div>
-        <div className="text-[9px] text-gray-500 leading-tight">७७ जिल्ला • १६५ क्षेत्र</div>
-      </div>
 
     </div>
   );
