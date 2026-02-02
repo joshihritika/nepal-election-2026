@@ -10,6 +10,7 @@ import NepalMap from "@/components/map/NepalMap";
 import BattleCard from "@/components/ui/BattleCard";
 import BattleDossierModal from "@/components/ui/BattleDossierModal";
 import CommentSection from "@/components/ui/CommentSection";
+import LocationFilter from "@/components/ui/LocationFilter";
 import { KEY_BATTLES, KeyBattle } from "@/data/key-battles";
 import { CandidateData } from "@/data/candidates-scraped";
 
@@ -89,6 +90,14 @@ function HomeContent() {
         {/* Election Countdown */}
         <div className="mb-4">
           <ElectionCountdown />
+        </div>
+
+        {/* Location Filter */}
+        <div className="mb-4">
+          <LocationFilter onSelect={(districtId, constituencyNum) => {
+            setSelectedDistrict(districtId);
+            setSelectedConstituency(constituencyNum);
+          }} />
         </div>
 
         {/* Map */}
