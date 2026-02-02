@@ -1,0 +1,637 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><title>
+	मतगणना प्रगतिको विवरण
+</title><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"><link href="Styles/sm-simple.css" rel="stylesheet" type="text/css"><link href="Styles/font-awesome/css/fontawesome.min.css" rel="stylesheet" type="text/css"><link href="Styles/font-awesome/css/solid.min.css" rel="stylesheet" type="text/css"><link href="Styles/font-awesome/css/brands.min.css" rel="stylesheet" type="text/css"><link href="Styles/CustomStyle.css" rel="stylesheet" type="text/css"><link href="Styles/Site.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/Styles/leaflet.css"><link rel="stylesheet" href="/Styles/qgis2web.css"><link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="Styles/animate.css" rel="stylesheet" type="text/css">
+    <script src="JSLibrary/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="JQGridReq/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="JQGridReq/jquery-ui.js" type="text/javascript"></script>
+    <link href="JQGridReq/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <script src="JQGridReq/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="JQGridReq/grid.locale-en.js" type="text/javascript"></script>
+    <script src="JQGridReq/jquery.jqGrid.js" type="text/javascript"></script>
+    <link href="JQGridReq/ui.jqgrid.css" rel="stylesheet" type="text/css">
+    <script src="JQGridReq/jszip.min.js" type="text/javascript"></script>
+    <script src="JSLibrary/jquery.smartmenus.js" type="text/javascript"></script>
+    <script src="JSLibrary/bootstrap.min.js" type="text/javascript"></script>
+    <script src="JSLibrary/WebCommon.js" type="text/javascript"></script>
+    <script src="JSLibrary/knockout-3.5.1.js" type="text/javascript"></script>
+
+
+  
+
+    
+
+    <style>
+        .ui-jqgrid .ui-pg-selbox
+        {
+            font-size: .8em;
+            line-height: 18px;
+            display: block;
+            height: 18px;
+            margin: 0;
+            color: #000 !important;
+        }
+        .panel-group .panel .panel-heading h4 a:hover, .panel-group .panel .panel-heading h4 a:not(.collapsed)
+        {
+            /*background: #fff;*/
+            transition: 0.15s all ease-in-out;
+        }
+        .panel-group .panel .panel-heading h4 a:not(.collapsed) i:before
+        {
+            content: "-";
+            font-size: 30px;
+            line-height: 10px;
+        }
+        .panel-group .panel .panel-heading h4 a i
+        {
+            color: #999;
+            font-size: 12px;
+        }
+        .panel-group .panel .panel-body
+        {
+            padding-top: 0;
+        }
+        .panel-group .panel .panel-heading + .panel-collapse > .list-group, .panel-group .panel .panel-heading + .panel-collapse > .panel-body
+        {
+            border-top: none;
+        }
+        .panel-group .panel + .panel
+        {
+            border-top: none;
+            margin-top: 0;
+        }
+        .panel
+        {
+            background: #1a3948;
+        }
+        .panel-default > .panel-heading
+        {
+            color: #fff;
+            background-color: #2a5c73;
+            border-top: 1px #1a3948 solid;
+            border-color: #1a3948;
+        }
+        .panel-heading a
+        {
+            color: #fff;
+            outline: none;
+        }
+        .panel-heading a:hover
+        {
+            text-decoration: none;
+        }
+        .panel-group .panel
+        {
+            border-radius: 0px;
+        }
+        .panel-default
+        {
+            border-color: #1a3948;
+        }
+        .panel-title
+        {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            color: inherit;
+            padding-left: 16px;
+        }
+        .pxlr-faq-body
+        {
+            padding: 0px;
+        }
+        .panel-title a
+        {
+            display: block;
+        }
+        .footer
+        {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="new-site" style="zoom: 1;">
+    <header class="page">
+        <div class="main-header">
+            <img src="/Images/coat_of_arms.png" alt="ERIS" id="coat" class="img-responsive" style="float: left;">
+            <div class="header-title">
+                <h1>
+                    निर्वाचन आयोग</h1>
+                <h2>
+                    प्रतिनिधि सभा निर्वाचन ,२०८२</h2>
+            </div>
+            <div class="header-logo">
+                <img src="/Images/ecn-logo.png" alt="ERIS" id="logo" class="img-responsive" style="float: left;">
+                <div class="header-logo-title">
+                    <div>
+                        निर्वाचन आयोग, नेपाल</div>
+                    <div>
+                        Election Commission, Nepal</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <aside class="nav-side-menu animated slideInLeft demo">
+        <div class="menu-list" id="menu"><ul id="list-main"><li data-toggle="collapse" data-menu="1" data-target="#list-1" data-level="1" class="active" id="li-1">
+            <a href="#" title="निर्वाचन, २०७९" class="hvr-sweep-to-right" style="">
+                निर्वाचन, २०७९
+                
+                <div class="pull-right" style="background:#3a4650;">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </a>
+        </li>
+        <ul class="collapse sub-menu" id="list-1"><li data-toggle="collapse" data-menu="30" data-target="#list-30" data-level="30" class="active" id="li-30">
+            <a href="#" title="जिल्ला गत विवरण " class="hvr-sweep-to-right" style="">
+                जिल्ला गत विवरण 
+                
+                <div class="pull-right" style="background:#3a4650;">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </a>
+        </li>
+        <ul class="collapse sub-menu" id="list-30"><li data-level="202" class="active" id="li-202">
+            <a href="/MapElectionResult2079.aspx" title="पहिलो हुने निर्वाचित हुने" class="nsub hvr-sweep-to-right" style="color:#39e16b;">
+                पहिलो हुने निर्वाचित हुने
+                
+            </a>
+        </li>
+        
+<li data-level="203" class="active" id="li-203">
+            <a href="/PRMapElectionResult2079.aspx" title="समानुपातिक" class="nsub hvr-sweep-to-right" style="color:#39e16b;">
+                समानुपातिक
+                
+            </a>
+        </li>
+        </ul>
+<li data-toggle="collapse" data-menu="40" data-target="#list-40" data-level="40" class="active" id="li-40">
+            <a href="#" title="मतगणना प्रगतिको विवरण" class="hvr-sweep-to-right" style="">
+                मतगणना प्रगतिको विवरण
+                
+                <div class="pull-right" style="background:#3a4650;">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </a>
+        </li>
+        <ul class="collapse sub-menu" id="list-40"><li data-level="302" class="active" id="li-302">
+            <a href="/FPTPWLChartResult.aspx" title="पहिलो हुने निर्वाचित हुने" class="nsub hvr-sweep-to-right" style="color:#39e16b;">
+                पहिलो हुने निर्वाचित हुने
+                
+            </a>
+        </li>
+        
+<li data-level="303" class="active" id="li-303">
+            <a href="/PRVoteChartResult.aspx" title="समानुपातिक" class="nsub hvr-sweep-to-right" style="color:#39e16b;">
+                समानुपातिक
+                
+            </a>
+        </li>
+        </ul>
+<li data-toggle="collapse" data-menu="10" data-target="#list-10" data-level="10" class="active" id="li-10">
+            <a href="#" title="प्रतिनिधि सभा" class="hvr-sweep-to-right" style="">
+                प्रतिनिधि सभा
+                
+                <div class="pull-right" style="background:#3a4650;">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </a>
+        </li>
+        <ul class="collapse sub-menu" id="list-10"><li data-level="101" class="active" id="li-101">
+            <a href="/ElectionResultCentral2079.aspx" title="पहिलो हुने निर्वाचित हुने उम्मेदवार" class="nsub hvr-sweep-to-right" style="color:#39e16b;">
+                पहिलो हुने निर्वाचित हुने उम्मेदवार
+                
+            </a>
+        </li>
+        </ul>
+<li data-toggle="collapse" data-menu="20" data-target="#list-20" data-level="20" class="active" id="li-20">
+            <a href="#" title="प्रदेश सभा" class="hvr-sweep-to-right" style="">
+                प्रदेश सभा
+                
+                <div class="pull-right" style="background:#3a4650;">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </a>
+        </li>
+        <ul class="collapse sub-menu" id="list-20"><li data-level="201" class="active" id="li-201">
+            <a href="/ElectionResultState2079.aspx" title="पहिलो हुने निर्वाचित हुने उम्मेदवार" class="nsub hvr-sweep-to-right" style="color:#39e16b;">
+                पहिलो हुने निर्वाचित हुने उम्मेदवार
+                
+            </a>
+        </li>
+        </ul>
+<li data-toggle="collapse" data-menu="2" data-target="#list-2" data-level="2" class="active" id="li-2">
+            <a href="#" title="स्थानीय तह निर्वाचन" class="hvr-sweep-to-right" style="">
+                स्थानीय तह निर्वाचन
+                
+                <div class="pull-right" style="background:#3a4650;">
+                    <i class="fa fa-plus"></i>
+                </div>
+            </a>
+        </li>
+        <ul class="collapse sub-menu" id="list-2"><li data-level="5" class="active" id="li-5">
+            <a href="/LocalElectionResult2079.aspx" title="मतगणना प्रगतिको विवरण" class="nsub hvr-sweep-to-right" style="color:#39e16b;">
+                मतगणना प्रगतिको विवरण
+                
+            </a>
+        </li>
+        
+<li data-level="3" class="active" id="li-3">
+            <a href="/LocalChartResult.aspx" title="मतगणनाको दलगत स्थिति" class="nsub hvr-sweep-to-right" style="color:#39e16b;">
+                मतगणनाको दलगत स्थिति
+                
+            </a>
+        </li>
+        </ul></ul>
+<li data-level="1" class="active" id="li-1">
+            <a href="/BiElectionFPTPMapBasedResult.aspx" title="निर्वाचन, २०७४" class="hvr-sweep-to-right" style="">
+                निर्वाचन, २०७४
+                
+            </a>
+        </li>
+        
+<li data-level="1" class="active" id="li-1">
+            <a href="/ElectionResultCentral2079bi.aspx" title="उप-निर्वाचन, २०८० " class="hvr-sweep-to-right" style="">
+                उप-निर्वाचन, २०८० 
+                
+            </a>
+        </li>
+        
+<li data-level="1" class="active" id="li-1">
+            <a href="/ElectionResultCentral2081bi.aspx" title="उप-निर्वाचन, २०८१ " class="hvr-sweep-to-right" style="">
+                उप-निर्वाचन, २०८१ 
+                
+            </a>
+        </li>
+        
+<li data-level="1" class="active" id="li-1">
+            <a href="/ElectionResultLL2081bi.aspx" title="स्थानीय तह उप-निर्वाचन, २०८१ " class="hvr-sweep-to-right" style="">
+                स्थानीय तह उप-निर्वाचन, २०८१ 
+                
+            </a>
+        </li>
+        
+<li data-level="1" class="active" id="li-1">
+            <a href="/NA2080.aspx" title="राष्ट्रिय सभा निर्वाचन २०८० " class="hvr-sweep-to-right" style="">
+                राष्ट्रिय सभा निर्वाचन २०८० 
+                
+            </a>
+        </li>
+        </ul></div>
+        <div class="menu-close" onclick="hideMenu()">×</div>
+    </aside>
+    <main>
+        
+        
+    <style>
+        .spacing {
+            margin-top: 10px;
+        }
+
+
+
+        .ui-search-toolbar th {
+            height: 25px !important;
+            vertical-align: top !important;
+        }
+
+        .ui-search-input select {
+            vertical-align: top !important;
+            margin-bottom: 15px;
+        }
+
+        .ui-search-input input[type="text"] {
+            line-height: 25px;
+            height: 25px !important;
+            vertical-align: top !important;
+        }
+
+        .ui-search-input input {
+            line-height: 25px;
+            height: 25px !important;
+            margin-top: 5px;
+            vertical-align: top !important;
+        }
+
+        th.ui-th-column div {
+            white-space: normal !important;
+            height: auto !important;
+            padding: 2px;
+            font-weight: bold;
+        }
+
+        .tree-wrap-ltr {
+            margin-top: 11PX;
+        }
+
+        .ui-search-clear a.clearsearchclass {
+            color: #f6f6f6;
+            display: block !important;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eaf3f3;
+        }
+
+        .ui-jqgrid .ui-pg-selbox {
+            font-size: .8em;
+            line-height: 18px;
+            display: block;
+            height: 18px;
+            margin: 0;
+            color: #000 !important;
+        }
+
+        .form-title {
+            margin-left: 15%;
+        }
+    </style>
+    <div class="col-md-10 col-xs-12 animated slideInRight" style="margin-top: 80px;">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: -45px;">
+                
+                <h3 class="form-title" style="font-size: 20px; font-weight: bold; margin-left: 35%;" id="pageTitle">प्रतिनिधि सभा सदस्य निर्वाचनमा उम्मेदवारहरुको सुची
+                </h3>
+                <h4 class="form-title" style="font-size: 20px; color: red; font-weight: bold; margin-left: 40%;" id="H1">click on the row to view details
+                </h4>
+                <br>
+                
+                <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_jQGridDemo" dir="ltr" style="width: 1100px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_jQGridDemo"></div><div class="loading ui-state-default ui-state-active" id="load_jQGridDemo" style="display: none;">Loading...</div><div class="ui-jqgrid-view" id="gview_jQGridDemo" style="width: 1100px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 1100px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width:1082px" role="grid" aria-labelledby="gbox_jQGridDemo" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="jQGridDemo_CandidateID" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_CandidateID" class="ui-jqgrid-sortable">Candidate_ID<span class="s-ico" style=""><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_CTZDIST" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_CTZDIST" class="ui-jqgrid-sortable">janmasthan<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_EXPERIENCE" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_EXPERIENCE" class="ui-jqgrid-sortable">experience<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_OTHERDETAILS" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_OTHERDETAILS" class="ui-jqgrid-sortable">otherdetails<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_ADDRESS" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_ADDRESS" class="ui-jqgrid-sortable">permaddress<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_QUALIFICATION" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_QUALIFICATION" class="ui-jqgrid-sortable">qualification<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_SPOUCE_NAME" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_SPOUCE_NAME" class="ui-jqgrid-sortable">spousename<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_FATHER_NAME" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_FATHER_NAME" class="ui-jqgrid-sortable">fathername<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_DOB" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_DOB" class="ui-jqgrid-sortable">DOB<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_NAMEOFINST" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_NAMEOFINST" class="ui-jqgrid-sortable">nameofinst<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_StateName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 133px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_StateName" class="ui-jqgrid-sortable">प्रदेश<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_DistrictName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 166px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_DistrictName" class="ui-jqgrid-sortable">जिल्ला<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_SCConstID" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 117px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_SCConstID" class="ui-jqgrid-sortable">प्रतिनिधि सभा निर्वाचन क्षेत्र<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_CandidateName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 183px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_CandidateName" class="ui-jqgrid-sortable">उम्मेदवारको नाम<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_Gender" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 67px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_Gender" class="ui-jqgrid-sortable">लिङ्ग<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_PoliticalPartyName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 250px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_PoliticalPartyName" class="ui-jqgrid-sortable"> 	राजनीतिक दल / स्वतन्त्र<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th><th id="jQGridDemo_SymbolName" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 166px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_jQGridDemo_SymbolName" class="ui-jqgrid-sortable">चुनाव चिन्ह <span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div></th></tr><tr class="ui-search-toolbar" role="rowheader"><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="CandidateID" id="gs_CandidateID" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="CTZDIST" id="gs_CTZDIST" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="EXPERIENCE" id="gs_EXPERIENCE" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="OTHERDETAILS" id="gs_OTHERDETAILS" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="ADDRESS" id="gs_ADDRESS" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="QUALIFICATION" id="gs_QUALIFICATION" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="SPOUCE_NAME" id="gs_SPOUCE_NAME" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="FATHER_NAME" id="gs_FATHER_NAME" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="DOB" id="gs_DOB" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="display: none;"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="NAMEOFINST" id="gs_NAMEOFINST" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><select name="StateName" id="gs_StateName" style="width: 100%;"><option value="">All</option><option value="कोशी प्रदेश">कोशी प्रदेश</option><option value="मधेश प्रदेश">मधेश प्रदेश</option><option value="बागमती प्रदेश">बागमती प्रदेश</option><option value="गण्डकी प्रदेश">गण्डकी प्रदेश</option><option value="लुम्बिनी प्रदेश">लुम्बिनी प्रदेश</option><option value="कर्णाली प्रदेश">कर्णाली प्रदेश</option><option value="सुदूरपश्चिम प्रदेश">सुदूरपश्चिम प्रदेश</option></select></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><select name="DistrictName" id="gs_DistrictName" style="width: 100%;"><option value="">All</option><option value="ताप्लेजुंग">ताप्लेजुंग</option><option value="पाँचथर">पाँचथर</option><option value="इलाम">इलाम</option><option value="झापा">झापा</option><option value="संखुवासभा">संखुवासभा</option><option value="तेर्हथुम">तेर्हथुम</option><option value="भोजपुर">भोजपुर</option><option value="धनकुटा">धनकुटा</option><option value="मोरङ्ग">मोरङ्ग</option><option value="सुनसरी">सुनसरी</option><option value="सोलुखुम्बु">सोलुखुम्बु</option><option value="खोटाङ्ग">खोटाङ्ग</option><option value="ओखलढुंगा">ओखलढुंगा</option><option value="उदयपुर">उदयपुर</option><option value="सप्तरी">सप्तरी</option><option value="सिराहा">सिराहा</option><option value="धनुषा">धनुषा</option><option value="महोत्तरी">महोत्तरी</option><option value="सर्लाही">सर्लाही</option><option value="रौतहट">रौतहट</option><option value="बारा">बारा</option><option value="पर्सा">पर्सा</option><option value="दोलखा">दोलखा</option><option value="रामेछाप">रामेछाप</option><option value="सिन्धुली">सिन्धुली</option><option value="रसुवा">रसुवा</option><option value="धादिङ्ग">धादिङ्ग</option><option value="नुवाकोट">नुवाकोट</option><option value="काठमाडौं">काठमाडौं</option><option value="भक्तपुर">भक्तपुर</option><option value="ललितपुर">ललितपुर</option><option value="काभ्रेपलाञ्चोक">काभ्रेपलाञ्चोक</option><option value="सिन्धुपाल्चोक">सिन्धुपाल्चोक</option><option value="मकवानपुर">मकवानपुर</option><option value="चितवन">चितवन</option><option value="गोरखा">गोरखा</option><option value="मनाङ्ग">मनाङ्ग</option><option value="लमजुंग">लमजुंग</option><option value="कास्की">कास्की</option><option value="तनहुँ">तनहुँ</option><option value="स्याङ्जा">स्याङ्जा</option><option value="नवलपरासी (बर्दघाट सुस्ता पूर्व)">नवलपरासी (बर्दघाट सुस्ता पूर्व)</option><option value="मुस्तांग">मुस्तांग</option><option value="म्याग्दी">म्याग्दी</option><option value="बागलुङ">बागलुङ</option><option value="पर्वत">पर्वत</option><option value="गुल्मी">गुल्मी</option><option value="पाल्पा">पाल्पा</option><option value="अर्घाखांची">अर्घाखांची</option><option value="रुपन्देही">रुपन्देही</option><option value="कपिलवस्तु">कपिलवस्तु</option><option value="रुकुम पूर्व">रुकुम पूर्व</option><option value="रोल्पा">रोल्पा</option><option value="प्यूठान">प्यूठान</option><option value="दाङ">दाङ</option><option value="बाँके">बाँके</option><option value="बर्दिया">बर्दिया</option><option value="नवलपरासी (बर्दघाट सुस्ता पश्चिम)">नवलपरासी (बर्दघाट सुस्ता पश्चिम)</option><option value="सल्यान">सल्यान</option><option value="डोल्पा">डोल्पा</option><option value="मुगु">मुगु</option><option value="जुम्ला">जुम्ला</option><option value="कालिकोट">कालिकोट</option><option value="हुम्ला">हुम्ला</option><option value="जाजरकोट">जाजरकोट</option><option value="दैलेख">दैलेख</option><option value="सुर्खेत">सुर्खेत</option><option value="रुकुम पश्चिम">रुकुम पश्चिम</option><option value="बाजुरा">बाजुरा</option><option value="अछाम">अछाम</option><option value="बझाङ्ग">बझाङ्ग</option><option value="डोटी">डोटी</option><option value="कैलाली">कैलाली</option><option value="दार्चुला">दार्चुला</option><option value="बैतडी">बैतडी</option><option value="डडेलधुरा">डडेलधुरा</option><option value="कन्चनपुर">कन्चनपुर</option></select></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="SCConstID" id="gs_SCConstID" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="CandidateName" id="gs_CandidateName" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="Gender" id="gs_Gender" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="PoliticalPartyName" id="gs_PoliticalPartyName" value=""></td></tr></tbody></table></div></th><th role="columnheader" class="ui-state-default ui-th-column ui-th-ltr"><div style="position:relative;height:100%;padding-right:0.3em;padding-left:0.3em;"><table class="ui-search-table" cellspacing="0"><tbody><tr><td class="ui-search-oper" style="display: none;"></td><td class="ui-search-input"><input type="text" style="width: 100%; padding: 0px;" name="SymbolName" id="gs_SymbolName" value=""></td></tr></tbody></table></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 425px; width: 1100px;"><div style="position:relative;"><div></div><table id="jQGridDemo" cellpadding="0" cellspacing="0" tabindex="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_jQGridDemo" class="ui-jqgrid-btable" style="width: 1082px;"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height:0px;width:133px;"></td><td role="gridcell" style="height:0px;width:166px;"></td><td role="gridcell" style="height:0px;width:117px;"></td><td role="gridcell" style="height:0px;width:183px;"></td><td role="gridcell" style="height:0px;width:67px;"></td><td role="gridcell" style="height:0px;width:250px;"></td><td role="gridcell" style="height:0px;width:166px;"></td></tr><tr role="row" id="1" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="339933" aria-describedby="jQGridDemo_CandidateID">339933</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_EXPERIENCE">0</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_OTHERDETAILS">0</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ सिरीजङ्घा गाउँपालिका मादिबुङ" aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ सिरीजङ्घा गाउँपालिका मादिबुङ</td><td role="gridcell" style="display:none;" title="स्नातक" aria-describedby="jQGridDemo_QUALIFICATION">स्नातक</td><td role="gridcell" style="display:none;" title="-" aria-describedby="jQGridDemo_SPOUCE_NAME">-</td><td role="gridcell" style="display:none;" title="भुपेन्द्र  थेबे" aria-describedby="jQGridDemo_FATHER_NAME">भुपेन्द्र  थेबे</td><td role="gridcell" style="display:none;" title="38" aria-describedby="jQGridDemo_DOB">38</td><td role="gridcell" style="display:none;" title="TU" aria-describedby="jQGridDemo_NAMEOFINST">TU</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="क्षितिज थेबे" aria-describedby="jQGridDemo_CandidateName">क्षितिज थेबे</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="नेपाल कम्युनिष्ट पार्टी (एकीकृत मार्क्सवादी लेनिनवादी)" aria-describedby="jQGridDemo_PoliticalPartyName">नेपाल कम्युनिष्ट पार्टी (एकीकृत मार्क्सवादी लेनिनवादी)</td><td role="gridcell" style="" title="सुर्य" aria-describedby="jQGridDemo_SymbolName">सुर्य</td></tr><tr role="row" id="2" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="341131" aria-describedby="jQGridDemo_CandidateID">341131</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_EXPERIENCE">0</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_OTHERDETAILS">0</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ सिरीजङ्घा गाउँपालिका " aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ सिरीजङ्घा गाउँपालिका </td><td role="gridcell" style="display:none;" title="स्नातक" aria-describedby="jQGridDemo_QUALIFICATION">स्नातक</td><td role="gridcell" style="display:none;" title="राधिका  लिङदेन तुम्याड" aria-describedby="jQGridDemo_SPOUCE_NAME">राधिका  लिङदेन तुम्याड</td><td role="gridcell" style="display:none;" title="पुर्ण बहादुर लिम्बु" aria-describedby="jQGridDemo_FATHER_NAME">पुर्ण बहादुर लिम्बु</td><td role="gridcell" style="display:none;" title="46" aria-describedby="jQGridDemo_DOB">46</td><td role="gridcell" style="display:none;" title="पाथीभरा वहुमुखी क्याम्पस" aria-describedby="jQGridDemo_NAMEOFINST">पाथीभरा वहुमुखी क्याम्पस</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="गजेन्द्र प्रसाद तुम्याङ लिम्बु" aria-describedby="jQGridDemo_CandidateName">गजेन्द्र प्रसाद तुम्याङ लिम्बु</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="नेपाली काँग्रेस" aria-describedby="jQGridDemo_PoliticalPartyName">नेपाली काँग्रेस</td><td role="gridcell" style="" title="रुख" aria-describedby="jQGridDemo_SymbolName">रुख</td></tr><tr role="row" id="3" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="339610" aria-describedby="jQGridDemo_CandidateID">339610</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_EXPERIENCE">0</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_OTHERDETAILS">0</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ सिरीजङ्घा गाउँपालिका चिचिहाङ्ग" aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ सिरीजङ्घा गाउँपालिका चिचिहाङ्ग</td><td role="gridcell" style="display:none;" title="I.s.c" aria-describedby="jQGridDemo_QUALIFICATION">I.s.c</td><td role="gridcell" style="display:none;" title="कुमारी  बुडाक्षेत्री" aria-describedby="jQGridDemo_SPOUCE_NAME">कुमारी  बुडाक्षेत्री</td><td role="gridcell" style="display:none;" title="शम्सेर बहादुर बुडाक्षेत्री" aria-describedby="jQGridDemo_FATHER_NAME">शम्सेर बहादुर बुडाक्षेत्री</td><td role="gridcell" style="display:none;" title="50" aria-describedby="jQGridDemo_DOB">50</td><td role="gridcell" style="display:none;" title="TU" aria-describedby="jQGridDemo_NAMEOFINST">TU</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="खेल प्रसाद बुडाक्षेत्री" aria-describedby="jQGridDemo_CandidateName">खेल प्रसाद बुडाक्षेत्री</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="नेपाली कम्युनिष्ट पार्टी" aria-describedby="jQGridDemo_PoliticalPartyName">नेपाली कम्युनिष्ट पार्टी</td><td role="gridcell" style="" title="पाँचकुने तारा" aria-describedby="jQGridDemo_SymbolName">पाँचकुने तारा</td></tr><tr role="row" id="4" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="340459" aria-describedby="jQGridDemo_CandidateID">340459</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_EXPERIENCE">0</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_OTHERDETAILS">0</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ सिरीजङ्घा गाउँपालिका " aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ सिरीजङ्घा गाउँपालिका </td><td role="gridcell" style="display:none;" title="ईन्जिनेरिङ ग्राजुएड" aria-describedby="jQGridDemo_QUALIFICATION">ईन्जिनेरिङ ग्राजुएड</td><td role="gridcell" style="display:none;" title="मानोलाक  वुफाश्रि  श्रेष्ठ" aria-describedby="jQGridDemo_SPOUCE_NAME">मानोलाक  वुफाश्रि  श्रेष्ठ</td><td role="gridcell" style="display:none;" title="टेकबहादुर  श्रेष्ठ" aria-describedby="jQGridDemo_FATHER_NAME">टेकबहादुर  श्रेष्ठ</td><td role="gridcell" style="display:none;" title="55" aria-describedby="jQGridDemo_DOB">55</td><td role="gridcell" style="display:none;" title="युनिभर सिटी आर्मानिय" aria-describedby="jQGridDemo_NAMEOFINST">युनिभर सिटी आर्मानिय</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="बिरेन्द्र श्रेष्ठ" aria-describedby="jQGridDemo_CandidateName">बिरेन्द्र श्रेष्ठ</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="राष्ट्रिय स्वतन्त्र पार्टी" aria-describedby="jQGridDemo_PoliticalPartyName">राष्ट्रिय स्वतन्त्र पार्टी</td><td role="gridcell" style="" title="घण्टी" aria-describedby="jQGridDemo_SymbolName">घण्टी</td></tr><tr role="row" id="5" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="340160" aria-describedby="jQGridDemo_CandidateID">340160</td><td role="gridcell" style="display:none;" title="कैलाली" aria-describedby="jQGridDemo_CTZDIST">कैलाली</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_EXPERIENCE">0</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_OTHERDETAILS">0</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ मिक्वाखोला गाउँपालिका थापा गाउँ" aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ मिक्वाखोला गाउँपालिका थापा गाउँ</td><td role="gridcell" style="display:none;" title="आई.ए." aria-describedby="jQGridDemo_QUALIFICATION">आई.ए.</td><td role="gridcell" style="display:none;" title="इश्वरा, पु्ण्यवती देवी, प्रसाई, अधिकारी (थापा)" aria-describedby="jQGridDemo_SPOUCE_NAME">इश्वरा, पु्ण्यवती देवी, प्रसाई, अधिकारी (थापा)</td><td role="gridcell" style="display:none;" title="नरजुङ्ग  थापा" aria-describedby="jQGridDemo_FATHER_NAME">नरजुङ्ग  थापा</td><td role="gridcell" style="display:none;" title="63" aria-describedby="jQGridDemo_DOB">63</td><td role="gridcell" style="display:none;" title="पाथीभरा वहुमुखी क्याम्पस" aria-describedby="jQGridDemo_NAMEOFINST">पाथीभरा वहुमुखी क्याम्पस</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="ईन्द्र प्रसाद थापा" aria-describedby="jQGridDemo_CandidateName">ईन्द्र प्रसाद थापा</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="राष्ट्रिय प्रजातन्त्र पार्टी" aria-describedby="jQGridDemo_PoliticalPartyName">राष्ट्रिय प्रजातन्त्र पार्टी</td><td role="gridcell" style="" title="हलो" aria-describedby="jQGridDemo_SymbolName">हलो</td></tr><tr role="row" id="6" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="340363" aria-describedby="jQGridDemo_CandidateID">340363</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_EXPERIENCE">0</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_OTHERDETAILS">0</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ फुङलिङ नगरपालिका बोझे" aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ फुङलिङ नगरपालिका बोझे</td><td role="gridcell" style="display:none;" title="एम.ए." aria-describedby="jQGridDemo_QUALIFICATION">एम.ए.</td><td role="gridcell" style="display:none;" title="-" aria-describedby="jQGridDemo_SPOUCE_NAME">-</td><td role="gridcell" style="display:none;" title="सन मान गुरुङ" aria-describedby="jQGridDemo_FATHER_NAME">सन मान गुरुङ</td><td role="gridcell" style="display:none;" title="66" aria-describedby="jQGridDemo_DOB">66</td><td role="gridcell" style="display:none;" title="BHM" aria-describedby="jQGridDemo_NAMEOFINST">BHM</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="सूर्य गुरुङ" aria-describedby="jQGridDemo_CandidateName">सूर्य गुरुङ</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="जनता समाजवादी पार्टी, नेपाल" aria-describedby="jQGridDemo_PoliticalPartyName">जनता समाजवादी पार्टी, नेपाल</td><td role="gridcell" style="" title="ढल्केको छाता" aria-describedby="jQGridDemo_SymbolName">ढल्केको छाता</td></tr><tr role="row" id="7" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="339312" aria-describedby="jQGridDemo_CandidateID">339312</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="-" aria-describedby="jQGridDemo_EXPERIENCE">-</td><td role="gridcell" style="display:none;" title="-" aria-describedby="jQGridDemo_OTHERDETAILS">-</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ फुङलिङ नगरपालिका " aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ फुङलिङ नगरपालिका </td><td role="gridcell" style="display:none;" title="कक्षा १०" aria-describedby="jQGridDemo_QUALIFICATION">कक्षा १०</td><td role="gridcell" style="display:none;" title="लक्ष्मी  लिम्बु" aria-describedby="jQGridDemo_SPOUCE_NAME">लक्ष्मी  लिम्बु</td><td role="gridcell" style="display:none;" title="फौद मान लिम्बु" aria-describedby="jQGridDemo_FATHER_NAME">फौद मान लिम्बु</td><td role="gridcell" style="display:none;" title="57" aria-describedby="jQGridDemo_DOB">57</td><td role="gridcell" style="display:none;" title="-" aria-describedby="jQGridDemo_NAMEOFINST">-</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="सन्त बहादुर लिम्बु" aria-describedby="jQGridDemo_CandidateName">सन्त बहादुर लिम्बु</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="मंगोल नेशनल अर्गनाइजेसन" aria-describedby="jQGridDemo_PoliticalPartyName">मंगोल नेशनल अर्गनाइजेसन</td><td role="gridcell" style="" title="कुखुराको भाले" aria-describedby="jQGridDemo_SymbolName">कुखुराको भाले</td></tr><tr role="row" id="8" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="339488" aria-describedby="jQGridDemo_CandidateID">339488</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_EXPERIENCE">0</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_OTHERDETAILS">0</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ मिक्वाखोला गाउँपालिका थलङ" aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ मिक्वाखोला गाउँपालिका थलङ</td><td role="gridcell" style="display:none;" title="साक्षर" aria-describedby="jQGridDemo_QUALIFICATION">साक्षर</td><td role="gridcell" style="display:none;" title="मन माया लिम्बू" aria-describedby="jQGridDemo_SPOUCE_NAME">मन माया लिम्बू</td><td role="gridcell" style="display:none;" title="सुक राज लिम्बू" aria-describedby="jQGridDemo_FATHER_NAME">सुक राज लिम्बू</td><td role="gridcell" style="display:none;" title="48" aria-describedby="jQGridDemo_DOB">48</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_NAMEOFINST">0</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="इन्द्र कुमार लिम्बू" aria-describedby="jQGridDemo_CandidateName">इन्द्र कुमार लिम्बू</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="नेपाल जनमुक्ति पार्टी" aria-describedby="jQGridDemo_PoliticalPartyName">नेपाल जनमुक्ति पार्टी</td><td role="gridcell" style="" title="घर" aria-describedby="jQGridDemo_SymbolName">घर</td></tr><tr role="row" id="9" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="339429" aria-describedby="jQGridDemo_CandidateID">339429</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="-" aria-describedby="jQGridDemo_EXPERIENCE">-</td><td role="gridcell" style="display:none;" title="-" aria-describedby="jQGridDemo_OTHERDETAILS">-</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ फक्ताङलुङ गाउँपालिका सेतोबा" aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ फक्ताङलुङ गाउँपालिका सेतोबा</td><td role="gridcell" style="display:none;" title="SEE" aria-describedby="jQGridDemo_QUALIFICATION">SEE</td><td role="gridcell" style="display:none;" title="-" aria-describedby="jQGridDemo_SPOUCE_NAME">-</td><td role="gridcell" style="display:none;" title="बरधोज  लिम्बु" aria-describedby="jQGridDemo_FATHER_NAME">बरधोज  लिम्बु</td><td role="gridcell" style="display:none;" title="44" aria-describedby="jQGridDemo_DOB">44</td><td role="gridcell" style="display:none;" title="सरस्वती मा.वि. " aria-describedby="jQGridDemo_NAMEOFINST">सरस्वती मा.वि. </td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="मुकसाम लाबुङ, लिम्बु" aria-describedby="jQGridDemo_CandidateName">मुकसाम लाबुङ, लिम्बु</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="संघीय लोकतान्त्रिक राष्ट्रिय मञ्च" aria-describedby="jQGridDemo_PoliticalPartyName">संघीय लोकतान्त्रिक राष्ट्रिय मञ्च</td><td role="gridcell" style="" title="दाप सहितको खुकुरी" aria-describedby="jQGridDemo_SymbolName">दाप सहितको खुकुरी</td></tr><tr role="row" id="10" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" style="display:none;" title="340005" aria-describedby="jQGridDemo_CandidateID">340005</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ" aria-describedby="jQGridDemo_CTZDIST">ताप्लेजुङ</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_EXPERIENCE">0</td><td role="gridcell" style="display:none;" title="0" aria-describedby="jQGridDemo_OTHERDETAILS">0</td><td role="gridcell" style="display:none;" title="ताप्लेजुङ सिरीजङ्घा गाउँपालिका खाँगे" aria-describedby="jQGridDemo_ADDRESS">ताप्लेजुङ सिरीजङ्घा गाउँपालिका खाँगे</td><td role="gridcell" style="display:none;" title="कक्षा ८" aria-describedby="jQGridDemo_QUALIFICATION">कक्षा ८</td><td role="gridcell" style="display:none;" title="सीता  राई" aria-describedby="jQGridDemo_SPOUCE_NAME">सीता  राई</td><td role="gridcell" style="display:none;" title="बल बहादुर राई" aria-describedby="jQGridDemo_FATHER_NAME">बल बहादुर राई</td><td role="gridcell" style="display:none;" title="49" aria-describedby="jQGridDemo_DOB">49</td><td role="gridcell" style="display:none;" title="गणेश मा.वि. खेवाङ" aria-describedby="jQGridDemo_NAMEOFINST">गणेश मा.वि. खेवाङ</td><td role="gridcell" style="" title="कोशी प्रदेश" aria-describedby="jQGridDemo_StateName">कोशी प्रदेश</td><td role="gridcell" style="" title="ताप्लेजुङ" aria-describedby="jQGridDemo_DistrictName">ताप्लेजुङ</td><td role="gridcell" style="" title="1" aria-describedby="jQGridDemo_SCConstID">1</td><td role="gridcell" style="" title="सन्तोष राई" aria-describedby="jQGridDemo_CandidateName">सन्तोष राई</td><td role="gridcell" style="" title="पुरुष" aria-describedby="jQGridDemo_Gender">पुरुष</td><td role="gridcell" style="" title="श्रम संस्कृति पार्टी" aria-describedby="jQGridDemo_PoliticalPartyName">श्रम संस्कृति पार्टी</td><td role="gridcell" style="" title="अँजुलीमा रहेको माटो" aria-describedby="jQGridDemo_SymbolName">अँजुलीमा रहेको माटो</td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mjQGridDemo">&nbsp;</div><div id="jQGridDemoPager" style="width: 1100px; min-height: 40px;" class="ui-state-default ui-jqgrid-pager ui-corner-bottom" dir="ltr">
+                <div id="pg_jQGridDemoPager" class="ui-pager-control" role="group"><table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table" style="width:100%;table-layout:fixed;height:100%;" role="row"><tbody><tr><td id="jQGridDemoPager_left" align="left"><table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table navtable" style="float:left;table-layout:auto;"><tbody><tr><td class="ui-pg-button ui-corner-all" title="Reload Grid" id="refresh_jQGridDemo"><div class="ui-pg-div"><span class="ui-icon ui-icon-refresh"></span>Refresh</div></td></tr></tbody></table></td><td id="jQGridDemoPager_center" align="center" style="white-space: pre; width: 261px;"><table cellspacing="0" cellpadding="0" border="0" style="table-layout:auto;" class="ui-pg-table"><tbody><tr><td id="first_jQGridDemoPager" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-first"></span></td><td id="prev_jQGridDemoPager" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-prev"></span></td><td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td><td dir="ltr">Page <input class="ui-pg-input" type="text" size="2" maxlength="7" value="0" role="textbox" style=""> of <span id="sp_1_jQGridDemoPager">341</span></td><td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td><td id="next_jQGridDemoPager" class="ui-pg-button ui-corner-all"><span class="ui-icon ui-icon-seek-next"></span></td><td id="last_jQGridDemoPager" class="ui-pg-button ui-corner-all"><span class="ui-icon ui-icon-seek-end"></span></td><td dir="ltr"><select class="ui-pg-selbox" role="listbox"><option role="option" value="10" selected="selected">10</option><option role="option" value="20">20</option><option role="option" value="30">30</option></select></td></tr></tbody></table></td><td id="jQGridDemoPager_right" align="right"><div dir="ltr" style="text-align:right" class="ui-paging-info">View 1 - 10 of 3,406</div></td></tr></tbody></table></div></div></div>
+                <div id="jQGridDemoPager" style="width: 500px; min-height: 40px;">
+                </div>
+                <br>
+                
+                <div id="divFooter" style="text-align: center">
+                    द्रष्टब्यः मुख्य निर्वाचन अधिकृत र निर्वाचन अधिकृतको कार्यालयहरुबाट यस प्रणालीमा
+                    प्रविष्ट भएका तथ्याङ्कको आधारमा ।
+                </div>
+                <!-- Popup Modal -->
+                <script type="text/javascript">
+
+                    function Vm() {
+                        var self = this;
+                        self.Details = ko.observable();
+                        self.ConstName = ko.observable();
+                    }
+
+                    $(document).ready(function () {
+                        let candVM = new Vm();
+                        ko.applyBindings(candVM, document.querySelector('#ModalDetails'));
+                        $("#banner-Image").attr("src", "/Images/pratinidhi-sabha.png");
+
+                        let states = [], dists = [];
+
+                        fetch('/JSONFiles/Election2082/Local/Lookup/states.json')
+                            .then(x => x.json())
+                            .then(data => {
+                                states = data;
+                            });
+
+                        fetch('/JSONFiles/Election2082/Local/Lookup/districts.json')
+                            .then(x => x.json())
+                            .then(data => {
+                                dists = data;
+                            });
+
+
+                        let candidates = [];
+                        var cols = [
+                            { label: 'Candidate_ID', name: 'CandidateID', width: 0, hidden: true },
+
+                            { label: 'janmasthan', name: 'CTZDIST', width: 0, hidden: true },
+                            { label: 'experience', name: 'EXPERIENCE', width: 0, hidden: true },
+                            { label: 'otherdetails', name: 'OTHERDETAILS', width: 0, hidden: true },
+                            { label: 'permaddress', name: 'ADDRESS', width: 0, hidden: true },
+                            { label: 'qualification', name: 'QUALIFICATION', width: 0, hidden: true },
+                            { label: 'spousename', name: 'SPOUCE_NAME', width: 0, hidden: true },
+                            { label: 'fathername', name: 'FATHER_NAME', width: 0, hidden: true },
+                            { label: 'DOB', name: 'DOB', width: 0, hidden: true },
+                            { label: 'nameofinst', name: 'NAMEOFINST', width: 0, hidden: true },
+
+                            { label: 'प्रदेश', name: 'StateName', width: 80, stype: "select" },
+                            { label: 'जिल्ला', name: 'DistrictName', width: 100, stype: "select" },
+                            { label: 'प्रतिनिधि सभा निर्वाचन क्षेत्र', name: 'SCConstID', width: 70 },
+                            { label: 'उम्मेदवारको नाम', name: 'CandidateName', width: 110 },
+                            { label: 'लिङ्ग', name: 'Gender', width: 40 },
+                            { label: ' 	राजनीतिक दल / स्वतन्त्र', name: 'PoliticalPartyName', width: 150 },
+                            { label: 'चुनाव चिन्ह ', name: 'SymbolName', width: 100 },
+                            //{ label: 'जम्मा प्राप्त मत', name: 'TotalVoteReceived', width: 70 },
+                            //{ label: 'स्थान', name: 'Rank', width: 25, searchoptions: { sopt: ['eq']} },
+                            //{ label: 'कैफियत', name: 'Remarks', width: 50 },
+                        ];
+                        fetch('/JSONFiles/ElectionResultCentral2082.txt').then(x => x.json()).then(arr => {
+                            candidates = arr;
+                        });
+
+                        displayCandidate = function (data) {
+                            $('#ModalDetails').modal('show');
+                            candVM.ConstName('प्रतिनिधि सभा निर्वाचन क्षेत्र ' + data.SCConstID);
+                            candVM.Details(data);
+                            getImage(data.CandidateID);
+                        };
+
+                        getImage = function (candidateid) {
+                            document.getElementById('imageDisplay').setAttribute('src', null);
+                            var imgsrc = "Images/Candidate/" + candidateid + ".jpg"
+                            console.log(imgsrc, 'src');
+                            document.getElementById('imageDisplay').setAttribute('src', imgsrc);
+                        };
+
+                        jQuery("#jQGridDemo").jqGrid({
+                            url: '/JSONFiles/ElectionResultCentral2082.txt',
+                            datatype: "json",
+                            height: 425,
+                            width: 1100,
+                            //colNames: ['क्र.सं.', 'जिल्ला', 'स्थानीय तह', 'पद', 'वडा नं.', 'उम्मेदवारको नाम', 'लिङ्ग', "उमेर", 'राजनीतिक दलको नाम'],
+                            colModel: cols,
+                            rowNum: 10,
+                            mtype: 'GET',
+                            loadonce: true,
+                            rowList: [10, 20, 30],
+                            pager: '#jQGridDemoPager',
+                            sortname: '_id',
+                            viewrecords: true,
+                            sortorder: 'desc',
+                            onSelectRow: function (rowid, status, e) {
+                                var $self = $(this), $target = $(e.target),
+                                    p = $self.jqGrid("getGridParam"),
+                                    rowData = $self.jqGrid("getLocalRow", rowid),
+                                    $td = $target.closest("tr.jqgrow>td"),
+                                    iCol = $td.length > 0 ? $td[0].cellIndex : -1,
+                                    cmName = iCol >= 0 ? p.colModel[iCol].name : "";
+                                displayCandidate(rowData);
+                            },
+                            ignoreCase: true
+                        });
+
+                        getUniqueNames = function (columnName) {
+                            var texts = $('#jQGridDemo').jqGrid("getCol", columnName), uniqueTexts = [],
+                                textsLength = texts.length, text, textsMap = {}, i;
+                            for (i = 0; i < textsLength; i++) {
+                                text = texts[i];
+                                if (text !== undefined && textsMap[text] === undefined) {
+                                    textsMap[text] = true;
+                                    uniqueTexts.push(text);
+                                }
+                            }
+                            return uniqueTexts;
+                        };
+                        getLookupArray = function (columnName) {
+                            var items;
+                            $.ajax({
+                                async: false,
+                                cache: false,
+                                url: "/JSONFiles/" + columnName + ".txt",
+                                success: function (data) {
+                                    items = JSON.parse(data);
+                                }
+                            });
+                            return items;
+                        };
+                        buildSearchSelect = function (items) {
+                            var values = ":All";
+                            $.each(items, function () {
+                                values += ";" + this + ":" + this;
+                            });
+                            return values;
+                        };
+                        setSearchSelect = function (columnName) {
+                            $('#jQGridDemo').jqGrid("setColProp", columnName, {
+                                stype: "select",
+                                searchoptions: {
+                                    value: buildSearchSelect(getLookupArray(columnName)),
+                                    sopt: ["eq"]
+                                }
+
+                            });
+                        };
+                        setVariableSearchSelect = function (columnName, jsonName) {
+                            $('#jQGridDemo').jqGrid("setColProp", columnName, {
+                                stype: "select",
+                                searchoptions: {
+                                    value: buildSearchSelect(getLookupArray(jsonName)),
+                                    sopt: ["eq"]
+                                }
+                            });
+                        };
+
+                        setSearchSelect('StateName');
+                        setSearchSelect('DistrictName');
+                        //setSearchSelect('LocalBodyName');
+                        // setSearchSelect('PoliticalPartyName');
+                        //setSearchSelect('SCConstName');
+
+                        $('#jQGridDemo').jqGrid('navGrid', '#jQGridDemoPager',
+                            {
+                                edit: false,
+                                add: false,
+                                del: false,
+                                search: false,
+                                searchtext: "Search",
+                                addtext: "Add",
+                                edittext: "Edit",
+                                deltext: "Delete"
+                            },
+                            {//SEARCH
+                                closeOnEscape: true
+                            }
+                        );
+                        //setSearchSelect.call($('#jQGridDemo'), "DistrictName");
+                        jQuery("#jQGridDemo").jqGrid('filterToolbar', { searchOperators: false, searchOnEnter: false, autosearch: true });
+
+                        $("#btnExportExcel").on("click", function () {
+                            $("#jQGridDemo").jqGrid("exportToExcel", {
+                                includeLabels: true,
+                                includeGroupHeader: true,
+                                includeFooter: true,
+                                fileName: "CandidateNominationList.xlsx",
+                                maxlength: 500 // maxlength for visible string data 
+                            })
+                        });
+
+                        //$('#gs_PoliticalPartyName option:gt(0)').remove();
+                        //var $partySelect = $('#gs_PoliticalPartyName');
+                        //var partyNames = getLookupArray('PoliticalPartyNew');
+                        //$.each(partyNames, function (data, value) {
+                        //    $partySelect.append($("<option></option>").attr("value", value).text(value));
+                        //});
+
+                        $('#gs_StateName').on('change', evt => {
+                            $('#gs_DistrictName').val('');
+                            stateId = states.find(x => x.name == evt.target.value)?.id;
+                            if (evt.target.value.toLowerCase() == '') districtList = dists;
+                            else districtList = dists.filter(x => x.parentId == stateId);
+                            [...document.querySelector('#gs_DistrictName').options].slice(1).map(x => x.remove());
+                            districtList.forEach(x => {
+                                document.querySelector('#gs_DistrictName').options.add(new Option(x.name, x.name));
+                            });
+                        });
+                    });
+
+                    var candidateId;
+                    document.getElementById("jQGridDemo").addEventListener("click", function (e) {
+                        //var data = table.row(e.target).data();
+                        var target = e.target || e.srcElement;
+                        candidateId = target.closest('tr').cells[0].innerText;
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div id="ModalDetails" class="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        ×</button>
+                    <h4 class="modal-title">उम्मेदवारको वैयक्तिक विवरण (अनुसूची-१० )</h4>
+                </div>
+                <div class="modal-body" data-bind="with: Details"></div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+    <footer>
+        <div class="col-md-12">
+            Powered by <a href="http://pcs.com.np/">PCS</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/JSLibrary/Common.js?v=0.7"></script>
+    <script type="text/javascript">
+        genMenu();
+
+        function hideMenu() {
+            document.querySelector('body').classList.remove('menu-active');
+        }
+        function showMenu() {
+            document.querySelector('body').classList.add('menu-active');
+        }
+        var allowedKeys = {
+            37: 'left',
+            38: 'up',
+            39: 'right',
+            40: 'down',
+            65: 'a',
+            66: 'b'
+        };
+        var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+        var konamiCodePosition = 0;
+        document.addEventListener('keydown', function (e) {
+            var key = allowedKeys[e.keyCode];
+            var requiredKey = konamiCode[konamiCodePosition];
+            if (key == requiredKey) {
+                konamiCodePosition++;
+                if (konamiCodePosition == konamiCode.length) {
+                    let theme = localStorage.getItem('theme');
+                    let newTheme = theme == 'light' ? 'dark' : 'light';
+                    localStorage.setItem('theme', newTheme);
+                    konamiCodePosition = 0;
+                }
+            } else {
+                konamiCodePosition = 0;
+            }
+        });
+    </script>
+
+
+<div class="ui-widget ui-widget-content ui-corner-all ui-jqdialog" id="alertmod_jQGridDemo" dir="ltr" tabindex="-1" role="dialog" aria-labelledby="alerthd_jQGridDemo" aria-hidden="true" style="width: 200px; height: auto; z-index: 950; overflow: hidden; top: 515px; left: 860px;"><div class="ui-jqdialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" id="alerthd_jQGridDemo" style="cursor: move;"><span class="ui-jqdialog-title" style="float: left;">Warning</span><a href="javascript:void(0)" class="ui-jqdialog-titlebar-close ui-corner-all" style="right: 0.3em;"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-jqdialog-content ui-widget-content" id="alertcnt_jQGridDemo"><div>Please, select row</div><span tabindex="0"><span tabindex="-1" id="jqg_alrt"></span></span></div><div class="jqResize ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"></div></div></body></html>

@@ -1,0 +1,9233 @@
+// Auto-generated candidate enrichment data
+// Source: Claude API enrichment of Election Commission 2082 data
+// Total enriched candidates: 820
+
+export interface ElectionHistoryEntry {
+  year: string;
+  district: string;
+  constituency: string;
+  party: string;
+  result: string;
+}
+
+export interface CandidateEnrichment {
+  id: string;
+  summary: string;
+  achievements: string[];
+  controversies: string[];
+  electionHistory: ElectionHistoryEntry[];
+  firstTimeCandidate: boolean;
+}
+
+const ENRICHMENTS: Record<string, CandidateEnrichment> = {
+  "339933": {
+    id: "339933",
+    summary: "क्षितिज थेबे एमालेका उम्मेदवार हुन् जसले ताप्लेजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341131": {
+    id: "341131",
+    summary: "गजेन्द्र प्रसाद तुम्याङ लिम्बु काँग्रेसका उम्मेदवार हुन् जसले ताप्लेजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339610": {
+    id: "339610",
+    summary: "खेल प्रसाद बुडाक्षेत्री नेकपा (माओवादी)का उम्मेदवार हुन् जसले ताप्लेजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340459": {
+    id: "340459",
+    summary: "बिरेन्द्र श्रेष्ठ रास्वपाका उम्मेदवार हुन् जसले ताप्लेजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340160": {
+    id: "340160",
+    summary: "ईन्द्र प्रसाद थापा राप्रपाका उम्मेदवार हुन् जसले ताप्लेजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340277": {
+    id: "340277",
+    summary: "अइन्द्र सुन्दर नेम्वाङ एमालेका उम्मेदवार हुन् जसले पाँचथर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340563": {
+    id: "340563",
+    summary: "नरेन्द्र कुमार केरुङ काँग्रेसका उम्मेदवार हुन् जसले पाँचथर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340425": {
+    id: "340425",
+    summary: "हर्क बहादुर नेम्बाङ नेकपा (माओवादी)का उम्मेदवार हुन् जसले पाँचथर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340066": {
+    id: "340066",
+    summary: "महेन्द्र विक्रम थाम्सुहाङ रास्वपाका उम्मेदवार हुन् जसले पाँचथर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340153": {
+    id: "340153",
+    summary: "तेज कुमार कुरुम्वाङ्ग राप्रपाका उम्मेदवार हुन् जसले पाँचथर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339884": {
+    id: "339884",
+    summary: "काजी मान कागते एमालेका उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340081": {
+    id: "340081",
+    summary: "निश्कल राई काँग्रेसका उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340630": {
+    id: "340630",
+    summary: "रन बहादुर राई नेकपा (माओवादी)का उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340213": {
+    id: "340213",
+    summary: "विमल गदाल रास्वपाका उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339362": {
+    id: "339362",
+    summary: "ज्वाला  नेपाल राप्रपाका उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339922": {
+    id: "339922",
+    summary: "सुहाङ नेम्बाङ एमालेका उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340271": {
+    id: "340271",
+    summary: "भेषराज आचार्य काँग्रेसका उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340605": {
+    id: "340605",
+    summary: "ओम बहादुर गुरुङ्ग नेकपा (माओवादी)का उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341350": {
+    id: "341350",
+    summary: "गोकुल बहादुर राई रास्वपाका उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339478": {
+    id: "339478",
+    summary: "गणेश प्रसाद दुलाल राप्रपाका उम्मेदवार हुन् जसले इलाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340001": {
+    id: "340001",
+    summary: "रामचन्द्र उप्रेती एमालेका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340934": {
+    id: "340934",
+    summary: "केशव राज पाण्डे काँग्रेसका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340297": {
+    id: "340297",
+    summary: "अशेष घिमिरे नेकपा (माओवादी)का उम्मेदवार हुन् जसले झापा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339485": {
+    id: "339485",
+    summary: "निशा डाँगी रास्वपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339749": {
+    id: "339749",
+    summary: "हेमराज कार्की राप्रपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339775": {
+    id: "339775",
+    summary: "देव राज घिमिरे एमालेका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340352": {
+    id: "340352",
+    summary: "सरिता प्रसाई काँग्रेसका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340124": {
+    id: "340124",
+    summary: "धर्माशिला चापागाई नेकपा (माओवादी)का उम्मेदवार हुन् जसले झापा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339380": {
+    id: "339380",
+    summary: "इन्दिरा राना मगर रास्वपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339568": {
+    id: "339568",
+    summary: "भद्र प्रसाद नेपाल राप्रपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340163": {
+    id: "340163",
+    summary: "हरी बहादुर राजवंशी एमालेका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340487": {
+    id: "340487",
+    summary: "राजेन्द्र कुमार घिमिरे काँग्रेसका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340843": {
+    id: "340843",
+    summary: "डिल्लीराम घिमिरे नेकपा (माओवादी)का उम्मेदवार हुन् जसले झापा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339542": {
+    id: "339542",
+    summary: "प्रकाश पाठक रास्वपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339403": {
+    id: "339403",
+    summary: "राजेन्द्र प्रसाद लिङ्देन राष्ट्रिय प्रजातन्त्र पार्टीका अध्यक्ष हुन्। हिन्दु राष्ट्र र राजसंस्थाको पुनर्स्थापनाका पक्षमा बोल्ने प्रमुख नेता हुन्।",
+    achievements: [
+      "राष्ट्रिय प्रजातन्त्र पार्टीका अध्यक्ष",
+      "पूर्व राज्यमन्त्री",
+      "हिन्दु राष्ट्र र राजसंस्था पुनर्स्थापनाको अभियान",
+    ],
+    controversies: [
+      "हिन्दु राष्ट्र र राजतन्त्रको माग सम्बन्धमा विवाद",
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "झापा",
+        constituency: "क्षेत्र नं. ३",
+        party: "राप्रपा",
+        result: "पराजित",
+      },
+      {
+        year: "२०७४",
+        district: "झापा",
+        constituency: "क्षेत्र नं. ३",
+        party: "राप्रपा",
+        result: "पराजित",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "339967": {
+    id: "339967",
+    summary: "लाल प्रसाद साँवा लिम्बू एमालेका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340608": {
+    id: "340608",
+    summary: "देउ कुमार थेवे काँग्रेसका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340367": {
+    id: "340367",
+    summary: "पुरुषोतम चुडाल नेकपा (माओवादी)का उम्मेदवार हुन् जसले झापा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339393": {
+    id: "339393",
+    summary: "शम्भु प्रसाद ढकाल रास्वपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339903": {
+    id: "339903",
+    summary: "भक्ति प्रसाद सिटौला राप्रपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340111": {
+    id: "340111",
+    summary: "केपी शर्मा ओली नेपालका प्रमुख कम्युनिष्ट नेता हुन् जसले तीन पटक प्रधानमन्त्रीको पदभार सम्हालेका छन्। एमाले पार्टीका अध्यक्षका रूपमा उनी नेपाली राजनीतिमा प्रभावशाली व्यक्तित्व हुन्।",
+    achievements: [
+      "तीन पटक नेपालको प्रधानमन्त्री (२०७२, २०७५, २०७८)",
+      "नेपालको नयाँ संविधान २०७२ मा जारी गर्ने नेतृत्व",
+      "नेपाल-भारत सीमा नाका अवरोध (२०७२) मा राष्ट्रिय एकता कायम",
+      "नेपालको नक्सा अद्यावधिक गरी कालापानी, लिपुलेक, लिम्पियाधुरा समावेश",
+    ],
+    controversies: [
+      "संसद विघटनको असफल प्रयास (२०७७) — सर्वोच्च अदालतले उल्टायो",
+      "प्रचण्डसँगको पार्टी एकीकरण र विभाजन",
+      "भ्रष्टाचार आरोप र ओम्नी घोटाला सम्बन्धमा विवाद",
+      "स्वास्थ्य अवस्थाको बारेमा चर्चा (मिर्गौला प्रत्यारोपण)",
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "झापा",
+        constituency: "क्षेत्र नं. ५",
+        party: "नेकपा एमाले",
+        result: "विजयी",
+      },
+      {
+        year: "२०७४",
+        district: "झापा",
+        constituency: "क्षेत्र नं. ५",
+        party: "नेकपा एमाले",
+        result: "विजयी",
+      },
+      {
+        year: "२०५६",
+        district: "झापा",
+        constituency: "क्षेत्र नं. ३",
+        party: "नेकपा एमाले",
+        result: "विजयी",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "340445": {
+    id: "340445",
+    summary: "मंधरा चिमरिया काँग्रेसका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340171": {
+    id: "340171",
+    summary: "रन्जित तामाङ नेकपा (माओवादी)का उम्मेदवार हुन् जसले झापा क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339653": {
+    id: "339653",
+    summary: "वालेन्द्र शाह रास्वपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339386": {
+    id: "339386",
+    summary: "लक्ष्मी प्रसाद संग्रौला राप्रपाका उम्मेदवार हुन् जसले झापा क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340348": {
+    id: "340348",
+    summary: "अर्जुन कुमार कार्की एमालेका उम्मेदवार हुन् जसले संखुवासभा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340661": {
+    id: "340661",
+    summary: "दिपन कुमार श्रेष्ठ काँग्रेसका उम्मेदवार हुन् जसले संखुवासभा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341044": {
+    id: "341044",
+    summary: "सरिता थापा नेकपा (माओवादी)का उम्मेदवार हुन् जसले संखुवासभा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340114": {
+    id: "340114",
+    summary: "मिङमा शेर्पा रास्वपाका उम्मेदवार हुन् जसले संखुवासभा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342606": {
+    id: "342606",
+    summary: "पदम बहादुर तामाङ राप्रपाका उम्मेदवार हुन् जसले संखुवासभा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340855": {
+    id: "340855",
+    summary: "भानु भक्त ढकाल एमालेका उम्मेदवार हुन् जसले तेह्रथुम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340612": {
+    id: "340612",
+    summary: "सन्तोष सुब्वा काँग्रेसका उम्मेदवार हुन् जसले तेह्रथुम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341720": {
+    id: "341720",
+    summary: "रनध्वज लिम्वु नेकपा (माओवादी)का उम्मेदवार हुन् जसले तेह्रथुम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342758": {
+    id: "342758",
+    summary: "सुरेन्द्र कार्की रास्वपाका उम्मेदवार हुन् जसले तेह्रथुम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342034": {
+    id: "342034",
+    summary: "होमभक्त लिम्बु (कुरुम्वाङ) राप्रपाका उम्मेदवार हुन् जसले तेह्रथुम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339661": {
+    id: "339661",
+    summary: "शेरधन राई एमालेका उम्मेदवार हुन् जसले भोजपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341046": {
+    id: "341046",
+    summary: "वालकृष्ण थापा काँग्रेसका उम्मेदवार हुन् जसले भोजपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340789": {
+    id: "340789",
+    summary: "अजम्बर राई काङमाङ नेकपा (माओवादी)का उम्मेदवार हुन् जसले भोजपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340071": {
+    id: "340071",
+    summary: "रमेश प्रसाद ओझा रास्वपाका उम्मेदवार हुन् जसले भोजपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339882": {
+    id: "339882",
+    summary: "जनक नेपाल राप्रपाका उम्मेदवार हुन् जसले भोजपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339725": {
+    id: "339725",
+    summary: "राजेन्द्र कुमार राई एमालेका उम्मेदवार हुन् जसले धनकुटा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340038": {
+    id: "340038",
+    summary: "दिनेश राई काँग्रेसका उम्मेदवार हुन् जसले धनकुटा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340302": {
+    id: "340302",
+    summary: "धर्म राज पौडेल नेकपा (माओवादी)का उम्मेदवार हुन् जसले धनकुटा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340886": {
+    id: "340886",
+    summary: "दिनेश भण्डारी रास्वपाका उम्मेदवार हुन् जसले धनकुटा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340463": {
+    id: "340463",
+    summary: "बिभत्सु थापा राप्रपाका उम्मेदवार हुन् जसले धनकुटा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339614": {
+    id: "339614",
+    summary: "घनश्याम खतीवडा एमालेका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340351": {
+    id: "340351",
+    summary: "खड्ग बहादुर फागो काँग्रेसका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340750": {
+    id: "340750",
+    summary: "कुल प्रसाद साम्बा नेकपा (माओवादी)का उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341227": {
+    id: "341227",
+    summary: "यज्ञमणि  न्याैपाने रास्वपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339954": {
+    id: "339954",
+    summary: "पूर्ण बहादुर वाइवा तामाङ्ग राप्रपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341506": {
+    id: "341506",
+    summary: "दिलीप कुमार अग्रवाल एमालेका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341194": {
+    id: "341194",
+    summary: "मिनेन्द्र प्रसाद रिजाल नेपाली काँग्रेसका वरिष्ठ नेता र पूर्वमन्त्री हुन्। उनी काँग्रेसको मधेश क्षेत्रमा प्रभावशाली नेताका रूपमा चिनिन्छन्।",
+    achievements: [
+      "पूर्व सूचना तथा सञ्चार प्रविधि मन्त्री",
+      "नेपाली काँग्रेसका केन्द्रीय सदस्य",
+      "मोरङ क्षेत्रमा बहुपटक निर्वाचित",
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "मोरङ",
+        constituency: "क्षेत्र नं. २",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+      {
+        year: "२०७४",
+        district: "मोरङ",
+        constituency: "क्षेत्र नं. २",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "340488": {
+    id: "340488",
+    summary: "चन्द्र वीर राई नेकपा (माओवादी)का उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341642": {
+    id: "341642",
+    summary: "कृष्ण कुमार कार्की रास्वपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340119": {
+    id: "340119",
+    summary: "कन्स राज राजवंशी राप्रपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339926": {
+    id: "339926",
+    summary: "इरन कुमार राई एमालेका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340372": {
+    id: "340372",
+    summary: "शुनिल कुमार शर्मा काँग्रेसका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340327": {
+    id: "340327",
+    summary: "डा. देउमान सम्वाहाङफे नेकपा (माओवादी)का उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341077": {
+    id: "341077",
+    summary: "गणेश कार्की रास्वपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339408": {
+    id: "339408",
+    summary: "प्रेम प्रसाद सुवेदी राप्रपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340158": {
+    id: "340158",
+    summary: "जिवन घिमीरे एमालेका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341356": {
+    id: "341356",
+    summary: "गुरु राज घिमिरे काँग्रेसका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341465": {
+    id: "341465",
+    summary: "अमन लाल मोदी नेकपा (माओवादी)का उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342293": {
+    id: "342293",
+    summary: "सन्तोष राजवंशी रास्वपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342387": {
+    id: "342387",
+    summary: "माधव प्रसाद आचार्य राप्रपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339949": {
+    id: "339949",
+    summary: "मनोज कुमार अग्रवाल एमालेका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341353": {
+    id: "341353",
+    summary: "फुल कुमार लालवानी काँग्रेसका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339521": {
+    id: "339521",
+    summary: "शिव कुमार मंडल (केवट) नेकपा (माओवादी)का उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341509": {
+    id: "341509",
+    summary: "आशा झा रास्वपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341402": {
+    id: "341402",
+    summary: "कुमोद राय राप्रपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339853": {
+    id: "339853",
+    summary: "विनोद प्रसाद ढकाल एमालेका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340656": {
+    id: "340656",
+    summary: "डा. शेखर कोइराला नेपाली काँग्रेसका वरिष्ठ नेता र चिकित्सक हुन्। कोइराला परिवारका सदस्यका रूपमा उनी काँग्रेसको सभापति पदका प्रमुख दावेदार रहेका छन्।",
+    achievements: [
+      "प्रख्यात क्यान्सर विशेषज्ञ चिकित्सक",
+      "बी.पी. कोइराला मेमोरियल क्यान्सर अस्पतालमा उल्लेखनीय योगदान",
+      "नेपाली काँग्रेसको सभापति पदका प्रबल दावेदार",
+      "मोरङ क्षेत्र नं. ६ बाट निर्वाचित सांसद",
+    ],
+    controversies: [
+      "काँग्रेस सभापति पदको चुनावमा शेरबहादुर देउवासँग प्रतिस्पर्धा र विवाद",
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "मोरङ",
+        constituency: "क्षेत्र नं. ६",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+      {
+        year: "२०७४",
+        district: "मोरङ",
+        constituency: "क्षेत्र नं. ६",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "339909": {
+    id: "339909",
+    summary: "ओपेन्द्र कुमार राय नेकपा (माओवादी)का उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341123": {
+    id: "341123",
+    summary: "रुबिना आचार्य रास्वपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340080": {
+    id: "340080",
+    summary: "सविन निरौला राप्रपाका उम्मेदवार हुन् जसले मोरङ क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339932": {
+    id: "339932",
+    summary: "टिका राम लिम्बु एमालेका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340894": {
+    id: "340894",
+    summary: "सुजेन्‍द्र तामाङ काँग्रेसका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340539": {
+    id: "340539",
+    summary: "सूर्य बहादुर भट्टराई नेकपा (माओवादी)का उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341436": {
+    id: "341436",
+    summary: "गोमा तामाङ रास्वपाका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342440": {
+    id: "342440",
+    summary: "उद्धव श्रेष्‍ठ राप्रपाका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342651": {
+    id: "342651",
+    summary: "सुजन लामा एमालेका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340635": {
+    id: "340635",
+    summary: "राजीव कोइराला काँग्रेसका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341120": {
+    id: "341120",
+    summary: "राम कुमारी चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341392": {
+    id: "341392",
+    summary: "लाल बिक्रम थापा रास्वपाका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341906": {
+    id: "341906",
+    summary: "दिने‍श कुमार बस्‍नेत राप्रपाका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340632": {
+    id: "340632",
+    summary: "भगवती चौधरी एमालेका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341886": {
+    id: "341886",
+    summary: "विजय कुमार गच्छदार नेपाली काँग्रेसका वरिष्ठ नेता र पूर्व उपप्रधानमन्त्री हुन्। थारू समुदायका प्रमुख राजनीतिक प्रतिनिधिका रूपमा चिनिन्छन्।",
+    achievements: [
+      "पूर्व उपप्रधानमन्त्री तथा गृहमन्त्री",
+      "थारू समुदायको अधिकारका लागि आवाज उठाउने नेता",
+      "बहुपटक संसद सदस्य निर्वाचित",
+    ],
+    controversies: [
+      "भ्रष्टाचार मुद्दामा अख्तियारको छानबिन",
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "सुनसरी",
+        constituency: "क्षेत्र नं. ३",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+      {
+        year: "२०७४",
+        district: "सुनसरी",
+        constituency: "क्षेत्र नं. ३",
+        party: "नेपाली काँग्रेस",
+        result: "पराजित",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "341189": {
+    id: "341189",
+    summary: "दुर्गेश कुमार चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340042": {
+    id: "340042",
+    summary: "अशोक कुमार चौधरी रास्वपाका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340726": {
+    id: "340726",
+    summary: "घनश्याम गुरुङ्ग राप्रपाका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341375": {
+    id: "341375",
+    summary: "जगदिश प्रसाद कुसियैत एमालेका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340452": {
+    id: "340452",
+    summary: "ज्ञानेन्द्र बहादुर कार्की काँग्रेसका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341017": {
+    id: "341017",
+    summary: "महमद महफुज अंसारी नेकपा (माओवादी)का उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340603": {
+    id: "340603",
+    summary: "दीपक कुमार साह रास्वपाका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341994": {
+    id: "341994",
+    summary: "प्रेम प्रसाद भट्टराई राप्रपाका उम्मेदवार हुन् जसले सुनसरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340324": {
+    id: "340324",
+    summary: "कल्पना राई एमालेका उम्मेदवार हुन् जसले सोलुखुम्बु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341534": {
+    id: "341534",
+    summary: "प्रकाश सिंह कार्की काँग्रेसका उम्मेदवार हुन् जसले सोलुखुम्बु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341788": {
+    id: "341788",
+    summary: "अशिम राई नेकपा (माओवादी)का उम्मेदवार हुन् जसले सोलुखुम्बु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340888": {
+    id: "340888",
+    summary: "ऋषि धन थुलुङराई रास्वपाका उम्मेदवार हुन् जसले सोलुखुम्बु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340592": {
+    id: "340592",
+    summary: "राजेन्द्र वस्नेत राप्रपाका उम्मेदवार हुन् जसले सोलुखुम्बु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340043": {
+    id: "340043",
+    summary: "देव विक्रम राई एमालेका उम्मेदवार हुन् जसले खोटाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341644": {
+    id: "341644",
+    summary: "वीर काजी राई काँग्रेसका उम्मेदवार हुन् जसले खोटाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340262": {
+    id: "340262",
+    summary: "हरि रोका नेकपा (माओवादी)का उम्मेदवार हुन् जसले खोटाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340918": {
+    id: "340918",
+    summary: "रुद्र गिरी रास्वपाका उम्मेदवार हुन् जसले खोटाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341376": {
+    id: "341376",
+    summary: "दिपक तामाङ्ग राप्रपाका उम्मेदवार हुन् जसले खोटाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340598": {
+    id: "340598",
+    summary: "अस्मिता थापा एमालेका उम्मेदवार हुन् जसले ओखलढुंगा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341555": {
+    id: "341555",
+    summary: "कुमार लुईटेल काँग्रेसका उम्मेदवार हुन् जसले ओखलढुंगा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342143": {
+    id: "342143",
+    summary: "अम्विर बाबु गुरुङ्ग नेकपा (माओवादी)का उम्मेदवार हुन् जसले ओखलढुंगा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339838": {
+    id: "339838",
+    summary: "बिश्‍व राज पोखरेल रास्वपाका उम्मेदवार हुन् जसले ओखलढुंगा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341342": {
+    id: "341342",
+    summary: "डिक प्रसाद बास्तोला राप्रपाका उम्मेदवार हुन् जसले ओखलढुंगा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340070": {
+    id: "340070",
+    summary: "दुर्गा कुमार थापा एमालेका उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341310": {
+    id: "341310",
+    summary: "विदुर वस्नेत काँग्रेसका उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340831": {
+    id: "340831",
+    summary: "बल देव चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341485": {
+    id: "341485",
+    summary: "पारश मणि गेलाल रास्वपाका उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339844": {
+    id: "339844",
+    summary: "सुभास चन्द्र खड्का राप्रपाका उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339923": {
+    id: "339923",
+    summary: "अम्वर बहादुर रायामाझी एमालेका उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340970": {
+    id: "340970",
+    summary: "राम कुमार राई काँग्रेसका उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340225": {
+    id: "340225",
+    summary: "सुरेश कुमार राई नेकपा (माओवादी)का उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341674": {
+    id: "341674",
+    summary: "सुर्य बहादुर  तामाङ्ग रास्वपाका उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339453": {
+    id: "339453",
+    summary: "विष्णु बहादुर खडका राप्रपाका उम्मेदवार हुन् जसले उदयपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340346": {
+    id: "340346",
+    summary: "सुमन राज प्याकुरेल एमालेका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341170": {
+    id: "341170",
+    summary: "रामदेव साह(तेली) काँग्रेसका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342797": {
+    id: "342797",
+    summary: "रविन्द्र चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341238": {
+    id: "341238",
+    summary: "पुष्पा कुमारी चौधरी रास्वपाका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339346": {
+    id: "339346",
+    summary: "सत्य जित कुमार झा राप्रपाका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340664": {
+    id: "340664",
+    summary: "मोहम्मद जियाउल रहमान एमालेका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341231": {
+    id: "341231",
+    summary: "राम कुमार यादव काँग्रेसका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340980": {
+    id: "340980",
+    summary: "सुर्यनाथ प्रसाद यादव नेकपा (माओवादी)का उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339852": {
+    id: "339852",
+    summary: "रामजी यादव रास्वपाका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340304": {
+    id: "340304",
+    summary: "अजय  कुमार  दास राप्रपाका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340599": {
+    id: "340599",
+    summary: "ताराकान्त चौधरी एमालेका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339812": {
+    id: "339812",
+    summary: "दिनेश कुमार यादव काँग्रेसका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340561": {
+    id: "340561",
+    summary: "अरुण कुमार साह नेकपा (माओवादी)का उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341099": {
+    id: "341099",
+    summary: "अमर कान्त चौधरी रास्वपाका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339528": {
+    id: "339528",
+    summary: "उम्देश्‍वर प्रसाद साहु राप्रपाका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341334": {
+    id: "341334",
+    summary: "गंगा प्रसाद चौधरी एमालेका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340625": {
+    id: "340625",
+    summary: "तेजु लाल चौधरी काँग्रेसका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339323": {
+    id: "339323",
+    summary: "रुवी कुमारी कर्ण नेकपा (माओवादी)का उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341103": {
+    id: "341103",
+    summary: "सिताराम साह रास्वपाका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340932": {
+    id: "340932",
+    summary: "रुप कुमार न्यौपाने राप्रपाका उम्मेदवार हुन् जसले सप्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341049": {
+    id: "341049",
+    summary: "राम शंकर यादव एमालेका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341756": {
+    id: "341756",
+    summary: "राम सुन्दर चौधरी काँग्रेसका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340818": {
+    id: "340818",
+    summary: "रामचन्द्र यादव नेकपा (माओवादी)का उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340556": {
+    id: "340556",
+    summary: "बब्लु गुप्ता रास्वपाका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339665": {
+    id: "339665",
+    summary: "बासुदेव साह राप्रपाका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341363": {
+    id: "341363",
+    summary: "नवीन कुमार यादव एमालेका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340877": {
+    id: "340877",
+    summary: "राम चन्द्र यादव काँग्रेसका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340325": {
+    id: "340325",
+    summary: "मुक्ति नारायण सिंह नेकपा (माओवादी)का उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341250": {
+    id: "341250",
+    summary: "शिव शंकर यादव रास्वपाका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340086": {
+    id: "340086",
+    summary: "श्‍याम किशो‍र साह हलुवाइ राप्रपाका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340864": {
+    id: "340864",
+    summary: "लिलानाथ श्रेष्ठ एमालेका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341723": {
+    id: "341723",
+    summary: "सुभाष चन्द्र यादव काँग्रेसका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341461": {
+    id: "341461",
+    summary: "विश्‍वनाथ साह नेकपा (माओवादी)का उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342059": {
+    id: "342059",
+    summary: "शम्भु कुमार यादव रास्वपाका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339811": {
+    id: "339811",
+    summary: "देव दयाल सिंह राप्रपाका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342560": {
+    id: "342560",
+    summary: "धर्मनाथ प्रसाद साह एमालेका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341888": {
+    id: "341888",
+    summary: "चन्द्र कला कुमारी यादव काँग्रेसका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340961": {
+    id: "340961",
+    summary: "अजय शंकर नायक नेकपा (माओवादी)का उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341713": {
+    id: "341713",
+    summary: "तपेश्वर यादव रास्वपाका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339452": {
+    id: "339452",
+    summary: "सुभेन्द्र कुमार साह राप्रपाका उम्मेदवार हुन् जसले सिराहा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339643": {
+    id: "339643",
+    summary: "पार्वत गुरुङ एमालेका उम्मेदवार हुन् जसले दोलखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341082": {
+    id: "341082",
+    summary: "अजय बाबु शिवाकोटी काँग्रेसका उम्मेदवार हुन् जसले दोलखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340303": {
+    id: "340303",
+    summary: "विशाल खड्का नेकपा (माओवादी)का उम्मेदवार हुन् जसले दोलखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339522": {
+    id: "339522",
+    summary: "जगदीश खरेल रास्वपाका उम्मेदवार हुन् जसले दोलखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339571": {
+    id: "339571",
+    summary: "प्रविण कुमार थोकर/तामाङ्ग राप्रपाका उम्मेदवार हुन् जसले दोलखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340239": {
+    id: "340239",
+    summary: "माधव प्रसाद ढुंगेल एमालेका उम्मेदवार हुन् जसले रामेछाप क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341939": {
+    id: "341939",
+    summary: "राम चन्द्र खडका काँग्रेसका उम्मेदवार हुन् जसले रामेछाप क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339706": {
+    id: "339706",
+    summary: "श्याम कुमार श्रेष्‍ठ नेकपा (माओवादी)का उम्मेदवार हुन् जसले रामेछाप क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340091": {
+    id: "340091",
+    summary: "कृष्ण हरी बुढाथोकी रास्वपाका उम्मेदवार हुन् जसले रामेछाप क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339874": {
+    id: "339874",
+    summary: "गोरे तामाङ राप्रपाका उम्मेदवार हुन् जसले रामेछाप क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340576": {
+    id: "340576",
+    summary: "प्रदिप कुमार कटुवाल क्षेत्री (के सी) एमालेका उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341357": {
+    id: "341357",
+    summary: "उज्ज्वल प्रसाद वराल काँग्रेसका उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340188": {
+    id: "340188",
+    summary: "डेकेन्द्र प्रसाद सुवेदी नेकपा (माओवादी)का उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340281": {
+    id: "340281",
+    summary: "धनेन्द्र कार्की रास्वपाका उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341297": {
+    id: "341297",
+    summary: "राम नारायण अधिकारी राप्रपाका उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340515": {
+    id: "340515",
+    summary: "मनोज जंग थापा एमालेका उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341107": {
+    id: "341107",
+    summary: "सुशिला थिङ काँग्रेसका उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340409": {
+    id: "340409",
+    summary: "लेख नाथ दाहाल नेकपा (माओवादी)का उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340203": {
+    id: "340203",
+    summary: "आशिष गजुरेल रास्वपाका उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340915": {
+    id: "340915",
+    summary: "मुकुन्द प्रसाद गजुरेल राप्रपाका उम्मेदवार हुन् जसले सिन्धुली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340982": {
+    id: "340982",
+    summary: "रामचन्द्र मण्डल एमालेका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341137": {
+    id: "341137",
+    summary: "राम पलटन साह काँग्रेसका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339549": {
+    id: "339549",
+    summary: "मातृका प्रसाद यादव नेकपा (माओवादी)का उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341166": {
+    id: "341166",
+    summary: "किशोरी साह कमल रास्वपाका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339940": {
+    id: "339940",
+    summary: "मनोज मल्ल ठकुरी राप्रपाका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340797": {
+    id: "340797",
+    summary: "उमाशंकर अरगरिया एमालेका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341263": {
+    id: "341263",
+    summary: "दिनेश प्रसाद  यादव परसैला काँग्रेसका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339448": {
+    id: "339448",
+    summary: "राम चन्द्र झा नेकपा (माओवादी)का उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339806": {
+    id: "339806",
+    summary: "राम विनोद यादव रास्वपाका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341379": {
+    id: "341379",
+    summary: "महेश्वर मंडल राप्रपाका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341057": {
+    id: "341057",
+    summary: "जुली कुमारी महतो (महासेठ) एमालेका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341945": {
+    id: "341945",
+    summary: "विमलेन्द्र निधि नेपाली काँग्रेसका वरिष्ठ नेता र पूर्व उपप्रधानमन्त्री हुन्। मधेश क्षेत्रमा काँग्रेसको प्रमुख चेहरा मानिन्छन्।",
+    achievements: [
+      "पूर्व उपप्रधानमन्त्री तथा स्वास्थ्य मन्त्री",
+      "नेपाली काँग्रेसको वरिष्ठ नेताका रूपमा दीर्घकालीन योगदान",
+      "धनुषा जिल्लामा बहुपटक निर्वाचित",
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "धनुषा",
+        constituency: "क्षेत्र नं. ३",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+      {
+        year: "२०७४",
+        district: "धनुषा",
+        constituency: "क्षेत्र नं. ३",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "339748": {
+    id: "339748",
+    summary: "रामललित मंडल नेकपा (माओवादी)का उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340296": {
+    id: "340296",
+    summary: "मनिष झा रास्वपाका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342033": {
+    id: "342033",
+    summary: "हुसैन कवारी राप्रपाका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340467": {
+    id: "340467",
+    summary: "रघुबीर महासेठ एमालेका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341109": {
+    id: "341109",
+    summary: "महेन्द्र यादव काँग्रेसका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340571": {
+    id: "340571",
+    summary: "संजय कुमार महतो नेकपा (माओवादी)का उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341797": {
+    id: "341797",
+    summary: "राज  किशोर  महतो रास्वपाका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340854": {
+    id: "340854",
+    summary: "राम वावु साह हलुवाइ राप्रपाका उम्मेदवार हुन् जसले धनुषा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339924": {
+    id: "339924",
+    summary: "लक्ष्मी महताे काेइरी एमालेका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340794": {
+    id: "340794",
+    summary: "मुकेश राज काफ्ले काँग्रेसका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340587": {
+    id: "340587",
+    summary: "गिरिराज  मणी  पोखरेल नेकपा (माओवादी)का उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341312": {
+    id: "341312",
+    summary: "प्रमोद कुमार महतो रास्वपाका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342588": {
+    id: "342588",
+    summary: "होम प्रसाद पोखरेल राप्रपाका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342118": {
+    id: "342118",
+    summary: "कासिम नदाफ एमालेका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340662": {
+    id: "340662",
+    summary: "किरण यादव काँग्रेसका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341828": {
+    id: "341828",
+    summary: "लक्ष्मण कुमार यादव नेकपा (माओवादी)का उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341190": {
+    id: "341190",
+    summary: "दिपक कुमार साह रास्वपाका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341112": {
+    id: "341112",
+    summary: "रामलखन साह कानु राप्रपाका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340195": {
+    id: "340195",
+    summary: "मनोज कुमार सिंह एमालेका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341917": {
+    id: "341917",
+    summary: "बजरंग नेपाली काँग्रेसका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340948": {
+    id: "340948",
+    summary: "राजकिशोर साह मेहत्तरी सुडी नेकपा (माओवादी)का उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340549": {
+    id: "340549",
+    summary: "उज्‍ज्‍वल कुमार झा रास्वपाका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342671": {
+    id: "342671",
+    summary: "राजेश्वर रा्य राप्रपाका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341913": {
+    id: "341913",
+    summary: "निलम अधिकारी एमालेका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342218": {
+    id: "342218",
+    summary: "महेन्‍द्र कुमार राय काँग्रेसका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339702": {
+    id: "339702",
+    summary: "भरत प्रसाद शाह नेकपा (माओवादी)का उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341656": {
+    id: "341656",
+    summary: "गौरी कुमारी रास्वपाका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342731": {
+    id: "342731",
+    summary: "सुनिल कुमार सिंह राप्रपाका उम्मेदवार हुन् जसले महोत्तरी क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340933": {
+    id: "340933",
+    summary: "मनोज कुमार देबकोटा एमालेका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342571": {
+    id: "342571",
+    summary: "शम्भु लाल श्रेष्ठ काँग्रेसका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342751": {
+    id: "342751",
+    summary: "प्रमोद साह नेकपा (माओवादी)का उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342793": {
+    id: "342793",
+    summary: "नितिमा भण्डारी (कार्की) रास्वपाका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342350": {
+    id: "342350",
+    summary: "सुर्य नारायण राय यादव राप्रपाका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342240": {
+    id: "342240",
+    summary: "नागेश्‍वर साह एमालेका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342345": {
+    id: "342345",
+    summary: "डा.सरोज कुमार काँग्रेसका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341177": {
+    id: "341177",
+    summary: "महिन्द्र राय यादव नेकपा (माओवादी)का उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341252": {
+    id: "341252",
+    summary: "रबिन महतो रास्वपाका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341361": {
+    id: "341361",
+    summary: "राज किशोर राय यादव राप्रपाका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341134": {
+    id: "341134",
+    summary: "हरि प्रसाद उप्रेती एमालेका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341765": {
+    id: "341765",
+    summary: "विनोद कुमार खनाल काँग्रेसका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340441": {
+    id: "340441",
+    summary: "नारायण काजी श्रेष्‍ठ नेकपा (माओवादी)का उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339904": {
+    id: "339904",
+    summary: "नरेन्द्र साह कलवार रास्वपाका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340692": {
+    id: "340692",
+    summary: "ढोलराम बारकोटी राप्रपाका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339944": {
+    id: "339944",
+    summary: "अमनिश कुमार यादव एमालेका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341549": {
+    id: "341549",
+    summary: "गगन थापा नेपाली काँग्रेसका महामन्त्री र युवा पुस्ताका लोकप्रिय नेता हुन्। काठमाडौं क्षेत्रबाट निर्वाचित भई संसदमा सक्रिय भूमिका खेलेका छन्।",
+    achievements: [
+      "नेपाली काँग्रेसका महामन्त्री",
+      "पूर्व स्वास्थ्य राज्यमन्त्री",
+      "युवा नेताका रूपमा संसदमा सशक्त आवाज",
+      "मानवअधिकार र प्रेस स्वतन्त्रताका पक्षधर",
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "काठमाडौं",
+        constituency: "क्षेत्र नं. ४",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+      {
+        year: "२०७४",
+        district: "काठमाडौं",
+        constituency: "क्षेत्र नं. ४",
+        party: "नेपाली काँग्रेस",
+        result: "विजयी",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "341761": {
+    id: "341761",
+    summary: "रजनिस राय नेकपा (माओवादी)का उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340974": {
+    id: "340974",
+    summary: "अमरेश कुमार सिह रास्वपाका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341088": {
+    id: "341088",
+    summary: "प्रदीप कुमार झा राप्रपाका उम्मेदवार हुन् जसले सर्लाही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341095": {
+    id: "341095",
+    summary: "प्रेम बहादुर तामाङ एमालेका उम्मेदवार हुन् जसले रसुवा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340518": {
+    id: "340518",
+    summary: "मोहन आचार्य काँग्रेसका उम्मेदवार हुन् जसले रसुवा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341237": {
+    id: "341237",
+    summary: "माधव प्रसाद लामिछाने नेकपा (माओवादी)का उम्मेदवार हुन् जसले रसुवा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339492": {
+    id: "339492",
+    summary: "बसन्त भट्ट रास्वपाका उम्मेदवार हुन् जसले रसुवा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340206": {
+    id: "340206",
+    summary: "हरि प्रसाद घिमिरे राप्रपाका उम्मेदवार हुन् जसले रसुवा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340810": {
+    id: "340810",
+    summary: "भुमि प्रसाद त्रिपाठी एमालेका उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341441": {
+    id: "341441",
+    summary: "कृष्ण रिजाल काँग्रेसका उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340320": {
+    id: "340320",
+    summary: "राजेन्द्र प्रसाद पाण्डे नेकपा (माओवादी)का उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342066": {
+    id: "342066",
+    summary: "आसिका तामाङ रास्वपाका उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341318": {
+    id: "341318",
+    summary: "गिता प्रसाद आचार्य राप्रपाका उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340205": {
+    id: "340205",
+    summary: "धन बहादुर घले एमालेका उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340121": {
+    id: "340121",
+    summary: "रमेश प्रसाद धमला काँग्रेसका उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341179": {
+    id: "341179",
+    summary: "राम बहादुर भण्डारी नेकपा (माओवादी)का उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340512": {
+    id: "340512",
+    summary: "वोध नारायण श्रेष्‍ठ रास्वपाका उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341345": {
+    id: "341345",
+    summary: "सुरेश रिजाल राप्रपाका उम्मेदवार हुन् जसले धादिङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340914": {
+    id: "340914",
+    summary: "बद्री मैनाली एमालेका उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341419": {
+    id: "341419",
+    summary: "प्रकाश शरण महत काँग्रेसका उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340293": {
+    id: "340293",
+    summary: "हित बहादुर तामाङ नेकपा (माओवादी)का उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340093": {
+    id: "340093",
+    summary: "विक्रम तिमिल्सिना रास्वपाका उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340371": {
+    id: "340371",
+    summary: "बिमल थापा राप्रपाका उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340613": {
+    id: "340613",
+    summary: "केशव राज पाण्डे एमालेका उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340902": {
+    id: "340902",
+    summary: "जगदिश्‍वर नरसिंह के.सी. काँग्रेसका उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340386": {
+    id: "340386",
+    summary: "हिरानाथ खतिवडा नेकपा (माओवादी)का उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341708": {
+    id: "341708",
+    summary: "अचुत्तम लामिछाने रास्वपाका उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340196": {
+    id: "340196",
+    summary: "झनक प्याकुरेल राप्रपाका उम्मेदवार हुन् जसले नुवाकोट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339901": {
+    id: "339901",
+    summary: "मोहन राज रेग्मी एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342172": {
+    id: "342172",
+    summary: "प्रबल  थापा क्षेत्री काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340466": {
+    id: "340466",
+    summary: "मेनुका भण्डारी नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340716": {
+    id: "340716",
+    summary: "रन्‍जु न्‍यौपाने रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339576": {
+    id: "339576",
+    summary: "रवीन्द्र मिश्र राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339642": {
+    id: "339642",
+    summary: "मणिराम फुयाल एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341940": {
+    id: "341940",
+    summary: "कबिर शर्मा काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339990": {
+    id: "339990",
+    summary: "नितेश पौडेल नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341881": {
+    id: "341881",
+    summary: "सुनिल के.सी. रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339804": {
+    id: "339804",
+    summary: "कुन्ती देवी पोखरेल(उपाध्याय) राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340062": {
+    id: "340062",
+    summary: "रामेश्‍वर फुयाल एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341618": {
+    id: "341618",
+    summary: "रमेश अर्याल काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339813": {
+    id: "339813",
+    summary: "निरज लामा नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339690": {
+    id: "339690",
+    summary: "राजु नाथ पाण्डे रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340737": {
+    id: "340737",
+    summary: "सुन्दर राम बोहरा राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341885": {
+    id: "341885",
+    summary: "राजन भट्टराई एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341929": {
+    id: "341929",
+    summary: "सचिन तिमल्सेना काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340590": {
+    id: "340590",
+    summary: "इन्द्र कुमार भुसाल नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340660": {
+    id: "340660",
+    summary: "पुकार बम रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340380": {
+    id: "340380",
+    summary: "सुरेन्द्र राज भण्डारी राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340085": {
+    id: "340085",
+    summary: "इश्वर पोखरेल एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340646": {
+    id: "340646",
+    summary: "प्रदीप पौडेल काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339912": {
+    id: "339912",
+    summary: "कल्पना शर्मा नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340670": {
+    id: "340670",
+    summary: "सस्मित पोखरेल रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339359": {
+    id: "339359",
+    summary: "कमल थापा राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341299": {
+    id: "341299",
+    summary: "अमन कुमार मास्के एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341403": {
+    id: "341403",
+    summary: "कृष्‍ण वानियाँ क्षेत्री काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339889": {
+    id: "339889",
+    summary: "हेम लाल शर्मा नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342290": {
+    id: "342290",
+    summary: "शिशिर  खनाल रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341133": {
+    id: "341133",
+    summary: "उद्धव राज भेटुवाल राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 6 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341121": {
+    id: "341121",
+    summary: "प्रकाश श्रेष्ठ एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 7 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341689": {
+    id: "341689",
+    summary: "प्रमोद हरि गुरागाई काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 7 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341092": {
+    id: "341092",
+    summary: "वसन्त प्रसाद मानन्धर नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 7 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340951": {
+    id: "340951",
+    summary: "गणेश पराजुली रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 7 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341483": {
+    id: "341483",
+    summary: "लाल कुमार लामा राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 7 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339822": {
+    id: "339822",
+    summary: "राजेश शाक्य एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 8 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341100": {
+    id: "341100",
+    summary: "सपना राजभण्डारी काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 8 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340369": {
+    id: "340369",
+    summary: "सुमन सायमी नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 8 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340972": {
+    id: "340972",
+    summary: "विराज भक्त श्रेष्ठ रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 8 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340159": {
+    id: "340159",
+    summary: "नबिन शाही राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 8 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339778": {
+    id: "339778",
+    summary: "अजय क्रान्‍ती शाक्‍य एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 9 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342487": {
+    id: "342487",
+    summary: "नानु मैया बास्तोला काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 9 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340718": {
+    id: "340718",
+    summary: "राधा कृष्ण महर्जन नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 9 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340686": {
+    id: "340686",
+    summary: "डोल प्रसाद अर्याल रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 9 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340531": {
+    id: "340531",
+    summary: "दिल कुमार कार्की राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 9 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340054": {
+    id: "340054",
+    summary: "विनोद श्रेष्‍ठ एमालेका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 10 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341965": {
+    id: "341965",
+    summary: "हिमाल कार्की काँग्रेसका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 10 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341002": {
+    id: "341002",
+    summary: "रुपा महर्जन [श्रेष्‍ठ] नेकपा (माओवादी)का उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 10 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340506": {
+    id: "340506",
+    summary: "प्रदिप विष्‍ट रास्वपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 10 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340851": {
+    id: "340851",
+    summary: "बल राम थापा राप्रपाका उम्मेदवार हुन् जसले काठमाडौं क्षेत्र नं. 10 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339693": {
+    id: "339693",
+    summary: "सोम प्रसाद मिश्र एमालेका उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340847": {
+    id: "340847",
+    summary: "किरण न्यौपाने काँग्रेसका उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340453": {
+    id: "340453",
+    summary: "हरि राम लवजू नेकपा (माओवादी)का उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339461": {
+    id: "339461",
+    summary: "रुकेश रन्जित रास्वपाका उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340128": {
+    id: "340128",
+    summary: "भरत बहादुर खड्का राप्रपाका उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339487": {
+    id: "339487",
+    summary: "महेश बस्नेत एमालेका उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341495": {
+    id: "341495",
+    summary: "कविर राणा काँग्रेसका उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339597": {
+    id: "339597",
+    summary: "राम प्रसाद सापकोटा नेकपा (माओवादी)का उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340060": {
+    id: "340060",
+    summary: "राजीव खत्री रास्वपाका उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341000": {
+    id: "341000",
+    summary: "बिक्रम थापा राप्रपाका उम्मेदवार हुन् जसले भक्तपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340092": {
+    id: "340092",
+    summary: "चेत नाथ संजेल एमालेका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341966": {
+    id: "341966",
+    summary: "उदय शंशेर ज.ब.राणा काँग्रेसका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341358": {
+    id: "341358",
+    summary: "सुनिल महर्जन नेकपा (माओवादी)का उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341868": {
+    id: "341868",
+    summary: "बुद्ध रत्न महर्जन रास्वपाका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340863": {
+    id: "340863",
+    summary: "सजिना कार्की राप्रपाका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340388": {
+    id: "340388",
+    summary: "प्रेम बहादुर महर्जन एमालेका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341171": {
+    id: "341171",
+    summary: "प्रेम कृष्ण महर्जन काँग्रेसका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340354": {
+    id: "340354",
+    summary: "राजेन्द्र अमात्य नेकपा (माओवादी)का उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340217": {
+    id: "340217",
+    summary: "जगदिश खरेल रास्वपाका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339911": {
+    id: "339911",
+    summary: "रघुवर राज थापा राप्रपाका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341646": {
+    id: "341646",
+    summary: "सन्दन थापा मगर एमालेका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342051": {
+    id: "342051",
+    summary: "जितेन्द्र कुमार श्रेष्ठ काँग्रेसका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341869": {
+    id: "341869",
+    summary: "राज काजी महर्जन नेकपा (माओवादी)का उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341547": {
+    id: "341547",
+    summary: "तोसीमा कार्की रास्वपाका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341442": {
+    id: "341442",
+    summary: "सबिन कुमार खड्का राप्रपाका उम्मेदवार हुन् जसले ललितपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340414": {
+    id: "340414",
+    summary: "अमि तामाङ एमालेका उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340501": {
+    id: "340501",
+    summary: "गुणराज मुक्तान काँग्रेसका उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341073": {
+    id: "341073",
+    summary: "दिन नाथ गौतम नेकपा (माओवादी)का उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341324": {
+    id: "341324",
+    summary: "मधु कुमार चौलागाई रास्वपाका उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341513": {
+    id: "341513",
+    summary: "नवराज सत्याल राप्रपाका उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339988": {
+    id: "339988",
+    summary: "अशोक कुमार ब्याञ्जु श्रेष्ठ एमालेका उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340524": {
+    id: "340524",
+    summary: "मधु प्रसाद आचार्य काँग्रेसका उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341012": {
+    id: "341012",
+    summary: "बसुन्धरा हुमागाई नेकपा (माओवादी)का उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339525": {
+    id: "339525",
+    summary: "बदन कुमार भण्डारी रास्वपाका उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342166": {
+    id: "342166",
+    summary: "रन्जीव श्रेष्ठ राप्रपाका उम्मेदवार हुन् जसले काभ्रेपलाञ्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341791": {
+    id: "341791",
+    summary: "सरेश नेपाल एमालेका उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341717": {
+    id: "341717",
+    summary: "जंग बहादुर लामा काँग्रेसका उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340875": {
+    id: "340875",
+    summary: "माधव सापकोटा नेकपा (माओवादी)का उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341908": {
+    id: "341908",
+    summary: "भरत प्रसाद पराजुली रास्वपाका उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339581": {
+    id: "339581",
+    summary: "राम मणी न्यौपाने राप्रपाका उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341470": {
+    id: "341470",
+    summary: "शेर बहादुर तामाङग एमालेका उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342079": {
+    id: "342079",
+    summary: "वंशलाल तामाङ काँग्रेसका उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340921": {
+    id: "340921",
+    summary: "युवराज दुलाल नेकपा (माओवादी)का उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342380": {
+    id: "342380",
+    summary: "झलक कुमार श्रेष्‍ठ रास्वपाका उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339975": {
+    id: "339975",
+    summary: "गोपी कृष्ण चौलागाई राप्रपाका उम्मेदवार हुन् जसले सिन्धुपाल्चोक क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339717": {
+    id: "339717",
+    summary: "रामेश्‍वर राना मगर एमालेका उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341087": {
+    id: "341087",
+    summary: "महालक्ष्मी उपाध्याय(डिना) काँग्रेसका उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340438": {
+    id: "340438",
+    summary: "बिजय गौतम नेकपा (माओवादी)का उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339633": {
+    id: "339633",
+    summary: "प्रकाश गौतम रास्वपाका उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340025": {
+    id: "340025",
+    summary: "दिपक बहादुर सिंह राप्रपाका उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339753": {
+    id: "339753",
+    summary: "महेश कुमार वर्तौला एमालेका उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341127": {
+    id: "341127",
+    summary: "वुद्ध लामा काँग्रेसका उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340454": {
+    id: "340454",
+    summary: "लव शेर विष्ट नेकपा (माओवादी)का उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339629": {
+    id: "339629",
+    summary: "प्रशान्त उप्रेती रास्वपाका उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340110": {
+    id: "340110",
+    summary: "राम बहादुर थोकर राप्रपाका उम्मेदवार हुन् जसले मकवानपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340390": {
+    id: "340390",
+    summary: "अजय कुमार गुप्‍ता एमालेका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341696": {
+    id: "341696",
+    summary: "अनिल कुमार झा काँग्रेसका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340541": {
+    id: "340541",
+    summary: "माधव कुमार नेपाल नेकपा (माओवादी)का उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341836": {
+    id: "341836",
+    summary: "राजेश कुमार चौधरी रास्वपाका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341086": {
+    id: "341086",
+    summary: "श्री मदन शाह राप्रपाका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340428": {
+    id: "340428",
+    summary: "महम्मद अतिउल्लाह एमालेका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340266": {
+    id: "340266",
+    summary: "मो. फिरदोश आलम काँग्रेसका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340983": {
+    id: "340983",
+    summary: "किरण कुमार साह नेकपा (माओवादी)का उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341641": {
+    id: "341641",
+    summary: "शेख सगिर रास्वपाका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342444": {
+    id: "342444",
+    summary: "रविन्द्र साह राप्रपाका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339712": {
+    id: "339712",
+    summary: "कुन्दन प्रसाद कुशवाहा एमालेका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342570": {
+    id: "342570",
+    summary: "रामकृपाल प्रसाद यादव काँग्रेसका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341982": {
+    id: "341982",
+    summary: "पुनम देवी नेकपा (माओवादी)का उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341005": {
+    id: "341005",
+    summary: "रविन्‍द्र पटेल रास्वपाका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342763": {
+    id: "342763",
+    summary: "सिकिन्द्र राय यादव राप्रपाका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340146": {
+    id: "340146",
+    summary: "रामजी साह सोनार एमालेका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340724": {
+    id: "340724",
+    summary: "देव प्रसाद तिमलसेना काँग्रेसका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340555": {
+    id: "340555",
+    summary: "राम कुमार भट्टराइ नेकपा (माओवादी)का उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341093": {
+    id: "341093",
+    summary: "गणेश पौडेल रास्वपाका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342555": {
+    id: "342555",
+    summary: "रुपलाल राय यादव राप्रपाका उम्मेदवार हुन् जसले रौतहट क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340317": {
+    id: "340317",
+    summary: "अच्युत प्रसाद मैनाली एमालेका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342042": {
+    id: "342042",
+    summary: "शम्भु बहादुर बुढाथोकी काँग्रेसका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340765": {
+    id: "340765",
+    summary: "सन्तोष दंगाल नेकपा (माओवादी)का उम्मेदवार हुन् जसले बारा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340083": {
+    id: "340083",
+    summary: "गणेश धिमाल रास्वपाका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341863": {
+    id: "341863",
+    summary: "लक्ष्मी प्रसाद सा कलवार राप्रपाका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341090": {
+    id: "341090",
+    summary: "बलबिर प्रसाद चौधरी एमालेका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340836": {
+    id: "340836",
+    summary: "भैयाराम प्रसाद यादव काँग्रेसका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339800": {
+    id: "339800",
+    summary: "रमेश  प्रसाद यादव नेकपा (माओवादी)का उम्मेदवार हुन् जसले बारा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341439": {
+    id: "341439",
+    summary: "चन्दन कुमार सिंह रास्वपाका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340099": {
+    id: "340099",
+    summary: "लालबाबु प्रसाद साह तेली राप्रपाका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339499": {
+    id: "339499",
+    summary: "ज्वाला कुमारी साह एमालेका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339741": {
+    id: "339741",
+    summary: "फरमुल्लाह मंसुर काँग्रेसका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341819": {
+    id: "341819",
+    summary: "भरत प्रसाद साह नेकपा (माओवादी)का उम्मेदवार हुन् जसले बारा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340776": {
+    id: "340776",
+    summary: "अरबिन्द साह रास्वपाका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342016": {
+    id: "342016",
+    summary: "राजेन्द्र प्रसाद जैसवार राप्रपाका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340034": {
+    id: "340034",
+    summary: "कृष्ण कुमार श्रेष्ठ एमालेका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341779": {
+    id: "341779",
+    summary: "श्‍यामबाबु गुप्ता काँग्रेसका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339573": {
+    id: "339573",
+    summary: "अजय कुशवाहा नेकपा (माओवादी)का उम्मेदवार हुन् जसले बारा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341514": {
+    id: "341514",
+    summary: "रहवर अंसारी रास्वपाका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341056": {
+    id: "341056",
+    summary: "दिलिप कुमार शर्मा नेपाल राप्रपाका उम्मेदवार हुन् जसले बारा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340046": {
+    id: "340046",
+    summary: "प्रदिप यादव एमालेका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341019": {
+    id: "341019",
+    summary: "अनिल कुमार रुगंटा काँग्रेसका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341520": {
+    id: "341520",
+    summary: "अजय चौरसीया नेकपा (माओवादी)का उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340884": {
+    id: "340884",
+    summary: "बुद्धि प्रसाद पन्त रास्वपाका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340543": {
+    id: "340543",
+    summary: "नन्द किशोर प्रसाद श्रीवास्तव राप्रपाका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340311": {
+    id: "340311",
+    summary: "रिमा कुमारी यादव एमालेका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341532": {
+    id: "341532",
+    summary: "अजय कुमार चौरसिया काँग्रेसका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341197": {
+    id: "341197",
+    summary: "मनोज कुमार चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340881": {
+    id: "340881",
+    summary: "सुशील कुमार कानु रास्वपाका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340943": {
+    id: "340943",
+    summary: "वीना जैसवाल राप्रपाका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340588": {
+    id: "340588",
+    summary: "रुपेश कुमार पाण्डेय एमालेका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342129": {
+    id: "342129",
+    summary: "सुरेन्‍द्र प्रसाद चौधरी काँग्रेसका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340853": {
+    id: "340853",
+    summary: "छोटेलाल प्रसाद यादव नेकपा (माओवादी)का उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340309": {
+    id: "340309",
+    summary: "रामाकान्त प्रसाद चौरसीया रास्वपाका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342036": {
+    id: "342036",
+    summary: "नवीन कुमार सिंह राप्रपाका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339906": {
+    id: "339906",
+    summary: "जालिम मियाँ मंसुरी एमालेका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341102": {
+    id: "341102",
+    summary: "रमेश रिजाल काँग्रेसका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340968": {
+    id: "340968",
+    summary: "जयप्रकाश थारु नेकपा (माओवादी)का उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342274": {
+    id: "342274",
+    summary: "टेक वहादुर शाक्य रास्वपाका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342523": {
+    id: "342523",
+    summary: "शान्त कुमार जोशी राप्रपाका उम्मेदवार हुन् जसले पर्सा क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339958": {
+    id: "339958",
+    summary: "दावा दोर्जे लामा एमालेका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341664": {
+    id: "341664",
+    summary: "राजेन्द्र प्रसाद वुर्लाकोटी काँग्रेसका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340263": {
+    id: "340263",
+    summary: "कृष्ण राज पन्त नेकपा (माओवादी)का उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341241": {
+    id: "341241",
+    summary: "हरि ढकाल रास्वपाका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340105": {
+    id: "340105",
+    summary: "वलराम शर्मा खनाल राप्रपाका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339701": {
+    id: "339701",
+    summary: "अस्‍मिन घिमिरे एमालेका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340504": {
+    id: "340504",
+    summary: "मिना कुमारी खरेल काँग्रेसका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339890": {
+    id: "339890",
+    summary: "प्रताप गुरुङ्ग नेकपा (माओवादी)का उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340990": {
+    id: "340990",
+    summary: "रवि लामिछाने राष्ट्रिय स्वतन्त्र पार्टीका अध्यक्ष र पूर्व टेलिभिजन पत्रकार हुन्। 'हेलो सरकार' कार्यक्रमबाट चर्चामा आई राजनीतिमा प्रवेश गरे।",
+    achievements: [
+      "राष्ट्रिय स्वतन्त्र पार्टीका संस्थापक अध्यक्ष",
+      "पूर्व उपप्रधानमन्त्री तथा गृहमन्त्री",
+      "'हेलो सरकार' टेलिभिजन कार्यक्रम सञ्चालक",
+      "भ्रष्टाचार विरुद्ध अभियानका रूपमा चर्चित",
+    ],
+    controversies: [
+      "नागरिकता विवाद — भारतीय नागरिकताको आरोप",
+      "शरद गौतमको मृत्यु प्रकरणमा अभियुक्त (सफाइ पाए)",
+      "सत्ता गठबन्धनमा बारम्बार परिवर्तन",
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "चितवन",
+        constituency: "क्षेत्र नं. २",
+        party: "रास्वपा",
+        result: "विजयी",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "340840": {
+    id: "340840",
+    summary: "जगदिश्वर अधिकारी राप्रपाका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340259": {
+    id: "340259",
+    summary: "शंकर राज थपलिया एमालेका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340483": {
+    id: "340483",
+    summary: "टेक प्रसाद गुरुङ्ग काँग्रेसका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339835": {
+    id: "339835",
+    summary: "रेणु दाहाल नेकपा (माओवादी)का उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341145": {
+    id: "341145",
+    summary: "सोविता गौतम रास्वपाका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339936": {
+    id: "339936",
+    summary: "दिपक थापा (मगर) राप्रपाका उम्मेदवार हुन् जसले चितवन क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340183": {
+    id: "340183",
+    summary: "राम चन्द्र लामिछाने एमालेका उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340758": {
+    id: "340758",
+    summary: "प्रेम कुमार खत्री काँग्रेसका उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339785": {
+    id: "339785",
+    summary: "हरि राज अधिकारी नेकपा (माओवादी)का उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340913": {
+    id: "340913",
+    summary: "सुधन गुरुङ रास्वपाका उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340360": {
+    id: "340360",
+    summary: "केदार मणी खनाल राप्रपाका उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340387": {
+    id: "340387",
+    summary: "मिलन गुरुङ्ग एमालेका उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340687": {
+    id: "340687",
+    summary: "प्रकाश चन्‍द्र दवाडी काँग्रेसका उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340023": {
+    id: "340023",
+    summary: "लेखनाथ न्यौपाने नेकपा (माओवादी)का उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339991": {
+    id: "339991",
+    summary: "कविन्द्र बुर्लाकोटी रास्वपाका उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341359": {
+    id: "341359",
+    summary: "कुल बहादुर बस्नेत राप्रपाका उम्मेदवार हुन् जसले गोरखा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339862": {
+    id: "339862",
+    summary: "टेक बहादुर गुरुङ काँग्रेसका उम्मेदवार हुन् जसले मनाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340431": {
+    id: "340431",
+    summary: "यशोदा गुरुङ (सुवेदी) नेकपा (माओवादी)का उम्मेदवार हुन् जसले मनाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339921": {
+    id: "339921",
+    summary: "पृथ्‍वी सुव्वा गुरुङ एमालेका उम्मेदवार हुन् जसले लमजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340880": {
+    id: "340880",
+    summary: "गम प्रसाद गुरुङ काँग्रेसका उम्मेदवार हुन् जसले लमजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340286": {
+    id: "340286",
+    summary: "हरि जंग तमाङ नेकपा (माओवादी)का उम्मेदवार हुन् जसले लमजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339858": {
+    id: "339858",
+    summary: "धर्म राज के.सी रास्वपाका उम्मेदवार हुन् जसले लमजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340075": {
+    id: "340075",
+    summary: "केबिन्द्र जंग गुरुङ राप्रपाका उम्मेदवार हुन् जसले लमजुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340161": {
+    id: "340161",
+    summary: "वैन बहादुर क्षेत्री(अधिकारी) एमालेका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341055": {
+    id: "341055",
+    summary: "तिलक बहादुर रानाभाट काँग्रेसका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340254": {
+    id: "340254",
+    summary: "राजकाजी गुरुङ नेकपा (माओवादी)का उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339553": {
+    id: "339553",
+    summary: "खडक राज पौडेल रास्वपाका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342205": {
+    id: "342205",
+    summary: "बाबु राम थापा राप्रपाका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339977": {
+    id: "339977",
+    summary: "रश्‍मि आचार्य एमालेका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340510": {
+    id: "340510",
+    summary: "माधव प्रसाद वांस्तोला काँग्रेसका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339624": {
+    id: "339624",
+    summary: "हेम बहादुर थापा पराजुली नेकपा (माओवादी)का उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339683": {
+    id: "339683",
+    summary: "उत्तम प्रसाद पौडेल रास्वपाका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340057": {
+    id: "340057",
+    summary: "हेम जङग गुरुङ राप्रपाका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340052": {
+    id: "340052",
+    summary: "दामोदर पौडेल वैरागी एमालेका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341174": {
+    id: "341174",
+    summary: "मनोज गुरुङ्ग काँग्रेसका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340861": {
+    id: "340861",
+    summary: "गोपाल गिरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339651": {
+    id: "339651",
+    summary: "बिना गुरुङ्ग रास्वपाका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341062": {
+    id: "341062",
+    summary: "अर्जुन प्रसाद खनाल राप्रपाका उम्मेदवार हुन् जसले कास्की क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340626": {
+    id: "340626",
+    summary: "भगवती न्यौपाने एमालेका उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341255": {
+    id: "341255",
+    summary: "गोविन्द भट्टराई काँग्रेसका उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340708": {
+    id: "340708",
+    summary: "विद्या नाथ ढकाल नेकपा (माओवादी)का उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340905": {
+    id: "340905",
+    summary: "स्वर्णिम वाग्ले रास्वपाका उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340243": {
+    id: "340243",
+    summary: "रामदत्त जोशी राप्रपाका उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340267": {
+    id: "340267",
+    summary: "केदार सिग्देल एमालेका उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341920": {
+    id: "341920",
+    summary: "शंकर भण्डारी काँग्रेसका उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340939": {
+    id: "340939",
+    summary: "सोम बहादुर थापा नेकपा (माओवादी)का उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341124": {
+    id: "341124",
+    summary: "श्रीराम न्यौपाने रास्वपाका उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339698": {
+    id: "339698",
+    summary: "याम बहादुर ठकुरी राप्रपाका उम्मेदवार हुन् जसले तनहुँ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340156": {
+    id: "340156",
+    summary: "मिन प्रसाद गुरुङ्ग एमालेका उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340298": {
+    id: "340298",
+    summary: "भरत राज ढकाल काँग्रेसका उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339596": {
+    id: "339596",
+    summary: "शैलेन्‍द्र घिमिरे नेकपा (माओवादी)का उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339751": {
+    id: "339751",
+    summary: "धनन्जय रेग्मी रास्वपाका उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340676": {
+    id: "340676",
+    summary: "हुकुम बहादुर राना राप्रपाका उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340887": {
+    id: "340887",
+    summary: "खिम बहादुर थापा एमालेका उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339732": {
+    id: "339732",
+    summary: "भागवत प्रकाश मल्ल काँग्रेसका उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339529": {
+    id: "339529",
+    summary: "पदम बहादुर वि.क. नेकपा (माओवादी)का उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341404": {
+    id: "341404",
+    summary: "झवि लाल डुम्रे रास्वपाका उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340562": {
+    id: "340562",
+    summary: "रविन पाठक राप्रपाका उम्मेदवार हुन् जसले स्याङजा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340067": {
+    id: "340067",
+    summary: "प्रदिप कुमार ज्ञवाली एमालेका उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339864": {
+    id: "339864",
+    summary: "चन्द्रकान्त भण्डारी काँग्रेसका उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340329": {
+    id: "340329",
+    summary: "सुदर्शन वराल नेकपा (माओवादी)का उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341377": {
+    id: "341377",
+    summary: "सागर ढकाल रास्वपाका उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339834": {
+    id: "339834",
+    summary: "अजित कुमार श्रेष्‍ठ राप्रपाका उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340185": {
+    id: "340185",
+    summary: "गोकर्ण राज विष्‍ट एमालेका उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340000": {
+    id: "340000",
+    summary: "भुवन प्रसाद श्रेष्ठ काँग्रेसका उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340559": {
+    id: "340559",
+    summary: "श्रीराम महत नेकपा (माओवादी)का उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341282": {
+    id: "341282",
+    summary: "गोविन्द पन्थी रास्वपाका उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340699": {
+    id: "340699",
+    summary: "जनक सेन राप्रपाका उम्मेदवार हुन् जसले गुल्मी क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340207": {
+    id: "340207",
+    summary: "नारायण प्रसाद आचार्य एमालेका उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341027": {
+    id: "341027",
+    summary: "सन्दीप राना काँग्रेसका उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340920": {
+    id: "340920",
+    summary: "हुम बहादुर सुनारी मगर नेकपा (माओवादी)का उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341313": {
+    id: "341313",
+    summary: "विमल पन्त रास्वपाका उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340398": {
+    id: "340398",
+    summary: "बृहस्पति अर्याल राप्रपाका उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339322": {
+    id: "339322",
+    summary: "ठाकुर प्रसाद गैरे एमालेका उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340340": {
+    id: "340340",
+    summary: "हिमाल दत्त श्रेष्ठ काँग्रेसका उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340916": {
+    id: "340916",
+    summary: "सोम प्रसाद पाण्डेय नेकपा (माओवादी)का उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341329": {
+    id: "341329",
+    summary: "माधव बहादुर थापा रास्वपाका उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339533": {
+    id: "339533",
+    summary: "डुल बहादुर कुँवर राप्रपाका उम्मेदवार हुन् जसले पाल्पा क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340014": {
+    id: "340014",
+    summary: "पिताम्वर भुसाल एमालेका उम्मेदवार हुन् जसले अर्घाखाँची क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341773": {
+    id: "341773",
+    summary: "विष्णु प्रसाद खनाल काँग्रेसका उम्मेदवार हुन् जसले अर्घाखाँची क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340772": {
+    id: "340772",
+    summary: "राम वहादुर चौहान नेकपा (माओवादी)का उम्मेदवार हुन् जसले अर्घाखाँची क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339640": {
+    id: "339640",
+    summary: "हरी प्रसाद भुसाल रास्वपाका उम्मेदवार हुन् जसले अर्घाखाँची क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342062": {
+    id: "342062",
+    summary: "झबिन्द्र फुल्लेल राप्रपाका उम्मेदवार हुन् जसले अर्घाखाँची क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340704": {
+    id: "340704",
+    summary: "भागिरथ सापकोटा एमालेका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341600": {
+    id: "341600",
+    summary: "बाल कृष्ण घिमिरे काँग्रेसका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341339": {
+    id: "341339",
+    summary: "लोक प्रसाद भुर्तेल नेकपा (माओवादी)का उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340220": {
+    id: "340220",
+    summary: "राजन गौतम रास्वपाका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339641": {
+    id: "339641",
+    summary: "दिपक चन्द्र बस्ताकोटी राप्रपाका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341567": {
+    id: "341567",
+    summary: "तिल बहादुर महत क्षेत्री एमालेका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341839": {
+    id: "341839",
+    summary: "ओम बहादुर घर्ती काँग्रेसका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341718": {
+    id: "341718",
+    summary: "गणेश मान महतो नेकपा (माओवादी)का उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340347": {
+    id: "340347",
+    summary: "मनिष खनाल रास्वपाका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339776": {
+    id: "339776",
+    summary: "रुन कुमारी महतो राप्रपाका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पूर्व) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342023": {
+    id: "342023",
+    summary: "दधिराम न्यौपाने एमालेका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341284": {
+    id: "341284",
+    summary: "हिरा बहादुर खत्री काँग्रेसका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341240": {
+    id: "341240",
+    summary: "घनश्‍याम यादव अहिर नेकपा (माओवादी)का उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340189": {
+    id: "340189",
+    summary: "सुनिल लम्साल रास्वपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339983": {
+    id: "339983",
+    summary: "प्रज्जवल बोहरा राप्रपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340782": {
+    id: "340782",
+    summary: "विष्‍णु प्रसाद पौडेल एमालेका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340486": {
+    id: "340486",
+    summary: "चुन्‍न प्रसाद शर्मा काँग्रेसका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340047": {
+    id: "340047",
+    summary: "शुभाष पाण्डे नेकपा (माओवादी)का उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341184": {
+    id: "341184",
+    summary: "सुलभ खरेल रास्वपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339880": {
+    id: "339880",
+    summary: "बासु देव घिमिरे एमालेका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340885": {
+    id: "340885",
+    summary: "सुशील गुरुङ्ग काँग्रेसका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340336": {
+    id: "340336",
+    summary: "फैज अहमद खाँ नेकपा (माओवादी)का उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339605": {
+    id: "339605",
+    summary: "डा. लेखजंग थापा रास्वपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340936": {
+    id: "340936",
+    summary: "गौरब बोहरा राप्रपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341739": {
+    id: "341739",
+    summary: "प्रमोद कुमार यादव एमालेका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341570": {
+    id: "341570",
+    summary: "आशुतोष मिश्र काँग्रेसका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340958": {
+    id: "340958",
+    summary: "बाबु लाल यादव नेकपा (माओवादी)का उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342471": {
+    id: "342471",
+    summary: "कन्हैया बनिया रास्वपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339973": {
+    id: "339973",
+    summary: "अहमददिन मुसलमान राप्रपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341218": {
+    id: "341218",
+    summary: "खिम लाल भट्टराई एमालेका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340937": {
+    id: "340937",
+    summary: "भरत कुमार शाह काँग्रेसका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340165": {
+    id: "340165",
+    summary: "मुहम्मद वकील मुसलमान नेकपा (माओवादी)का उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341416": {
+    id: "341416",
+    summary: "तौफिक अहमद खान रास्वपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339992": {
+    id: "339992",
+    summary: "मिन प्रसाद घिमिरे राप्रपाका उम्मेदवार हुन् जसले रूपन्देही क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339507": {
+    id: "339507",
+    summary: "विश्राम प्रसाद चौधरी एमालेका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341670": {
+    id: "341670",
+    summary: "अतहर कमाल मुसलमान काँग्रेसका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340308": {
+    id: "340308",
+    summary: "कृष्ण बहादुर कुँवर नेकपा (माओवादी)का उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341902": {
+    id: "341902",
+    summary: "मोहन लाल आचार्य रास्वपाका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340807": {
+    id: "340807",
+    summary: "शत्रुघन बिलास सिंह कुर्मी राप्रपाका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341146": {
+    id: "341146",
+    summary: "द‍ृग नरायण पाण्‍डेय एमालेका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340820": {
+    id: "340820",
+    summary: "सुरेन्द्र राज आचार्य काँग्रेसका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339730": {
+    id: "339730",
+    summary: "बृजेश कुमार गुप्‍त नेकपा (माओवादी)का उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341561": {
+    id: "341561",
+    summary: "विक्रम थापा रास्वपाका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339828": {
+    id: "339828",
+    summary: "विष्णु प्रसाद भण्डारी राप्रपाका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342305": {
+    id: "342305",
+    summary: "बीरेन्द्र कुमार कानोडिया एमालेका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341266": {
+    id: "341266",
+    summary: "अभिषेक प्रताप शाह काँग्रेसका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342060": {
+    id: "342060",
+    summary: "एहसान अहमद खाँ नेकपा (माओवादी)का उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341989": {
+    id: "341989",
+    summary: "प्रकाश रजौरिया रास्वपाका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342652": {
+    id: "342652",
+    summary: "प्रेम शंकर शुक्ल राप्रपाका उम्मेदवार हुन् जसले कपिलबस्तु क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339737": {
+    id: "339737",
+    summary: "इन्द्र धारा डादु विष्ट एमालेका उम्मेदवार हुन् जसले मुस्ताङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342128": {
+    id: "342128",
+    summary: "योगेश गौचन  थकाली काँग्रेसका उम्मेदवार हुन् जसले मुस्ताङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342284": {
+    id: "342284",
+    summary: "ङुटुक गुरुङ नेकपा (माओवादी)का उम्मेदवार हुन् जसले मुस्ताङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342245": {
+    id: "342245",
+    summary: "अधितीय चन्द्र थकाली रास्वपाका उम्मेदवार हुन् जसले मुस्ताङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340370": {
+    id: "340370",
+    summary: "कमला लालचन राप्रपाका उम्मेदवार हुन् जसले मुस्ताङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339939": {
+    id: "339939",
+    summary: "हरीकृष्ण श्रेष्ठ एमालेका उम्मेदवार हुन् जसले म्याग्दी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339689": {
+    id: "339689",
+    summary: "कर्ण बहादुर भण्डारी काँग्रेसका उम्मेदवार हुन् जसले म्याग्दी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340362": {
+    id: "340362",
+    summary: "अर्जुन बहादुर थापा नेकपा (माओवादी)का उम्मेदवार हुन् जसले म्याग्दी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341434": {
+    id: "341434",
+    summary: "युवराज रोका रास्वपाका उम्मेदवार हुन् जसले म्याग्दी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339669": {
+    id: "339669",
+    summary: "डम्भर बहादुर सुवेदी राप्रपाका उम्मेदवार हुन् जसले म्याग्दी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340240": {
+    id: "340240",
+    summary: "हिरा बहादुर खत्री एमालेका उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340345": {
+    id: "340345",
+    summary: "भिम बहादुर श्रीस राना काँग्रेसका उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339959": {
+    id: "339959",
+    summary: "सुशील खड्का रास्वपाका उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339674": {
+    id: "339674",
+    summary: "कल्याण आचार्य राप्रपाका उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340355": {
+    id: "340355",
+    summary: "मन्जु शर्मा एमालेका उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341354": {
+    id: "341354",
+    summary: "टेक राज पौडेल काँग्रेसका उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340813": {
+    id: "340813",
+    summary: "ज्ञामनाथ गैरे नेकपा (माओवादी)का उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342039": {
+    id: "342039",
+    summary: "सोम शर्मा रास्वपाका उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340109": {
+    id: "340109",
+    summary: "अञ्चल शाही राप्रपाका उम्मेदवार हुन् जसले बाग्लुङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339915": {
+    id: "339915",
+    summary: "पदम गिरी एमालेका उम्मेदवार हुन् जसले पर्वत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340090": {
+    id: "340090",
+    summary: "अर्जुन प्रसाद जोशी काँग्रेसका उम्मेदवार हुन् जसले पर्वत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340410": {
+    id: "340410",
+    summary: "मनहरि शर्मा नेकपा (माओवादी)का उम्मेदवार हुन् जसले पर्वत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341279": {
+    id: "341279",
+    summary: "सागर भुसाल रास्वपाका उम्मेदवार हुन् जसले पर्वत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342048": {
+    id: "342048",
+    summary: "दुर्गा बहादुर मल्ल राप्रपाका उम्मेदवार हुन् जसले पर्वत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341054": {
+    id: "341054",
+    summary: "लिलामणी गौतम एमालेका उम्मेदवार हुन् जसले रुकुम (पूर्वी भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340912": {
+    id: "340912",
+    summary: "कुसुम देवी थापा काँग्रेसका उम्मेदवार हुन् जसले रुकुम (पूर्वी भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340050": {
+    id: "340050",
+    summary: "पुष्प कमल दाहाल प्रचण्ड नेकपा (माओवादी)का उम्मेदवार हुन् जसले रुकुम (पूर्वी भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341476": {
+    id: "341476",
+    summary: "लखन कुमार थापा रास्वपाका उम्मेदवार हुन् जसले रुकुम (पूर्वी भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340680": {
+    id: "340680",
+    summary: "रोषण शाह राप्रपाका उम्मेदवार हुन् जसले रुकुम (पूर्वी भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340139": {
+    id: "340139",
+    summary: "गोकुल प्रसाद घर्ती एमालेका उम्मेदवार हुन् जसले रोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340258": {
+    id: "340258",
+    summary: "सुदन कुमार वली काँग्रेसका उम्मेदवार हुन् जसले रोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339842": {
+    id: "339842",
+    summary: "बर्षमान पुन 'अनन्त' नेकपा माओवादी केन्द्रका उपाध्यक्ष र जनयुद्धकालीन कमाण्डर हुन्।",
+    achievements: [
+      "पूर्व ऊर्जा मन्त्री",
+      "नेकपा माओवादी केन्द्रका उपाध्यक्ष",
+      "जनयुद्धकालीन पश्चिमाञ्चल कमाण्डर",
+    ],
+    controversies: [
+      "जनयुद्धकालीन हिंसाका बारेमा प्रश्न",
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "रोल्पा",
+        constituency: "क्षेत्र नं. १",
+        party: "माओवादी केन्द्र",
+        result: "विजयी",
+      },
+      {
+        year: "२०७४",
+        district: "रोल्पा",
+        constituency: "क्षेत्र नं. १",
+        party: "माओवादी केन्द्र",
+        result: "विजयी",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "340366": {
+    id: "340366",
+    summary: "बालराम थापा रास्वपाका उम्मेदवार हुन् जसले रोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339371": {
+    id: "339371",
+    summary: "अम्मर बहादुर थापा क्षेत्री राप्रपाका उम्मेदवार हुन् जसले रोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340629": {
+    id: "340629",
+    summary: "सूर्य बहादुर  थापा क्षेत्री एमालेका उम्मेदवार हुन् जसले प्यूठान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340321": {
+    id: "340321",
+    summary: "डा .गोविन्द राज पोखरेल काँग्रेसका उम्मेदवार हुन् जसले प्यूठान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341108": {
+    id: "341108",
+    summary: "कृष्‍ण ध्वज खड्का नेकपा (माओवादी)का उम्मेदवार हुन् जसले प्यूठान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340722": {
+    id: "340722",
+    summary: "सुशान्त वैदिक रास्वपाका उम्मेदवार हुन् जसले प्यूठान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340097": {
+    id: "340097",
+    summary: "धनेश्‍वर पण्डित राप्रपाका उम्मेदवार हुन् जसले प्यूठान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340058": {
+    id: "340058",
+    summary: "गुलाव जंग शाह एमालेका उम्मेदवार हुन् जसले सल्यान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340714": {
+    id: "340714",
+    summary: "केश बहादुर विष्ट काँग्रेसका उम्मेदवार हुन् जसले सल्यान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340418": {
+    id: "340418",
+    summary: "रमेश कुमार मल्ल नेकपा (माओवादी)का उम्मेदवार हुन् जसले सल्यान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341381": {
+    id: "341381",
+    summary: "ललित कुमार चन्द रास्वपाका उम्मेदवार हुन् जसले सल्यान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339548": {
+    id: "339548",
+    summary: "अनिशा नेपाली राप्रपाका उम्मेदवार हुन् जसले सल्यान क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341371": {
+    id: "341371",
+    summary: "रेवतीरमण शर्मा घिमिरे एमालेका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340084": {
+    id: "340084",
+    summary: "योगेन्द्र चौधरी काँग्रेसका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340523": {
+    id: "340523",
+    summary: "मेटमणी चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342029": {
+    id: "342029",
+    summary: "देवराज पाठक रास्वपाका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339934": {
+    id: "339934",
+    summary: "विनय वि.सी. राप्रपाका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339760": {
+    id: "339760",
+    summary: "शंकर पोख्रेल एमालेका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340365": {
+    id: "340365",
+    summary: "किरण किशोर घिमिरे काँग्रेसका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340137": {
+    id: "340137",
+    summary: "निर्मल आचार्य नेकपा (माओवादी)का उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340655": {
+    id: "340655",
+    summary: "विपिन कुमार आचार्य रास्वपाका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341072": {
+    id: "341072",
+    summary: "ऋषि केश पोख्रेल राप्रपाका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340401": {
+    id: "340401",
+    summary: "घनश्याम पाण्डे एमालेका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341200": {
+    id: "341200",
+    summary: "दिपक गिरी काँग्रेसका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340151": {
+    id: "340151",
+    summary: "धन बहादुर मास्की नेकपा (माओवादी)का उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339501": {
+    id: "339501",
+    summary: "कमल सुबेदी रास्वपाका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340349": {
+    id: "340349",
+    summary: "दामोदर भण्डारी राप्रपाका उम्मेदवार हुन् जसले दाङ क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339397": {
+    id: "339397",
+    summary: "लंक बहादुर रोकाया एमालेका उम्मेदवार हुन् जसले डोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340232": {
+    id: "340232",
+    summary: "कर्ण बहादुर बुढा काँग्रेसका उम्मेदवार हुन् जसले डोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339703": {
+    id: "339703",
+    summary: "धन बहादुर बुढा नेकपा (माओवादी)का उम्मेदवार हुन् जसले डोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341680": {
+    id: "341680",
+    summary: "देव सिहं ऐडी रास्वपाका उम्मेदवार हुन् जसले डोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340672": {
+    id: "340672",
+    summary: "हरि प्रसाद डाँगी राप्रपाका उम्मेदवार हुन् जसले डोल्पा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340557": {
+    id: "340557",
+    summary: "पूर्ण बहादुर रोकाया एमालेका उम्मेदवार हुन् जसले मुगु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341556": {
+    id: "341556",
+    summary: "खड्ग शाही काँग्रेसका उम्मेदवार हुन् जसले मुगु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341041": {
+    id: "341041",
+    summary: "चन्द्र बहादुर शाही नेकपा (माओवादी)का उम्मेदवार हुन् जसले मुगु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341393": {
+    id: "341393",
+    summary: "भुवन टमटा रास्वपाका उम्मेदवार हुन् जसले मुगु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340665": {
+    id: "340665",
+    summary: "बल बहादुर मल्ल राप्रपाका उम्मेदवार हुन् जसले मुगु क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341224": {
+    id: "341224",
+    summary: "शान्ति लाल महत एमालेका उम्मेदवार हुन् जसले जुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341715": {
+    id: "341715",
+    summary: "दिप बहादुर शाही काँग्रेसका उम्मेदवार हुन् जसले जुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339930": {
+    id: "339930",
+    summary: "नरेश भण्‍डारी नेकपा (माओवादी)का उम्मेदवार हुन् जसले जुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340197": {
+    id: "340197",
+    summary: "बिनिता कठायत रास्वपाका उम्मेदवार हुन् जसले जुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341535": {
+    id: "341535",
+    summary: "ज्ञान बहादुर शाही राप्रपाका उम्मेदवार हुन् जसले जुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340619": {
+    id: "340619",
+    summary: "श्री नगीन्द्र शाही एमालेका उम्मेदवार हुन् जसले कालिकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341244": {
+    id: "341244",
+    summary: "हर्ष बहादुर बम काँग्रेसका उम्मेदवार हुन् जसले कालिकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340992": {
+    id: "340992",
+    summary: "महेन्द्र बहादुर शाही नेकपा (माओवादी)का उम्मेदवार हुन् जसले कालिकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339582": {
+    id: "339582",
+    summary: "प्रकाश न्यौपाने रास्वपाका उम्मेदवार हुन् जसले कालिकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340106": {
+    id: "340106",
+    summary: "सुर्य बहादुर शाही राप्रपाका उम्मेदवार हुन् जसले कालिकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339931": {
+    id: "339931",
+    summary: "दल फडेरा एमालेका उम्मेदवार हुन् जसले हुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340564": {
+    id: "340564",
+    summary: "जय पती रोकाया काँग्रेसका उम्मेदवार हुन् जसले हुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340087": {
+    id: "340087",
+    summary: "दीपेन्द्र रोकाया नेकपा (माओवादी)का उम्मेदवार हुन् जसले हुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341114": {
+    id: "341114",
+    summary: "टासी ल्हान्जोम रास्वपाका उम्मेदवार हुन् जसले हुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339829": {
+    id: "339829",
+    summary: "छक्क बुढा राप्रपाका उम्मेदवार हुन् जसले हुम्ला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340356": {
+    id: "340356",
+    summary: "डम्बर बहादुर सिंह एमालेका उम्मेदवार हुन् जसले जाजरकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342453": {
+    id: "342453",
+    summary: "खडक वहादुर वुढा काँग्रेसका उम्मेदवार हुन् जसले जाजरकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341130": {
+    id: "341130",
+    summary: "शक्ति बहादुर वस्नेत नेकपा (माओवादी)का उम्मेदवार हुन् जसले जाजरकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341256": {
+    id: "341256",
+    summary: "राघब​ कार्की रास्वपाका उम्मेदवार हुन् जसले जाजरकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340955": {
+    id: "340955",
+    summary: "कृष्ण  बिक्रम शाह राप्रपाका उम्मेदवार हुन् जसले जाजरकोट क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339621": {
+    id: "339621",
+    summary: "रविन्द्र राज शर्मा एमालेका उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341040": {
+    id: "341040",
+    summary: "बासना थापा काँग्रेसका उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339953": {
+    id: "339953",
+    summary: "अम्मर बहादुर थापा नेकपा (माओवादी)का उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339758": {
+    id: "339758",
+    summary: "नन्द किशोर बस्नेत रास्वपाका उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340472": {
+    id: "340472",
+    summary: "रण बहादुर सिंह राप्रपाका उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340637": {
+    id: "340637",
+    summary: "लक्ष्मी प्रसाद पोखरेल एमालेका उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341215": {
+    id: "341215",
+    summary: "दिक्पाल कुमार शाहि काँग्रेसका उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340478": {
+    id: "340478",
+    summary: "योगेन्द्र वहादुर शाही नेकपा (माओवादी)का उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340344": {
+    id: "340344",
+    summary: "बखत बहादुर शाही रास्वपाका उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342569": {
+    id: "342569",
+    summary: "बविता कुमारी शाही राप्रपाका उम्मेदवार हुन् जसले दैलेख क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340773": {
+    id: "340773",
+    summary: "ध्रुवकुमार शाही एमालेका उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341140": {
+    id: "341140",
+    summary: "विष्णु बहादुर खड्का काँग्रेसका उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340540": {
+    id: "340540",
+    summary: "जित बहादुर राना नेकपा (माओवादी)का उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341749": {
+    id: "341749",
+    summary: "टेक बहादुर सिंह ठकुरी रास्वपाका उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340059": {
+    id: "340059",
+    summary: "रवि हमाल ठकुरी राप्रपाका उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339970": {
+    id: "339970",
+    summary: "कुलमणि देवकोटा एमालेका उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341438": {
+    id: "341438",
+    summary: "नारायण कुमार कोइराला काँग्रेसका उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339820": {
+    id: "339820",
+    summary: "झक बहादुर मल्ल नेकपा (माओवादी)का उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340194": {
+    id: "340194",
+    summary: "रमेश कुमार सापकोटा रास्वपाका उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341667": {
+    id: "341667",
+    summary: "कबि राम पुरी राप्रपाका उम्मेदवार हुन् जसले सुर्खेत क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339720": {
+    id: "339720",
+    summary: "सुर्य प्रसाद ढकाल एमालेका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340994": {
+    id: "340994",
+    summary: "नारायण प्रसाद गौडेल काँग्रेसका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340433": {
+    id: "340433",
+    summary: "नरेन्द्र प्रसाद पाण्डे नेकपा (माओवादी)का उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341907": {
+    id: "341907",
+    summary: "सुरेश कुमार चौधरी रास्वपाका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340244": {
+    id: "340244",
+    summary: "प्रदिप कुमार शाह राप्रपाका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340037": {
+    id: "340037",
+    summary: "मोहम्मद इश्तियाक राई एमालेका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340606": {
+    id: "340606",
+    summary: "सुधान्सु कोइराला काँग्रेसका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341003": {
+    id: "341003",
+    summary: "दिपेन्द्र बिष्‍ट नेकपा (माओवादी)का उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341812": {
+    id: "341812",
+    summary: "विवेक कुमार श्रेष्ठ रास्वपाका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339927": {
+    id: "339927",
+    summary: "ऋषि राज देवकोटा राप्रपाका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340035": {
+    id: "340035",
+    summary: "सुमन मल्ल एमालेका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342191": {
+    id: "342191",
+    summary: "अमर सिह पुन काँग्रेसका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342796": {
+    id: "342796",
+    summary: "दिपक कुमार गौरी मगर नेकपा (माओवादी)का उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339589": {
+    id: "339589",
+    summary: "खगेन्द्र सुनार रास्वपाका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340869": {
+    id: "340869",
+    summary: "तारक सिंह थारु राप्रपाका उम्मेदवार हुन् जसले बाँके क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339707": {
+    id: "339707",
+    summary: "सालीक राम अधिकारी एमालेका उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342655": {
+    id: "342655",
+    summary: "संजय कुमार गौतम काँग्रेसका उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340010": {
+    id: "340010",
+    summary: "वीष्णु प्रसाद चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340825": {
+    id: "340825",
+    summary: "ठाकुर सिंह थारु रास्वपाका उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342057": {
+    id: "342057",
+    summary: "विर बहादुर कामी राप्रपाका उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339866": {
+    id: "339866",
+    summary: "बिमला वि.क. एमालेका उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341186": {
+    id: "341186",
+    summary: "किशोर सिह राठोर काँग्रेसका उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340015": {
+    id: "340015",
+    summary: "सुरेश पन्थ नेकपा (माओवादी)का उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342516": {
+    id: "342516",
+    summary: "श्रीधर पोख्रेल रास्वपाका उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341333": {
+    id: "341333",
+    summary: "सुशिल चौधरी राप्रपाका उम्मेदवार हुन् जसले बर्दिया क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340567": {
+    id: "340567",
+    summary: "लाल बहादुर थापा एमालेका उम्मेदवार हुन् जसले बाजुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341303": {
+    id: "341303",
+    summary: "जनक राज गिरी काँग्रेसका उम्मेदवार हुन् जसले बाजुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340953": {
+    id: "340953",
+    summary: "प्रकाश वहादुर शाह नेकपा (माओवादी)का उम्मेदवार हुन् जसले बाजुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340150": {
+    id: "340150",
+    summary: "हेमराज थापा रास्वपाका उम्मेदवार हुन् जसले बाजुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340323": {
+    id: "340323",
+    summary: "केशर बहादुर शाही राप्रपाका उम्मेदवार हुन् जसले बाजुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340695": {
+    id: "340695",
+    summary: "दिपक बहादुर साउंद एमालेका उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341661": {
+    id: "341661",
+    summary: "भरत कुमार स्वार काँग्रेसका उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341030": {
+    id: "341030",
+    summary: "भीम रावल नेकपा एमालेका वरिष्ठ नेता र पूर्वमन्त्री हुन्। सुदूरपश्चिमका प्रभावशाली नेता हुन्।",
+    achievements: [
+      "पूर्व गृहमन्त्री",
+      "नेकपा एमालेका वरिष्ठ नेता",
+      "अछाम जिल्लामा बहुपटक निर्वाचित",
+    ],
+    controversies: [
+      "ओली नेतृत्व विरुद्ध पार्टी भित्रको विरोध",
+    ],
+    electionHistory: [
+      {
+        year: "२०७९",
+        district: "अछाम",
+        constituency: "क्षेत्र नं. २",
+        party: "नेकपा एमाले",
+        result: "विजयी",
+      },
+      {
+        year: "२०७४",
+        district: "अछाम",
+        constituency: "क्षेत्र नं. २",
+        party: "नेकपा एमाले",
+        result: "विजयी",
+      },
+    ],
+    firstTimeCandidate: false,
+  },
+  "340514": {
+    id: "340514",
+    summary: "ओमप्रकाश रावल रास्वपाका उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341564": {
+    id: "341564",
+    summary: "लोकेन्द्र बहादुर शाह राप्रपाका उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340611": {
+    id: "340611",
+    summary: "यज्ञ बहादुर बोगटी एमालेका उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342150": {
+    id: "342150",
+    summary: "पुष्प बहादुर शाह काँग्रेसका उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342067": {
+    id: "342067",
+    summary: "बल बहादुर कुंवर नेकपा (माओवादी)का उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340307": {
+    id: "340307",
+    summary: "भुप देव शाह रास्वपाका उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340744": {
+    id: "340744",
+    summary: "मिन बहादुर शाही राप्रपाका उम्मेदवार हुन् जसले अछाम क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340443": {
+    id: "340443",
+    summary: "ऐन बहादुर महर एमालेका उम्मेदवार हुन् जसले बझाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341565": {
+    id: "341565",
+    summary: "प्रकाश रसाइली स्नेही काँग्रेसका उम्मेदवार हुन् जसले बझाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339996": {
+    id: "339996",
+    summary: "मिन बहादुर कुवँर नेकपा (माओवादी)का उम्मेदवार हुन् जसले बझाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341236": {
+    id: "341236",
+    summary: "शैलेश कुमार सिंह रास्वपाका उम्मेदवार हुन् जसले बझाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339857": {
+    id: "339857",
+    summary: "बिश्व प्रकाश जेठारा राप्रपाका उम्मेदवार हुन् जसले बझाङ क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340117": {
+    id: "340117",
+    summary: "दीपक बहादुर धामी एमालेका उम्मेदवार हुन् जसले डोटी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341208": {
+    id: "341208",
+    summary: "भरत बहादुर खड्का काँग्रेसका उम्मेदवार हुन् जसले डोटी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339731": {
+    id: "339731",
+    summary: "त्रिलोचन भट्ट नेकपा (माओवादी)का उम्मेदवार हुन् जसले डोटी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340378": {
+    id: "340378",
+    summary: "नरेन्द्र बहादुर खडका रास्वपाका उम्मेदवार हुन् जसले डोटी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341050": {
+    id: "341050",
+    summary: "खडक वहादुर अग्रवाल राप्रपाका उम्मेदवार हुन् जसले डोटी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340572": {
+    id: "340572",
+    summary: "द्धारिका प्रसाद न्यौपाने एमालेका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341307": {
+    id: "341307",
+    summary: "जनकराज चौधरी काँग्रेसका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340249": {
+    id: "340249",
+    summary: "रामलाल डगौरा थारु नेकपा (माओवादी)का उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342184": {
+    id: "342184",
+    summary: "कोमल ज्ञवाली रास्वपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340505": {
+    id: "340505",
+    summary: "लोकेन्‍द्र कुँवर राप्रपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340568": {
+    id: "340568",
+    summary: "सुर्य बहादुर थापा एमालेका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341235": {
+    id: "341235",
+    summary: "विजय बहादुर स्वाँर काँग्रेसका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340275": {
+    id: "340275",
+    summary: "नन्द बहादुर साउँद नेकपा (माओवादी)का उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339795": {
+    id: "339795",
+    summary: "के पी खनाल रास्वपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340644": {
+    id: "340644",
+    summary: "भरत सिहं वि.सि.(बुढाक्षेत्री) राप्रपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340513": {
+    id: "340513",
+    summary: "गौरी शंकर चौधरी एमालेका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339891": {
+    id: "339891",
+    summary: "भिम बडुवाल काँग्रेसका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340175": {
+    id: "340175",
+    summary: "विरमान चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342441": {
+    id: "342441",
+    summary: "जगत प्रसाद जोशी रास्वपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340642": {
+    id: "340642",
+    summary: "बिरेन्द्र बहादुर बम राप्रपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340533": {
+    id: "340533",
+    summary: "लेख राज भट्ट एमालेका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341859": {
+    id: "341859",
+    summary: "गोरख बहादुर विष्ट काँग्रेसका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340226": {
+    id: "340226",
+    summary: "हरि राम चौधरी नेकपा (माओवादी)का उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342757": {
+    id: "342757",
+    summary: "खेम राज कोईराला रास्वपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340040": {
+    id: "340040",
+    summary: "कमल रजवार राप्रपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 4 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341203": {
+    id: "341203",
+    summary: "यज्ञ राज ढुंगाना उपाध्याय एमालेका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340383": {
+    id: "340383",
+    summary: "नर नारायण शाह काँग्रेसका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340246": {
+    id: "340246",
+    summary: "प्रेम वहादुर आले नेकपा (माओवादी)का उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339984": {
+    id: "339984",
+    summary: "आनन्‍द बहादुर चन्‍द रास्वपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340800": {
+    id: "340800",
+    summary: "रोशन शाही राप्रपाका उम्मेदवार हुन् जसले कैलाली क्षेत्र नं. 5 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340502": {
+    id: "340502",
+    summary: "गणेश सिंह ठगुन्ना एमालेका उम्मेदवार हुन् जसले दार्चुला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341414": {
+    id: "341414",
+    summary: "धर्मानन्द जोशी काँग्रेसका उम्मेदवार हुन् जसले दार्चुला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339588": {
+    id: "339588",
+    summary: "लक्ष्मण दत्त जोशी नेकपा (माओवादी)का उम्मेदवार हुन् जसले दार्चुला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339773": {
+    id: "339773",
+    summary: "राजेश सिंह सामन्त (साउद) रास्वपाका उम्मेदवार हुन् जसले दार्चुला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341285": {
+    id: "341285",
+    summary: "राजेश चन्द राप्रपाका उम्मेदवार हुन् जसले दार्चुला क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339601": {
+    id: "339601",
+    summary: "दामोदर भण्डारी एमालेका उम्मेदवार हुन् जसले बैतडी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339985": {
+    id: "339985",
+    summary: "चतुर बहादुर चन्द काँग्रेसका उम्मेदवार हुन् जसले बैतडी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340415": {
+    id: "340415",
+    summary: "प्रमानन्द भट्ट नेकपा (माओवादी)का उम्मेदवार हुन् जसले बैतडी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340516": {
+    id: "340516",
+    summary: "हरि मोहन भण्डारी रास्वपाका उम्मेदवार हुन् जसले बैतडी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339508": {
+    id: "339508",
+    summary: "भुपेन बाहादुर चन्द राप्रपाका उम्मेदवार हुन् जसले बैतडी क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341022": {
+    id: "341022",
+    summary: "चक्र प्रसाद स्नेही एमालेका उम्मेदवार हुन् जसले डडेलधुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341455": {
+    id: "341455",
+    summary: "नैन सिंह महर काँग्रेसका उम्मेदवार हुन् जसले डडेलधुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340669": {
+    id: "340669",
+    summary: "मान सिह माल नेकपा (माओवादी)का उम्मेदवार हुन् जसले डडेलधुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340545": {
+    id: "340545",
+    summary: "तारा प्रसाद जोशी रास्वपाका उम्मेदवार हुन् जसले डडेलधुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340616": {
+    id: "340616",
+    summary: "गोविन्द खडायत राप्रपाका उम्मेदवार हुन् जसले डडेलधुरा क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340717": {
+    id: "340717",
+    summary: "तारा लामा तामाङ एमालेका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341563": {
+    id: "341563",
+    summary: "गोपी प्रसाद उपाध्याय काँग्रेसका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340979": {
+    id: "340979",
+    summary: "बीना मगर नेकपा (माओवादी)का उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339943": {
+    id: "339943",
+    summary: "जनक सिंह धामी रास्वपाका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340465": {
+    id: "340465",
+    summary: "दिल्ली वहादुर शाही राप्रपाका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341210": {
+    id: "341210",
+    summary: "बचन बहादुर सिंह एमालेका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341026": {
+    id: "341026",
+    summary: "नारायण प्रकाश साउद काँग्रेसका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341433": {
+    id: "341433",
+    summary: "माधव प्रसाद पन्त नेकपा (माओवादी)का उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340896": {
+    id: "340896",
+    summary: "दिपक राज बोहरा रास्वपाका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340044": {
+    id: "340044",
+    summary: "तिर्थ राज चटौत राप्रपाका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340422": {
+    id: "340422",
+    summary: "दीपक प्रकाश भट्ट एमालेका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "342171": {
+    id: "342171",
+    summary: "हरि प्रसाद बोहरा काँग्रेसका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341039": {
+    id: "341039",
+    summary: "मान बहादुर सुनार नेकपा (माओवादी)का उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340127": {
+    id: "340127",
+    summary: "ज्ञानेन्द्र सिंह महता रास्वपाका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339863": {
+    id: "339863",
+    summary: "पुर्ण वहादुर चन्द राप्रपाका उम्मेदवार हुन् जसले कञ्चनपुर क्षेत्र नं. 3 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340622": {
+    id: "340622",
+    summary: "राम प्रसाद पाण्डेय एमालेका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341163": {
+    id: "341163",
+    summary: "विनोद कुमार चौधरी काँग्रेसका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339616": {
+    id: "339616",
+    summary: "सिन्‍धु जलेसा बुढाथोकी नेकपा (माओवादी)का उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340029": {
+    id: "340029",
+    summary: "विक्रम खनाल रास्वपाका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340211": {
+    id: "340211",
+    summary: "नवनित कुमार मिश्र राप्रपाका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340735": {
+    id: "340735",
+    summary: "लेखनाथ खरेल एमालेका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340076": {
+    id: "340076",
+    summary: "भीम बहादुर थापा क्षेत्री काँग्रेसका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341116": {
+    id: "341116",
+    summary: "देवेन्द्र पौडेल नेकपा (माओवादी)का उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340191": {
+    id: "340191",
+    summary: "नरेन्द्र कुमार गुप्‍ता रास्वपाका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "339405": {
+    id: "339405",
+    summary: "धुब्र बहादुर प्रधान राप्रपाका उम्मेदवार हुन् जसले नवलपरासी (बर्दघाट सुस्ता पश्चिम) क्षेत्र नं. 2 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340586": {
+    id: "340586",
+    summary: "नन्दराम देवकोटा एमालेका उम्मेदवार हुन् जसले रुकुम (पश्चिम भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341362": {
+    id: "341362",
+    summary: "राजु के.सी. काँग्रेसका उम्मेदवार हुन् जसले रुकुम (पश्चिम भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340125": {
+    id: "340125",
+    summary: "गोपाल शर्मा नेकपा (माओवादी)का उम्मेदवार हुन् जसले रुकुम (पश्चिम भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "341052": {
+    id: "341052",
+    summary: "मान बहादुर शाही रास्वपाका उम्मेदवार हुन् जसले रुकुम (पश्चिम भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+  "340720": {
+    id: "340720",
+    summary: "गोपाल खडका राप्रपाका उम्मेदवार हुन् जसले रुकुम (पश्चिम भाग) क्षेत्र नं. 1 बाट २०८२ को प्रतिनिधिसभा निर्वाचनमा उम्मेदवारी दिएका छन्।",
+    achievements: [
+    ],
+    controversies: [
+    ],
+    electionHistory: [
+    ],
+    firstTimeCandidate: true,
+  },
+};
+
+export function getEnrichment(id: string): CandidateEnrichment | undefined {
+  return ENRICHMENTS[id];
+}
