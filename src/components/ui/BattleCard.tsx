@@ -27,12 +27,21 @@ export default function BattleCard({ battle, onOpen }: BattleCardProps) {
       {/* Candidate face-off */}
       <div className="flex items-center gap-2">
         <div className="flex-1 text-center">
-          <div
-            className="w-10 h-10 rounded-full mx-auto flex items-center justify-center text-white text-sm font-bold"
-            style={{ backgroundColor: battle.candidates[0].partyColor }}
-          >
-            {battle.candidates[0].name.charAt(0)}
-          </div>
+          {battle.candidates[0].image ? (
+            <img
+              src={battle.candidates[0].image}
+              alt={battle.candidates[0].name}
+              className="w-20 h-20 rounded-full mx-auto object-cover"
+              style={{ border: `3px solid ${battle.candidates[0].partyColor}` }}
+            />
+          ) : (
+            <div
+              className="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold"
+              style={{ backgroundColor: battle.candidates[0].partyColor }}
+            >
+              {battle.candidates[0].name.charAt(0)}
+            </div>
+          )}
           <div className="text-sm font-semibold text-gray-900 mt-1.5 truncate">
             {battle.candidates[0].name}
           </div>
@@ -42,12 +51,21 @@ export default function BattleCard({ battle, onOpen }: BattleCardProps) {
         <div className="flex-shrink-0 text-xs font-bold text-gray-300 uppercase">vs</div>
 
         <div className="flex-1 text-center">
-          <div
-            className="w-10 h-10 rounded-full mx-auto flex items-center justify-center text-white text-sm font-bold"
-            style={{ backgroundColor: battle.candidates[1].partyColor }}
-          >
-            {battle.candidates[1].name.charAt(0)}
-          </div>
+          {battle.candidates[1].image ? (
+            <img
+              src={battle.candidates[1].image}
+              alt={battle.candidates[1].name}
+              className="w-20 h-20 rounded-full mx-auto object-cover"
+              style={{ border: `3px solid ${battle.candidates[1].partyColor}` }}
+            />
+          ) : (
+            <div
+              className="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-white text-2xl font-bold"
+              style={{ backgroundColor: battle.candidates[1].partyColor }}
+            >
+              {battle.candidates[1].name.charAt(0)}
+            </div>
+          )}
           <div className="text-sm font-semibold text-gray-900 mt-1.5 truncate">
             {battle.candidates[1].name}
           </div>

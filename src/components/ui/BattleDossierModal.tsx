@@ -96,12 +96,21 @@ export default function BattleDossierModal({ battle, onClose }: BattleDossierMod
             <div className="grid grid-cols-[1fr_auto_1fr] items-stretch max-w-2xl mx-auto">
               {/* Candidate 1 */}
               <div className="p-3 sm:p-6 text-center">
-                <div
-                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto flex items-center justify-center text-white text-lg sm:text-2xl font-bold shadow-lg"
-                  style={{ backgroundColor: battle.candidates[0].partyColor }}
-                >
-                  {battle.candidates[0].name.charAt(0)}
-                </div>
+                {battle.candidates[0].image ? (
+                  <img
+                    src={battle.candidates[0].image}
+                    alt={battle.candidates[0].name}
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto object-cover shadow-lg"
+                    style={{ border: `4px solid ${battle.candidates[0].partyColor}` }}
+                  />
+                ) : (
+                  <div
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto flex items-center justify-center text-white text-3xl sm:text-4xl font-bold shadow-lg"
+                    style={{ backgroundColor: battle.candidates[0].partyColor }}
+                  >
+                    {battle.candidates[0].name.charAt(0)}
+                  </div>
+                )}
                 <h3 className="text-sm sm:text-lg font-bold text-gray-900 mt-2 sm:mt-3">
                   {battle.candidates[0].name}
                 </h3>
@@ -125,12 +134,21 @@ export default function BattleDossierModal({ battle, onClose }: BattleDossierMod
 
               {/* Candidate 2 */}
               <div className="p-3 sm:p-6 text-center">
-                <div
-                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full mx-auto flex items-center justify-center text-white text-lg sm:text-2xl font-bold shadow-lg"
-                  style={{ backgroundColor: battle.candidates[1].partyColor }}
-                >
-                  {battle.candidates[1].name.charAt(0)}
-                </div>
+                {battle.candidates[1].image ? (
+                  <img
+                    src={battle.candidates[1].image}
+                    alt={battle.candidates[1].name}
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto object-cover shadow-lg"
+                    style={{ border: `4px solid ${battle.candidates[1].partyColor}` }}
+                  />
+                ) : (
+                  <div
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto flex items-center justify-center text-white text-3xl sm:text-4xl font-bold shadow-lg"
+                    style={{ backgroundColor: battle.candidates[1].partyColor }}
+                  >
+                    {battle.candidates[1].name.charAt(0)}
+                  </div>
+                )}
                 <h3 className="text-sm sm:text-lg font-bold text-gray-900 mt-2 sm:mt-3">
                   {battle.candidates[1].name}
                 </h3>
@@ -210,12 +228,21 @@ export default function BattleDossierModal({ battle, onClose }: BattleDossierMod
                         onClick={() => handleVote(candidate.name)}
                         className="py-3 px-4 rounded-xl border-2 border-gray-200 hover:border-gray-400 transition-all text-center hover:shadow-md"
                       >
-                        <div
-                          className="w-10 h-10 rounded-full mx-auto flex items-center justify-center text-white text-sm font-bold"
-                          style={{ backgroundColor: candidate.partyColor }}
-                        >
-                          {candidate.name.charAt(0)}
-                        </div>
+                        {candidate.image ? (
+                          <img
+                            src={candidate.image}
+                            alt={candidate.name}
+                            className="w-10 h-10 rounded-full mx-auto object-cover"
+                            style={{ border: `2px solid ${candidate.partyColor}` }}
+                          />
+                        ) : (
+                          <div
+                            className="w-10 h-10 rounded-full mx-auto flex items-center justify-center text-white text-sm font-bold"
+                            style={{ backgroundColor: candidate.partyColor }}
+                          >
+                            {candidate.name.charAt(0)}
+                          </div>
+                        )}
                         <div className="font-semibold text-gray-900 mt-2 text-sm">
                           {candidate.name}
                         </div>
