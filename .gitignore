@@ -42,3 +42,9 @@ next-env.d.ts
 
 # Votes database
 data/votes.db
+
+# Personal/data files
+K.P Oli
+candidates/
+*.pdf
+raw-electiondata*.json
