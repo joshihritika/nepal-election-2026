@@ -48,6 +48,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ne">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWWBZQQ5P4"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FWWBZQQ5P4');
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
       </body>
