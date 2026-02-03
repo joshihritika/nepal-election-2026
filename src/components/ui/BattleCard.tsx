@@ -42,13 +42,13 @@ export default function BattleCard({ battle, onOpen }: BattleCardProps) {
               {battle.candidates[0].name.charAt(0)}
             </div>
           )}
-          <div className="text-sm font-semibold text-gray-900 mt-1.5 truncate">
+          <div className="text-base font-semibold text-gray-900 mt-1.5 truncate">
             {battle.candidates[0].name}
           </div>
-          <div className="text-xs text-gray-500">{battle.candidates[0].partyShort}</div>
+          <div className="text-sm text-gray-500">{battle.candidates[0].partyShort}</div>
         </div>
 
-        <div className="flex-shrink-0 text-xs font-bold text-gray-300 uppercase">vs</div>
+        <div className="flex-shrink-0 text-sm font-bold text-gray-300 uppercase">vs</div>
 
         <div className="flex-1 text-center">
           {battle.candidates[1].image ? (
@@ -66,10 +66,10 @@ export default function BattleCard({ battle, onOpen }: BattleCardProps) {
               {battle.candidates[1].name.charAt(0)}
             </div>
           )}
-          <div className="text-sm font-semibold text-gray-900 mt-1.5 truncate">
+          <div className="text-base font-semibold text-gray-900 mt-1.5 truncate">
             {battle.candidates[1].name}
           </div>
-          <div className="text-xs text-gray-500">{battle.candidates[1].partyShort}</div>
+          <div className="text-sm text-gray-500">{battle.candidates[1].partyShort}</div>
         </div>
       </div>
     </button>

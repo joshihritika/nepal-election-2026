@@ -110,7 +110,7 @@ export default function ReturningCandidates() {
   return (
     <section className="mt-4">
       <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5">
-        <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-3">
+        <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3">
           उम्मेदवार हाइलाइट्स
         </h3>
 
@@ -136,7 +136,7 @@ export default function ReturningCandidates() {
               </div>
               <button
                 onClick={() => setExpanded(expanded === s.key ? null : s.key)}
-                className="mt-1.5 text-[11px] font-medium w-full text-center py-1 rounded hover:underline"
+                className="mt-1.5 text-sm font-medium w-full text-center py-1 rounded hover:underline"
                 style={{ color: s.color }}
               >
                 {expanded === s.key ? "बन्द गर्नुहोस् ✕" : "विस्तृत सूची हेर्नुहोस् →"}
