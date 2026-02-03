@@ -87,7 +87,7 @@ function HomeContent() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             प्रतिनिधि सभा सदस्य निर्वाचन २०८२
           </h1>
-          <p className="text-base sm:text-lg italic text-blue-700/80 mb-4">प्रत्येक मत महत्त्वपूर्ण छ। मतदान गर्न नभुल्नुहोला।</p>
+          <p className="text-base sm:text-lg italic text-blue-700/80 mb-4">प्रत्येक मत महत्त्वपूर्ण छ। सचेत भई मतदान गरौँ! 🇳🇵</p>
           {/* Key Stats */}
           <div className="flex items-center justify-center gap-6 sm:gap-10 mb-4">
             <div className="text-center">
