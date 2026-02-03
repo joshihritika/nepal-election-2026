@@ -42,20 +42,85 @@ const TRANSLITERATION: [string, string][] = [
 ];
 
 const NAME_ALIASES: Record<string, string[]> = {
-  "oli": ["ओली"], "deuba": ["देउवा"], "prachanda": ["प्रचण्ड", "प्रचन्ड"],
-  "balen": ["बालेन"], "rabi": ["रवि"], "lamichhane": ["लामिछाने"],
-  "gagan": ["गगन"], "thapa": ["थापा"], "sharma": ["शर्मा"],
-  "kc": ["केसी"], "gurung": ["गुरुङ"], "tamang": ["तामाङ"],
-  "rai": ["राई"], "shrestha": ["श्रेष्ठ"], "adhikari": ["अधिकारी"],
+  // Key political figures
+  "kp": ["के.पी", "केपी", "के पी"],
+  "kp oli": ["के.पी शर्मा ओली", "केपी शर्मा ओली", "ओली"],
+  "oli": ["ओली"], "deuba": ["देउवा"],
+  "prachanda": ["प्रचण्ड", "प्रचन्ड", "पुष्प कमल दाहाल", "पुष्प कमल दाहाल प्रचण्ड"],
+  "pushpa": ["पुष्प"], "pushpa kamal": ["पुष्प कमल"],
+  "pushpa kamal dahal": ["पुष्प कमल दाहाल", "पुष्प कमल दाहाल प्रचण्ड"],
+  "pushpa kamal dahal prachanda": ["पुष्प कमल दाहाल प्रचण्ड"],
+  "balen": ["बालेन"], "rabi": ["रवि", "रवी", "रबि"], "lamichhane": ["लामिछाने"],
+  "gagan": ["गगन"], "gagan thapa": ["गगन थापा", "गगन कुमार थापा"],
+  // Common surnames (top 50)
+  "thapa": ["थापा"], "sharma": ["शर्मा"], "shah": ["शाह"], "shahi": ["शाही"],
+  "singh": ["सिंह", "सिँह", "सिह"], "kc": ["केसी", "के.सी"], "khadka": ["खड्का"],
+  "gurung": ["गुरुङ", "गुरुं", "गुरुङ्ग"], "tamang": ["तामाङ", "तामांग", "तामाङ्ग"],
+  "rai": ["राई", "राय"], "ray": ["राय", "राई"], "limbu": ["लिम्बु", "लिम्बू"],
+  "magar": ["मगर"], "shrestha": ["श्रेष्ठ", "श्रेष्‍ठ"], "sah": ["साह"],
+  "mahato": ["महतो"], "maharjan": ["महर्जन"], "yadav": ["यादव"],
+  "chaudhary": ["चौधरी"], "adhikari": ["अधिकारी"], "bhandari": ["भण्डारी", "भंडारी"],
+  "dahal": ["दाहाल"], "renu": ["रेणु"], "renu dahal": ["रेणु दाहाल"],
+  "dharmananda": ["धर्मानन्द"], "dharmananda joshi": ["धर्मानन्द जोशी"],
+  "joshi": ["जोशी"], "neupane": ["न्यौपाने", "न्युपाने"], "lama": ["लामा"],
+  "poudel": ["पौडेल", "पौडल"], "paudel": ["पौडेल", "पौडल"], "koirala": ["कोइराला"],
+  "basnet": ["बस्नेत"], "karki": ["कार्की"], "tharu": ["थारु"],
+  "ghimire": ["घिमिरे"], "acharya": ["आचार्य"], "thakur": ["ठाकुर"],
+  "rana": ["राना"], "bhattarai": ["भट्टराई"], "khatri": ["खत्री"],
+  "dhakal": ["ढकाल"], "khanal": ["खनाल"], "bhatt": ["भट्ट"],
+  "jha": ["झा"], "mishra": ["मिश्र"], "kushwaha": ["कुशवाहा"],
+  "rajbanshi": ["राजवंशी"], "ansari": ["अंसारी", "अन्सारी"], "paswan": ["पासवान"],
+  "kshetri": ["क्षेत्री"], "pokharel": ["पोखरेल"], "gautam": ["गौतम"],
+  // Common first names (top 50)
+  "ram": ["राम"], "hari": ["हरि"], "krishna": ["कृष्ण"], "raj": ["राज"],
+  "prem": ["प्रेम"], "manoj": ["मनोज"], "bharat": ["भरत"], "dipak": ["दीपक", "दिपक"],
+  "deepak": ["दीपक", "दिपक"], "ramesh": ["रमेश"], "vinod": ["विनोद"], "binod": ["विनोद", "बिनोद"],
+  "prakash": ["प्रकाश"], "santosh": ["सन्तोष", "संतोष"], "rajendra": ["राजेन्द्र"],
+  "chandra": ["चन्द्र"], "ganesh": ["गणेश"], "surendra": ["सुरेन्द्र"],
+  "ajay": ["अजय"], "shiv": ["शिव"], "lal": ["लाल"], "kamal": ["कमल"],
+  "arjun": ["अर्जुन"], "bishnu": ["विष्णु"], "rajesh": ["राजेश"], "raju": ["राजु"],
+  "dhan": ["धन"], "jay": ["जय"], "sanjay": ["सञ्जय", "संजय"], "madhav": ["माधव"],
+  "mahesh": ["महेश"], "suresh": ["सुरेश"], "sunil": ["सुनिल"], "rakesh": ["राकेश"],
+  "dinesh": ["दिनेश"], "tek": ["टेक"], "kiran": ["किरण"], "indra": ["इन्द्र"],
+  "rajan": ["राजन"], "pradip": ["प्रदिप", "प्रदीप"], "dev": ["देव"],
+  "keshav": ["केशव"], "umesh": ["उमेश"], "surya": ["सुर्य", "सूर्य"],
+  "suman": ["सुमन"], "saroj": ["सरोज"], "shyam": ["श्याम"], "laxmi": ["लक्ष्मी"],
+  "mohan": ["मोहन"], "mukesh": ["मुकेश"], "pramod": ["प्रमोद"],
+  "kumar": ["कुमार"], "bahadur": ["बहादुर"], "prasad": ["प्रसाद"],
+  "bikash": ["विकास", "बिकाश"], "balendra": ["वालेन्द्र", "बालेन्द्र"],
+  "balendra shah": ["वालेन्द्र शाह", "बालेन्द्र शाह"],
+  "lokendra": ["लोकेन्द्र"], "narendra": ["नरेन्द्र"], "mahendra": ["महेन्द्र"],
+  "upendra": ["उपेन्द्र"], "gopal": ["गोपाल"], "narayan": ["नारायण"],
 };
 
 function transliterate(input: string): string[] {
-  const lower = input.toLowerCase();
+  const lower = input.toLowerCase().trim();
   const results: string[] = [];
+
+  // Check direct alias matches - both full and partial
   for (const [eng, nepVariants] of Object.entries(NAME_ALIASES)) {
-    if (lower.includes(eng)) results.push(...nepVariants);
+    if (lower === eng || lower.includes(eng)) {
+      results.push(...nepVariants);
+    }
+    // Alias contains the input (for partial searches like "bal" matching "balen")
+    if (eng.includes(lower) && lower.length >= 2) {
+      results.push(...nepVariants);
+    }
   }
-  let remaining = lower;
+
+  // Also check each word separately for multi-word queries
+  const words = lower.split(/\s+/);
+  for (const word of words) {
+    if (word.length < 2) continue;
+    for (const [eng, nepVariants] of Object.entries(NAME_ALIASES)) {
+      if (eng === word || eng.startsWith(word) || word.startsWith(eng)) {
+        results.push(...nepVariants);
+      }
+    }
+  }
+
+  // Generate phonetic transliteration
+  let remaining = lower.replace(/\s+/g, "");
   let nepali = "";
   while (remaining.length > 0) {
     let matched = false;
@@ -70,7 +135,8 @@ function transliterate(input: string): string[] {
     if (!matched) remaining = remaining.slice(1);
   }
   if (nepali) results.push(nepali);
-  return results;
+
+  return [...new Set(results)];
 }
 
 function isEnglish(str: string): boolean {
@@ -102,28 +168,49 @@ export default function CandidateSelector({ onSelect, excludeIds = [], placehold
     if (q.length < 2) { setResults([]); return; }
     const all = getAllCandidates();
     const english = isEnglish(q.trim());
+    const queryParts = q.toLowerCase().trim().split(/\s+/);
+
+    // Get transliterations for full query and each word separately
     const fragments = english ? transliterate(q.toLowerCase().trim()) : [];
-    const matched: CandidateData[] = [];
+    const perWordFragments: string[] = [];
+    if (english) {
+      for (const part of queryParts) {
+        perWordFragments.push(...transliterate(part));
+      }
+    }
+    const allFragments = [...new Set([...fragments, ...perWordFragments])];
+
+    const scored: { candidate: CandidateData; score: number }[] = [];
 
     for (const c of all) {
-      if (matched.length >= 8) break;
       if (excludeIds.includes(c.id)) continue;
-      let hit = false;
+      let score = 0;
+
       if (!english) {
-        hit = c.name.includes(q) || c.party.includes(q);
-      } else if (fragments.length > 0) {
-        hit = fragments.some((f) => c.name.includes(f));
-        if (!hit) {
-          const parts = q.toLowerCase().trim().split(/\s+/);
-          if (parts.length > 1) {
-            const partFrags = parts.flatMap((p) => transliterate(p));
-            hit = partFrags.some((f) => c.name.includes(f));
+        if (c.name.includes(q)) score += 10;
+        if (c.party.includes(q)) score += 5;
+      } else if (allFragments.length > 0) {
+        for (const frag of allFragments) {
+          if (c.name.includes(frag)) {
+            score += 5 + frag.length;
           }
         }
+
+        // Bonus for matching multiple fragments
+        const matchedParts = allFragments.filter(frag => c.name.includes(frag));
+        if (matchedParts.length > 1) {
+          score += matchedParts.length * 5;
+        }
       }
-      if (hit) matched.push(c);
+
+      if (score > 0) {
+        scored.push({ candidate: c, score });
+      }
     }
-    setResults(matched);
+
+    // Sort by score and take top 8
+    scored.sort((a, b) => b.score - a.score);
+    setResults(scored.slice(0, 8).map(s => s.candidate));
   }, [excludeIds]);
 
   useEffect(() => {

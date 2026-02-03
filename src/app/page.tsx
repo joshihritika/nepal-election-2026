@@ -14,6 +14,7 @@ import LocationFilter from "@/components/ui/LocationFilter";
 import SearchBar from "@/components/ui/SearchBar";
 import { KEY_BATTLES, KeyBattle } from "@/data/key-battles";
 import ReturningCandidates from "@/components/ui/ReturningCandidates";
+import CompareCandidates from "@/components/ui/CompareCandidates";
 import { CompareProvider } from "@/contexts/CompareContext";
 import { CandidateData } from "@/data/candidates-scraped";
 
@@ -159,6 +160,8 @@ function HomeContent() {
           )}
         </div>
 
+        {/* Compare Candidates */}
+        <CompareCandidates />
 
         {/* Returning Candidates */}
         <ReturningCandidates />

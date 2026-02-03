@@ -54,69 +54,252 @@ const TRANSLITERATION: [string, string][] = [
 
 // Well-known English-to-Nepali name mappings for popular figures
 const NAME_ALIASES: Record<string, string[]> = {
+  // Key political figures - full names and variations (matching actual data)
+  "kp": ["के.पी", "केपी", "के पी"],
+  "kp oli": ["के.पी शर्मा ओली", "केपी शर्मा ओली", "के.पी. शर्मा ओली", "ओली"],
+  "kp sharma oli": ["के.पी शर्मा ओली", "केपी शर्मा ओली", "के.पी. शर्मा ओली"],
+  "kp sharma": ["के.पी शर्मा", "केपी शर्मा"],
   "oli": ["ओली"],
   "deuba": ["देउवा"],
-  "prachanda": ["प्रचण्ड", "प्रचन्ड"],
+  "sher bahadur deuba": ["शेरबहादुर देउवा", "शेर बहादुर देउवा"],
+  "sher bahadur": ["शेरबहादुर", "शेर बहादुर"],
+  "prachanda": ["प्रचण्ड", "प्रचन्ड", "पुष्प कमल दाहाल", "पुष्प कमल दाहाल प्रचण्ड"],
+  "pushpa": ["पुष्प"],
+  "pushpa kamal": ["पुष्प कमल"],
+  "pushpa kamal dahal": ["पुष्प कमल दाहाल", "पुष्प कमल दाहाल प्रचण्ड"],
+  "pushpa kamal dahal prachanda": ["पुष्प कमल दाहाल प्रचण्ड"],
   "balen": ["बालेन"],
-  "rabi lamichhane": ["रवि लामिछाने"],
-  "rabi": ["रवि"],
+  "balen shah": ["बालेन शाह"],
+  "rabi lamichhane": ["रवि लामिछाने", "रबि लामिछाने"],
+  "rabi": ["रवि", "रवी", "रबि"],
   "lamichhane": ["लामिछाने"],
   "gagan": ["गगन"],
+  "gagan thapa": ["गगन थापा", "गगन कुमार थापा"],
+  "gagan kumar thapa": ["गगन कुमार थापा"],
   "thapa": ["थापा"],
-  "ghising": ["घिसिङ"],
+  "ghising": ["घिसिङ", "घिसिं"],
   "kulman": ["कुलमान"],
-  "sher bahadur": ["शेरबहादुर", "शेर बहादुर"],
+  "kulman ghising": ["कुलमान घिसिङ"],
   "baburam": ["बाबुराम"],
+  "baburam bhattarai": ["बाबुराम भट्टराई"],
   "bhattarai": ["भट्टराई"],
   "madhav": ["माधव"],
+  "madhav nepal": ["माधव कुमार नेपाल", "माधव नेपाल"],
   "nepal": ["नेपाल"],
   "jhalanath": ["झलनाथ"],
+  "jhalanath khanal": ["झलनाथ खनाल"],
   "khanal": ["खनाल"],
-  "pushpa": ["पुष्प"],
   "kamal": ["कमल"],
-  "dahal": ["दाहाल"],
+  "renu": ["रेणु"],
+  "renu dahal": ["रेणु दाहाल"],
   "upendra": ["उपेन्द्र"],
+  "upendra yadav": ["उपेन्द्र यादव"],
   "yadav": ["यादव"],
   "bishnu": ["विष्णु"],
+  "bishnu poudel": ["विष्णु पौडेल"],
   "poudel": ["पौडेल", "पौडल"],
+  "paudel": ["पौडेल", "पौडल"],
   "ram chandra": ["रामचन्द्र", "राम चन्द्र"],
+  "ram chandra poudel": ["रामचन्द्र पौडेल"],
+  "ranju": ["रन्जु", "रञ्जु"],
+  "ranju darshan": ["रन्जु दर्शना"],
+  "rabindra": ["रवीन्द्र", "रविन्द्र"],
+  "rabindra mishra": ["रवीन्द्र मिश्र"],
+  "mishra": ["मिश्र"],
+  "amresh": ["अमरेश"],
+  "amresh singh": ["अमरेश कुमार सिंह"],
+  "harka": ["हर्क"],
+  "harka rai": ["हर्क राज राई"],
+
+  // Common surnames/last names (top 50 most common)
   "shah": ["शाह"],
-  "singh": ["सिंह", "सिँह"],
+  "shahi": ["शाही"],
+  "singh": ["सिंह", "सिँह", "सिह"],
   "sharma": ["शर्मा"],
   "kc": ["केसी", "के.सी"],
-  "gurung": ["गुरुङ"],
-  "tamang": ["तामाङ"],
-  "rai": ["राई"],
+  "khadka": ["खड्का"],
+  "gurung": ["गुरुङ", "गुरुं", "गुरुङ्ग"],
+  "tamang": ["तामाङ", "तामांग", "तामाङ्ग"],
+  "rai": ["राई", "राय"],
+  "ray": ["राय", "राई"],
   "limbu": ["लिम्बु", "लिम्बू"],
   "magar": ["मगर"],
-  "shrestha": ["श्रेष्ठ"],
+  "shrestha": ["श्रेष्ठ", "श्रेष्‍ठ"],
+  "sah": ["साह"],
+  "mahato": ["महतो"],
   "maharjan": ["महर्जन"],
   "pradhan": ["प्रधान"],
   "joshi": ["जोशी"],
+  "dharmananda": ["धर्मानन्द"],
+  "dharmananda joshi": ["धर्मानन्द जोशी"],
   "adhikari": ["अधिकारी"],
   "pokharel": ["पोखरेल"],
+  "pokhrel": ["पोखरेल"],
   "koirala": ["कोइराला"],
   "rijal": ["रिजाल"],
   "basnet": ["बस्नेत"],
   "karki": ["कार्की"],
   "chaudhary": ["चौधरी"],
-  "mandal": ["मण्डल"],
+  "chaudhari": ["चौधरी"],
+  "choudhary": ["चौधरी"],
+  "mandal": ["मण्डल", "मंडल"],
+  "lama": ["लामा"],
+  "sherpa": ["शेर्पा"],
+  "tharu": ["थारु"],
+  "budha": ["बुढा"],
+  "buda": ["बुढा"],
+  "pun": ["पुन"],
+  "bhandari": ["भण्डारी", "भंडारी"],
+  "pandey": ["पाण्डे", "पाण्डेय"],
+  "pandit": ["पण्डित"],
+  "regmi": ["रेग्मी"],
+  "bhusal": ["भुसाल"],
+  "acharya": ["आचार्य"],
+  "subedi": ["सुवेदी"],
+  "khatri": ["खत्री"],
+  "neupane": ["न्यौपाने", "न्युपाने"],
+  "nyaupane": ["न्यौपाने"],
+  "gautam": ["गौतम"],
+  "ghimire": ["घिमिरे"],
+  "sapkota": ["सापकोटा"],
+  "agni": ["अग्नि"],
+  "kharel": ["खरेल"],
+  "dhakal": ["ढकाल"],
+  "thakur": ["ठाकुर"],
+  "rana": ["राना"],
+  "bhatt": ["भट्ट"],
+  "jha": ["झा"],
+  "kushwaha": ["कुशवाहा"],
+  "sunar": ["सुनार"],
+  "rajbanshi": ["राजवंशी"],
+  "nepali": ["नेपाली"],
+  "ansari": ["अंसारी", "अन्सारी"],
+  "mahara": ["महरा"],
+  "paswan": ["पासवान"],
+  "kshetri": ["क्षेत्री"],
+
+  // Common first names (top 50 most common)
+  "ram": ["राम"],
+  "shyam": ["श्याम"],
+  "hari": ["हरि"],
+  "krishna": ["कृष्ण"],
+  "gopal": ["गोपाल"],
+  "kumar": ["कुमार"],
+  "bahadur": ["बहादुर"],
+  "prasad": ["प्रसाद"],
+  "lal": ["लाल"],
+  "man": ["मान"],
+  "bir": ["बीर", "वीर"],
+  "narayan": ["नारायण"],
+  "ganesh": ["गणेश"],
+  "balendra": ["वालेन्द्र", "बालेन्द्र"],
+  "balendra shah": ["वालेन्द्र शाह", "बालेन्द्र शाह"],
+  "suresh": ["सुरेश"],
+  "mahesh": ["महेश"],
+  "rajesh": ["राजेश"],
+  "dinesh": ["दिनेश"],
+  "ramesh": ["रमेश"],
+  "bikash": ["विकास", "बिकाश"],
+  "bikram": ["विक्रम", "बिक्रम"],
+  "deepak": ["दीपक", "दिपक"],
+  "dipak": ["दीपक", "दिपक"],
+  "sunil": ["सुनिल"],
+  "anil": ["अनिल"],
+  "sanjay": ["सञ्जय", "संजय"],
+  "manoj": ["मनोज"],
+  "bijay": ["विजय", "बिजय"],
+  "vijay": ["विजय"],
+  "ajay": ["अजय"],
+  "nabin": ["नबिन", "नविन"],
+  "prabin": ["प्रबिन", "प्रविन"],
+  "sabin": ["सबिन", "सविन"],
+  "prakash": ["प्रकाश"],
+  "lokendra": ["लोकेन्द्र"],
+  "surendra": ["सुरेन्द्र"],
+  "rajendra": ["राजेन्द्र"],
+  "narendra": ["नरेन्द्र"],
+  "mahendra": ["महेन्द्र"],
+  "jeevan": ["जीवन"],
+  "jiwan": ["जीवन"],
+  "sita": ["सीता"],
+  "gita": ["गीता"],
+  "rita": ["रीता"],
+  "anita": ["अनिता"],
+  "sunita": ["सुनिता"],
+  "sabina": ["सबिना"],
+  "kabita": ["कविता"],
+  "raj": ["राज"],
+  "prem": ["प्रेम"],
+  "bharat": ["भरत"],
+  "vinod": ["विनोद"],
+  "santosh": ["सन्तोष", "संतोष"],
+  "chandra": ["चन्द्र"],
+  "shiv": ["शिव"],
+  "arjun": ["अर्जुन"],
+  "jay": ["जय"],
+  "dhan": ["धन"],
+  "raju": ["राजु"],
+  "rakesh": ["राकेश"],
+  "tek": ["टेक"],
+  "kiran": ["किरण"],
+  "indra": ["इन्द्र"],
+  "rajan": ["राजन"],
+  "pradip": ["प्रदिप", "प्रदीप"],
+  "dev": ["देव"],
+  "keshav": ["केशव"],
+  "umesh": ["उमेश"],
+  "surya": ["सुर्य", "सूर्य"],
+  "suman": ["सुमन"],
+  "saroj": ["सरोज"],
+  "laxmi": ["लक्ष्मी"],
+  "mohan": ["मोहन"],
+  "mukesh": ["मुकेश"],
+  "pramod": ["प्रमोद"],
+  "binod": ["विनोद", "बिनोद"],
+  "kamala": ["कमला"],
+  "parbati": ["पार्वती"],
+  "saraswati": ["सरस्वती"],
+  "durga": ["दुर्गा"],
+  "mina": ["मिना"],
+  "bina": ["बिना"],
+  "tika": ["टिका"],
+  "devi": ["देवी"],
+
+  // Titles and prefixes
+  "dr": ["डा.", "डाक्टर"],
+  "doctor": ["डा.", "डाक्टर"],
 };
 
 // Generate transliteration fragments from English input
 function transliterate(input: string): string[] {
-  const lower = input.toLowerCase();
+  const lower = input.toLowerCase().trim();
   const results: string[] = [];
 
-  // Check direct alias matches
+  // Check direct alias matches - both full and partial
   for (const [eng, nepVariants] of Object.entries(NAME_ALIASES)) {
-    if (lower.includes(eng)) {
+    // Exact match or input contains the alias
+    if (lower === eng || lower.includes(eng)) {
+      results.push(...nepVariants);
+    }
+    // Alias contains the input (for partial searches like "bal" matching "balen")
+    if (eng.includes(lower) && lower.length >= 2) {
       results.push(...nepVariants);
     }
   }
 
+  // Also check each word separately for multi-word queries
+  const words = lower.split(/\s+/);
+  for (const word of words) {
+    if (word.length < 2) continue;
+    for (const [eng, nepVariants] of Object.entries(NAME_ALIASES)) {
+      if (eng === word || eng.startsWith(word) || word.startsWith(eng)) {
+        results.push(...nepVariants);
+      }
+    }
+  }
+
   // Generate phonetic transliteration
-  let remaining = lower;
+  let remaining = lower.replace(/\s+/g, "");
   let nepali = "";
   while (remaining.length > 0) {
     let matched = false;
@@ -136,7 +319,8 @@ function transliterate(input: string): string[] {
     results.push(nepali);
   }
 
-  return results;
+  // Return unique results
+  return [...new Set(results)];
 }
 
 // Build a flat searchable list of all candidates
@@ -195,41 +379,79 @@ export default function SearchBar() {
     // Search candidates
     const allCandidates = getAllCandidates();
     const seen = new Set<string>();
+    const scoredResults: { candidate: CandidateData; score: number }[] = [];
+
+    // For English input, also get transliterations for each word separately
+    const perWordFragments: string[] = [];
+    if (englishInput) {
+      for (const part of queryParts) {
+        perWordFragments.push(...transliterate(part));
+      }
+    }
+    const allFragments = [...new Set([...nepaliFragments, ...perWordFragments])];
 
     for (const candidate of allCandidates) {
-      if (searchResults.length >= 12) break;
       if (seen.has(candidate.id)) continue;
 
-      let matches = false;
+      let score = 0;
+      const candidateNameLower = candidate.name.toLowerCase();
 
       // Direct Nepali match
       if (!englishInput) {
-        matches = candidate.name.includes(searchQuery) ||
-          candidate.party.includes(searchQuery);
+        if (candidate.name.includes(searchQuery)) score += 10;
+        if (candidate.party.includes(searchQuery)) score += 5;
       }
 
       // English transliteration match
-      if (englishInput && nepaliFragments.length > 0) {
-        matches = nepaliFragments.some(frag => candidate.name.includes(frag));
+      if (englishInput) {
+        // Try all fragments (both full query and per-word)
+        for (const frag of allFragments) {
+          if (candidate.name.includes(frag)) {
+            // Higher score for longer fragment matches
+            score += 5 + frag.length;
+          }
+        }
 
-        // Also try matching each query word separately (e.g., "kp oli" → "केपी" + "ओली")
-        if (!matches && queryParts.length > 1) {
-          const partFragments = queryParts.map(part => transliterate(part)).flat();
-          matches = partFragments.some(frag => candidate.name.includes(frag));
+        // Also try a simple substring match with transliterated fragments
+        if (score === 0) {
+          for (const frag of allFragments) {
+            // Check if any part of the fragment appears in the name
+            if (frag.length >= 2) {
+              for (let i = 0; i <= frag.length - 2; i++) {
+                const subFrag = frag.substring(i, i + 2);
+                if (candidate.name.includes(subFrag)) {
+                  score += 1;
+                }
+              }
+            }
+          }
+        }
+
+        // Bonus for matching multiple fragments
+        const matchedParts = allFragments.filter(frag => candidate.name.includes(frag));
+        if (matchedParts.length > 1) {
+          score += matchedParts.length * 5;
         }
       }
 
-      if (matches) {
+      if (score > 0) {
         seen.add(candidate.id);
-        searchResults.push({
-          type: "candidate",
-          id: candidate.id,
-          name: candidate.name,
-          subtitle: `${candidate.party} · ${candidate.district}-${candidate.constituency}`,
-          districtId: candidate.district,
-          constituencyNum: candidate.constituency,
-        });
+        scoredResults.push({ candidate, score });
       }
+    }
+
+    // Sort by score (highest first) and take top results
+    scoredResults.sort((a, b) => b.score - a.score);
+
+    for (const { candidate } of scoredResults.slice(0, 12 - searchResults.length)) {
+      searchResults.push({
+        type: "candidate",
+        id: candidate.id,
+        name: candidate.name,
+        subtitle: `${candidate.party} · ${candidate.district}-${candidate.constituency}`,
+        districtId: candidate.district,
+        constituencyNum: candidate.constituency,
+      });
     }
 
     setResults(searchResults.slice(0, 12));
@@ -317,7 +539,7 @@ export default function SearchBar() {
           }}
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
-          placeholder="आफ्नो क्षेत्र खोज्नुहोस्..."
+          placeholder="आफ्नो क्षेत्र वा उम्मेदवार खोज्नुहोस्..."
           className="w-full pl-12 pr-4 py-3 bg-white border border-gray-200 rounded-xl shadow-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
         />
 
