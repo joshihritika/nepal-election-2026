@@ -129,7 +129,7 @@ function HomeContent() {
 
         {/* Map */}
         <div className="relative">
-          <p className="text-sm text-gray-500 mb-2 text-center">नक्सामा क्लिक गरेर उम्मेदवारहरू हेर्नुहोस्</p>
+          <p className="text-sm font-bold text-gray-700 mb-2 text-center">नक्सामा क्लिक गरी उम्मेदवारहरूको विवरण हेर्नुहोस्</p>
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm relative">
             {/* Election Info — fixed to top-right corner, doesn't scroll with map */}
             <div className="absolute top-0 right-0 z-10 bg-white/90 backdrop-blur rounded-bl-lg rounded-tr-xl shadow-sm px-1.5 py-1 md:px-4 md:py-3 border-b border-l border-gray-100 pointer-events-none">
