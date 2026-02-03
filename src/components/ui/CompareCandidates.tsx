@@ -53,7 +53,7 @@ export default function CompareCandidates() {
 
   return (
     <section className="mt-6 bg-white rounded-xl border border-gray-200 p-4 sm:p-5">
-      <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-4">
+      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
         उम्मेदवार तुलना गर्नुहोस्
       </h3>
 
@@ -61,10 +61,10 @@ export default function CompareCandidates() {
         {slots.map((slot, i) => (
           <div key={i} className="relative">
             {slot ? (
-              <div className="flex items-center gap-2 px-3 py-2.5 bg-blue-50 border border-blue-200 rounded-lg">
+              <div className="flex items-center gap-2 px-3 py-3 bg-blue-50 border border-blue-200 rounded-lg">
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-medium text-gray-900 truncate">{slot.name}</div>
-                  <div className="text-xs text-gray-500 truncate">{slot.district}-{slot.constituency}</div>
+                  <div className="text-base font-medium text-gray-900 truncate">{slot.name}</div>
+                  <div className="text-sm text-gray-500 truncate">{slot.district}-{slot.constituency}</div>
                 </div>
                 <button
                   onClick={() => handleRemove(i)}
@@ -98,9 +98,9 @@ export default function CompareCandidates() {
         {slots.length < MAX_SLOTS && (
           <button
             onClick={addSlot}
-            className="flex items-center justify-center gap-2 px-3 py-2.5 border-2 border-dashed border-gray-300 rounded-lg text-sm text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-colors"
+            className="flex items-center justify-center gap-2 px-3 py-3 border-2 border-dashed border-gray-300 rounded-lg text-base text-gray-500 hover:border-blue-400 hover:text-blue-600 transition-colors"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
             </svg>
             थप्नुहोस्
@@ -112,7 +112,7 @@ export default function CompareCandidates() {
         <button
           onClick={() => setShowModal(true)}
           disabled={filledCount < 2}
-          className="px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-5 py-3 bg-blue-600 text-white text-base font-medium rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           तुलना गर्नुहोस्
         </button>

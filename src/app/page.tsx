@@ -92,22 +92,22 @@ function HomeContent() {
           <div className="flex items-center justify-center gap-6 sm:gap-10 mb-4">
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-blue-600">७</div>
-              <div className="text-xs sm:text-sm text-gray-500">प्रदेश</div>
+              <div className="text-sm sm:text-base text-gray-500">प्रदेश</div>
             </div>
             <div className="w-px h-8 bg-gray-200" />
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-green-600">७७</div>
-              <div className="text-xs sm:text-sm text-gray-500">जिल्ला</div>
+              <div className="text-sm sm:text-base text-gray-500">जिल्ला</div>
             </div>
             <div className="w-px h-8 bg-gray-200" />
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-purple-600">१६५</div>
-              <div className="text-xs sm:text-sm text-gray-500">निर्वाचन क्षेत्र</div>
+              <div className="text-sm sm:text-base text-gray-500">निर्वाचन क्षेत्र</div>
             </div>
             <div className="w-px h-8 bg-gray-200" />
             <div className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-orange-600">१.८९ कराेड</div>
-              <div className="text-xs sm:text-sm text-gray-500">मतदाता</div>
+              <div className="text-sm sm:text-base text-gray-500">मतदाता</div>
             </div>
           </div>
         </div>
@@ -130,13 +130,13 @@ function HomeContent() {
 
         {/* Map */}
         <div className="relative">
-          <p className="text-sm font-bold text-gray-700 mb-2 text-center">नक्सामा क्लिक गरी उम्मेदवारहरूको विवरण हेर्नुहोस्</p>
+          <p className="text-base sm:text-lg font-bold text-gray-700 mb-2 text-center">नक्सामा क्लिक गरी उम्मेदवारहरूको विवरण हेर्नुहोस्</p>
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm relative">
             {/* Election Info — fixed to top-right corner, doesn't scroll with map */}
-            <div className="absolute top-0 right-0 z-10 bg-white/90 backdrop-blur rounded-bl-lg rounded-tr-xl shadow-sm px-1.5 py-1 md:px-4 md:py-3 border-b border-l border-gray-100 pointer-events-none">
-              <div className="text-[8px] md:text-xs text-gray-500 uppercase tracking-wide leading-tight">आम निर्वाचन</div>
-              <div className="text-[10px] md:text-lg font-bold text-blue-900 leading-tight">२०८२ फागुन २१</div>
-              <div className="text-[8px] md:text-xs text-gray-500 leading-tight">७७ जिल्ला • १६५ <span className="hidden md:inline">निर्वाचन </span>क्षेत्र</div>
+            <div className="absolute top-0 right-0 z-10 bg-white/90 backdrop-blur rounded-bl-lg rounded-tr-xl shadow-sm px-2 py-1.5 md:px-4 md:py-3 border-b border-l border-gray-100 pointer-events-none">
+              <div className="text-[10px] md:text-xs text-gray-500 uppercase tracking-wide leading-tight">आम निर्वाचन</div>
+              <div className="text-xs md:text-lg font-bold text-blue-900 leading-tight">२०८२ फागुन २१</div>
+              <div className="text-[10px] md:text-xs text-gray-500 leading-tight">७७ जिल्ला • १६५ <span className="hidden md:inline">निर्वाचन </span>क्षेत्र</div>
             </div>
             <div className="overflow-x-auto min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
               <NepalMap
@@ -169,27 +169,27 @@ function HomeContent() {
         {/* Voter Demographics */}
         <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-5 mt-4">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xs sm:text-sm font-semibold text-gray-700">मतदाता विवरण</h3>
-            <span className="text-sm sm:text-lg font-bold text-gray-900">१,८९,०३,६८९</span>
+            <h3 className="text-sm sm:text-base font-semibold text-gray-700">मतदाता विवरण</h3>
+            <span className="text-base sm:text-lg font-bold text-gray-900">१,८९,०३,६८९</span>
           </div>
 
           {/* Stacked bar */}
-          <div className="flex rounded-full overflow-hidden h-2.5">
+          <div className="flex rounded-full overflow-hidden h-3">
             <div className="bg-blue-500" style={{ width: "51.1%" }} />
             <div className="bg-pink-500" style={{ width: "48.9%" }} />
           </div>
 
           {/* Legend */}
-          <div className="flex flex-wrap items-center gap-3 sm:gap-6 mt-3 text-xs sm:text-sm text-gray-500">
-            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-blue-500" />पुरुष ५१.१%</span>
-            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-pink-500" />महिला ४८.९%</span>
-            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-purple-500" />अन्य २००</span>
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-3 text-sm sm:text-base text-gray-500">
+            <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-blue-500" />पुरुष ५१.१%</span>
+            <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-pink-500" />महिला ४८.९%</span>
+            <span className="flex items-center gap-1.5"><span className="w-2.5 h-2.5 rounded-full bg-purple-500" />अन्य २००</span>
           </div>
         </div>
 
         {/* Key Battles Section */}
         <section className="mt-10">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
             हेर्नुपर्ने प्रमुख प्रतिस्पर्धा
           </h3>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -207,7 +207,7 @@ function HomeContent() {
         <CommentSection />
 
         {/* Data Source Notice */}
-        <footer className="mt-10 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
+        <footer className="mt-10 pt-6 border-t border-gray-200 text-center text-sm sm:text-base text-gray-500">
           <p>
             तथ्याङ्क स्रोत:{" "}
             <a

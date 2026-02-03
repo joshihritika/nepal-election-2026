@@ -251,7 +251,7 @@ export default function CandidateSelector({ onSelect, excludeIds = [], placehold
         onFocus={() => setIsOpen(true)}
         onKeyDown={handleKeyDown}
         placeholder={placeholder}
-        className="w-full px-3 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        className="w-full px-3 py-3 bg-white border border-gray-200 rounded-lg text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
       />
       {isOpen && results.length > 0 && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden z-50">
@@ -261,10 +261,10 @@ export default function CandidateSelector({ onSelect, excludeIds = [], placehold
                 <button
                   onClick={() => handleSelect(c)}
                   onMouseEnter={() => setSelectedIndex(i)}
-                  className={`w-full px-3 py-2.5 text-left transition-colors ${selectedIndex === i ? "bg-blue-50" : "hover:bg-gray-50"}`}
+                  className={`w-full px-3 py-3 text-left transition-colors ${selectedIndex === i ? "bg-blue-50" : "hover:bg-gray-50"}`}
                 >
-                  <div className="text-sm font-medium text-gray-900 truncate">{c.name}</div>
-                  <div className="text-xs text-gray-500 truncate">{c.party} · {c.district}-{c.constituency}</div>
+                  <div className="text-base font-medium text-gray-900 truncate">{c.name}</div>
+                  <div className="text-sm text-gray-500 truncate">{c.party} · {c.district}-{c.constituency}</div>
                 </button>
               </li>
             ))}
