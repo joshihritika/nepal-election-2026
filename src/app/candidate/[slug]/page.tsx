@@ -11,9 +11,10 @@ const CANDIDATE_PHOTOS: Record<string, string> = {
   // KP Oli
   "के.पी शर्मा ओली": "https://upload.wikimedia.org/wikipedia/commons/d/dd/The_Prime_Minister_of_Nepal%2C_Shri_KP_Sharma_Oli_at_Bangkok%2C_in_Thailand_on_April_04%2C_2025_%28cropped%29.jpg",
   "केपी शर्मा ओली": "https://upload.wikimedia.org/wikipedia/commons/d/dd/The_Prime_Minister_of_Nepal%2C_Shri_KP_Sharma_Oli_at_Bangkok%2C_in_Thailand_on_April_04%2C_2025_%28cropped%29.jpg",
-  // Balen Shah
+  // Balen Shah (multiple name variations in data)
   "बालेन शाह": "https://annapurnaexpress.prixacdn.net/media/albums/Balen_Shah_iuTWcK0zlE.jpg",
   "बालेन्द्र शाह": "https://annapurnaexpress.prixacdn.net/media/albums/Balen_Shah_iuTWcK0zlE.jpg",
+  "वालेन्द्र शाह": "https://annapurnaexpress.prixacdn.net/media/albums/Balen_Shah_iuTWcK0zlE.jpg",
   // Ranju Neupane
   "रन्‍जु न्‍यौपाने": "https://en.setopati.com/uploads/posts/1656815531RanjuDarshana.jpg",
   "रन्जु न्यौपाने": "https://en.setopati.com/uploads/posts/1656815531RanjuDarshana.jpg",
