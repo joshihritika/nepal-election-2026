@@ -8,6 +8,7 @@ import {
   TWO_TIME_CONTESTANTS,
   ReturningCandidate,
 } from "@/data/returning-candidates";
+import { getSlugFromId } from "@/lib/slug";
 
 const TOTAL = 559;
 
@@ -159,10 +160,11 @@ export default function ReturningCandidates() {
                   ? [...new Set(c.history.map((h) => h.party))].find((p) => p !== c.party) || c.history[0]?.party
                   : null;
 
+                const slug = getSlugFromId(c.id) || c.id;
                 return (
                   <Link
                     key={c.id}
-                    href={`/candidate/${c.id}`}
+                    href={`/candidate/${slug}`}
                     className="w-full text-left flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-md hover:bg-gray-50 transition-colors text-xs"
                   >
                     <span className="font-medium text-gray-800 truncate flex-shrink-0">

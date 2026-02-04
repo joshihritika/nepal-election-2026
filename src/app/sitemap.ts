@@ -1,11 +1,11 @@
 import { MetadataRoute } from "next";
-import { CANDIDATES } from "@/data/candidates-scraped";
+import { getAllSlugs } from "@/lib/slug";
 
 const BASE_URL = "https://nepalelections.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Get all candidate IDs
-  const allCandidates = Object.values(CANDIDATES).flat();
+  // Get all candidate slugs
+  const allSlugs = getAllSlugs();
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -17,9 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic candidate pages
-  const candidatePages: MetadataRoute.Sitemap = allCandidates.map((candidate) => ({
-    url: `${BASE_URL}/candidate/${candidate.id}`,
+  // Dynamic candidate pages with slugs
+  const candidatePages: MetadataRoute.Sitemap = allSlugs.map(({ slug }) => ({
+    url: `${BASE_URL}/candidate/${slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.8,

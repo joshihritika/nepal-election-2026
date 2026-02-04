@@ -4,6 +4,7 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { districts } from "@/data/districts";
 import { CANDIDATES, CandidateData } from "@/data/candidates-scraped";
+import { getSlugFromId } from "@/lib/slug";
 
 interface SearchResult {
   type: "district" | "candidate";
@@ -483,8 +484,9 @@ export default function SearchBar() {
     setQuery("");
 
     if (result.type === "candidate") {
-      // Navigate to candidate page
-      router.push(`/candidate/${result.id}`);
+      // Navigate to candidate page using slug
+      const slug = getSlugFromId(result.id) || result.id;
+      router.push(`/candidate/${slug}`);
     } else {
       // For districts, dispatch event so the page can open the district panel
       window.dispatchEvent(new CustomEvent("search-select", { detail: result }));

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { CandidateData } from "@/data/candidates-scraped";
 import { useCompare } from "@/contexts/CompareContext";
+import { getSlugFromId } from "@/lib/slug";
 
 // Party color mapping for major Nepali parties
 const PARTY_COLORS: Record<string, string> = {
@@ -158,9 +159,10 @@ export default function ScrapedCandidateCard({
     ${candidate.elected ? "border-green-500 bg-green-50/50" : "border-gray-200 bg-white"}`;
 
   if (asLink) {
+    const slug = getSlugFromId(candidate.id) || candidate.id;
     return (
       <Link
-        href={`/candidate/${candidate.id}`}
+        href={`/candidate/${slug}`}
         className={baseClassName}
         style={{ borderLeft: `4px solid ${partyColor}` }}
       >

@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { CANDIDATES, CandidateData } from "@/data/candidates-scraped";
 import { getEnrichment } from "@/data/candidate-enrichments";
+import { getIdFromSlug, getAllSlugs } from "@/lib/slug";
 import CandidateProfileClient from "./CandidateProfileClient";
 
 // Candidate photos mapping (from key battles and other sources)
@@ -32,7 +33,7 @@ function getAllCandidates(): CandidateData[] {
 }
 
 // Find candidate by ID
-function findCandidate(id: string): CandidateData | undefined {
+function findCandidateById(id: string): CandidateData | undefined {
   return getAllCandidates().find((c) => c.id === id);
 }
 
@@ -41,11 +42,11 @@ function getCandidatePhoto(name: string): string | undefined {
   return CANDIDATE_PHOTOS[name];
 }
 
-// Generate static params for all candidates
+// Generate static params for all candidates using slugs
 export async function generateStaticParams() {
-  const candidates = getAllCandidates();
-  return candidates.map((c) => ({
-    id: c.id,
+  const slugs = getAllSlugs();
+  return slugs.map(({ slug }) => ({
+    slug,
   }));
 }
 
@@ -53,10 +54,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const { id } = await params;
-  const candidate = findCandidate(id);
+  const { slug } = await params;
+  const id = getIdFromSlug(slug);
+  const candidate = id ? findCandidateById(id) : undefined;
 
   if (!candidate) {
     return {
@@ -128,10 +130,11 @@ export async function generateMetadata({
 export default async function CandidatePage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
-  const candidate = findCandidate(id);
+  const { slug } = await params;
+  const id = getIdFromSlug(slug);
+  const candidate = id ? findCandidateById(id) : undefined;
 
   if (!candidate) {
     notFound();
