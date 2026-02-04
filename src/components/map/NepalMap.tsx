@@ -60,51 +60,17 @@ const NepalMap = memo(function NepalMap({
   });
 
   const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
-  const [tappedDistrict, setTappedDistrict] = useState<{
-    id: string;
-    name: string;
-    province: string;
-    hq: string;
-  } | null>(null);
-  const isTouchRef = useRef(false);
 
   const handleDistrictClick = useCallback(
     (district: typeof DISTRICT_PATHS[0]) => {
-      // On touch devices: first tap shows label, second tap on same district opens panel
-      if (isTouchRef.current) {
-        if (tappedDistrict?.id === district.id) {
-          // Second tap on same district — open the panel
-          if (onDistrictClick) {
-            onDistrictClick(district.id);
-          }
-        } else {
-          // First tap or different district — just show the label
-          setTappedDistrict({
-            id: district.id,
-            name: district.name,
-            province: provinceNames[district.province],
-            hq: district.hq,
-          });
-        }
-      } else {
-        // Desktop click — open immediately
-        setTappedDistrict({
-          id: district.id,
-          name: district.name,
-          province: provinceNames[district.province],
-          hq: district.hq,
-        });
-        if (onDistrictClick) {
-          onDistrictClick(district.id);
-        }
+      // On desktop, click opens immediately
+      // On touch devices, the tooltip is clickable
+      if (onDistrictClick) {
+        onDistrictClick(district.id);
       }
     },
-    [onDistrictClick, tappedDistrict?.id]
+    [onDistrictClick]
   );
-
-  const handleTouchStart = useCallback(() => {
-    isTouchRef.current = true;
-  }, []);
 
   const handleDistrictMouseEnter = useCallback(
     (district: typeof DISTRICT_PATHS[0], evt: React.MouseEvent) => {
@@ -161,24 +127,6 @@ const NepalMap = memo(function NepalMap({
 
   return (
     <div className={`relative bg-white rounded-xl ${className}`}>
-      {/* Fixed label for touch devices - clickable to open district details */}
-      {tappedDistrict && (
-        <button
-          onClick={() => {
-            if (onDistrictClick) {
-              onDistrictClick(tappedDistrict.id);
-            }
-          }}
-          className="w-full flex items-center justify-between gap-2 bg-blue-50 border-b border-blue-200 rounded-t-xl px-3 py-2 hover:bg-blue-100 transition-colors"
-        >
-          <div className="flex items-center gap-1.5 text-sm">
-            <span className="font-bold text-gray-900">{tappedDistrict.name}</span>
-            <span className="text-gray-400">•</span>
-            <span className="text-gray-600">{tappedDistrict.province}</span>
-          </div>
-          <span className="text-blue-600 text-sm font-medium flex-shrink-0">हेर्नुहोस् →</span>
-        </button>
-      )}
       <svg
         viewBox="0 0 800 400"
         className="w-full h-full"
@@ -203,7 +151,6 @@ const NepalMap = memo(function NepalMap({
                 stroke={isSelected ? "#1E40AF" : isHovered ? "#ffffff" : "rgba(255,255,255,0.6)"}
                 strokeWidth={isSelected ? 2 : isHovered ? 1.5 : 0.5}
                 className="cursor-pointer"
-                onTouchStart={handleTouchStart}
                 onClick={() => handleDistrictClick(district)}
                 onMouseEnter={(e) => handleDistrictMouseEnter(district, e)}
                 onMouseLeave={handleMouseLeave}
