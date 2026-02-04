@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { CandidateData } from "@/data/candidates-scraped";
 import { useCompare } from "@/contexts/CompareContext";
 
@@ -53,12 +54,14 @@ interface ScrapedCandidateCardProps {
   candidate: CandidateData;
   rank?: number;
   onClick?: () => void;
+  asLink?: boolean;
 }
 
 export default function ScrapedCandidateCard({
   candidate,
   rank,
   onClick,
+  asLink = true,
 }: ScrapedCandidateCardProps) {
   const partyColor = getPartyColor(candidate.party);
   const partyShort = getPartyShort(candidate.party);
@@ -67,14 +70,8 @@ export default function ScrapedCandidateCard({
   const { isSelected, addCandidate, removeCandidate, canAdd } = useCompare();
   const compared = isSelected(candidate.id);
 
-  return (
-    <div
-      className={`relative flex items-center gap-2 sm:gap-4 px-2.5 sm:px-4 py-3 sm:py-3.5 rounded-xl border transition-colors overflow-hidden
-        ${candidate.elected ? "border-green-500 bg-green-50/50" : "border-gray-200 bg-white"}
-        ${onClick ? "cursor-pointer hover:bg-gray-50" : ""}`}
-      style={{ borderLeft: `4px solid ${partyColor}` }}
-      onClick={onClick}
-    >
+  const cardContent = (
+    <>
       {/* Rank */}
       {rank && (
         <span className="relative text-base font-bold text-gray-400 w-6 text-right flex-shrink-0">
@@ -140,6 +137,7 @@ export default function ScrapedCandidateCard({
       <button
         onClick={(e) => {
           e.stopPropagation();
+          e.preventDefault();
           if (compared) removeCandidate(candidate.id);
           else addCandidate(candidate.id);
         }}
@@ -153,6 +151,31 @@ export default function ScrapedCandidateCard({
       >
         {compared ? "✓" : "+"}
       </button>
+    </>
+  );
+
+  const baseClassName = `relative flex items-center gap-2 sm:gap-4 px-2.5 sm:px-4 py-3 sm:py-3.5 rounded-xl border transition-colors overflow-hidden cursor-pointer hover:bg-gray-50
+    ${candidate.elected ? "border-green-500 bg-green-50/50" : "border-gray-200 bg-white"}`;
+
+  if (asLink) {
+    return (
+      <Link
+        href={`/candidate/${candidate.id}`}
+        className={baseClassName}
+        style={{ borderLeft: `4px solid ${partyColor}` }}
+      >
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      className={baseClassName}
+      style={{ borderLeft: `4px solid ${partyColor}` }}
+      onClick={onClick}
+    >
+      {cardContent}
     </div>
   );
 }

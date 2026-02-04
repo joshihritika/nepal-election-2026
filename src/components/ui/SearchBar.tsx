@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { districts } from "@/data/districts";
 import { CANDIDATES, CandidateData } from "@/data/candidates-scraped";
 
@@ -336,6 +337,7 @@ function isEnglish(str: string): boolean {
 }
 
 export default function SearchBar() {
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -479,16 +481,13 @@ export default function SearchBar() {
   const handleSelect = (result: SearchResult) => {
     setIsOpen(false);
     setQuery("");
-    // Dispatch a custom event so the page can handle navigation via state
-    window.dispatchEvent(new CustomEvent("search-select", { detail: result }));
 
-    // For candidate results, also dispatch candidate-detail with full data
     if (result.type === "candidate") {
-      const allCandidates = getAllCandidates();
-      const fullCandidate = allCandidates.find(c => c.id === result.id);
-      if (fullCandidate) {
-        window.dispatchEvent(new CustomEvent("candidate-detail", { detail: fullCandidate }));
-      }
+      // Navigate to candidate page
+      router.push(`/candidate/${result.id}`);
+    } else {
+      // For districts, dispatch event so the page can open the district panel
+      window.dispatchEvent(new CustomEvent("search-select", { detail: result }));
     }
   };
 

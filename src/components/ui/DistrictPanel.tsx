@@ -4,7 +4,6 @@ import { useMemo, useEffect, useState } from "react";
 import { getDistrictById, getProvinceById } from "@/data/districts";
 import { getCandidates, getConstituencies, CANDIDATES, CandidateData } from "@/data/candidates-scraped";
 import ScrapedCandidateCard from "./ScrapedCandidateCard";
-import CandidateModal from "./CandidateModal";
 import CompareModal from "./CompareModal";
 import { useCompare } from "@/contexts/CompareContext";
 
@@ -28,7 +27,6 @@ interface DistrictPanelProps {
 }
 
 export default function DistrictPanel({ districtId, constituencyNum, onClose, onBack, onSelectConstituency }: DistrictPanelProps) {
-  const [selectedCandidate, setSelectedCandidate] = useState<CandidateData | null>(null);
   const [showCompareModal, setShowCompareModal] = useState(false);
   const { selectedIds, removeCandidate, clearAll } = useCompare();
 
@@ -222,7 +220,6 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
                     key={candidate.id}
                     candidate={candidate}
                     rank={index + 1}
-                    onClick={() => setSelectedCandidate(candidate)}
                   />
                 ))}
 
@@ -281,13 +278,6 @@ export default function DistrictPanel({ districtId, constituencyNum, onClose, on
           </div>
         )}
       </div>
-
-      {selectedCandidate && (
-        <CandidateModal
-          candidate={selectedCandidate}
-          onClose={() => setSelectedCandidate(null)}
-        />
-      )}
 
       {showCompareModal && selectedIds.length >= 2 && (
         <CompareModal

@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   RETURNING_WINNERS,
   PARTY_SWITCHERS,
   TWO_TIME_CONTESTANTS,
   ReturningCandidate,
 } from "@/data/returning-candidates";
-import { CANDIDATES } from "@/data/candidates-scraped";
 
 const TOTAL = 559;
 
@@ -92,15 +92,6 @@ function Donut({ count, color }: { count: number; color: string }) {
   );
 }
 
-function openCandidate(c: ReturningCandidate) {
-  const allCandidates = Object.values(CANDIDATES).flat();
-  const full = allCandidates.find((x) => x.id === c.id);
-  if (full) {
-    window.dispatchEvent(
-      new CustomEvent("candidate-detail", { detail: full })
-    );
-  }
-}
 
 export default function ReturningCandidates() {
   const [expanded, setExpanded] = useState<string | null>(null);
@@ -169,9 +160,9 @@ export default function ReturningCandidates() {
                   : null;
 
                 return (
-                  <button
+                  <Link
                     key={c.id}
-                    onClick={() => openCandidate(c)}
+                    href={`/candidate/${c.id}`}
                     className="w-full text-left flex items-center justify-between gap-2 px-2.5 py-1.5 rounded-md hover:bg-gray-50 transition-colors text-xs"
                   >
                     <span className="font-medium text-gray-800 truncate flex-shrink-0">
@@ -188,7 +179,7 @@ export default function ReturningCandidates() {
                         {c.district}-{c.constituency}
                       </span>
                     )}
-                  </button>
+                  </Link>
                 );
               })}
             </div>

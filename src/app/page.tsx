@@ -5,7 +5,6 @@ import { useSearchParams } from "next/navigation";
 import Header from "@/components/layout/Header";
 import ElectionCountdown from "@/components/ui/ElectionCountdown";
 import DistrictPanel from "@/components/ui/DistrictPanel";
-import CandidateModal from "@/components/ui/CandidateModal";
 import NepalMap from "@/components/map/NepalMap";
 import BattleCard from "@/components/ui/BattleCard";
 import BattleDossierModal from "@/components/ui/BattleDossierModal";
@@ -16,7 +15,6 @@ import { KEY_BATTLES, KeyBattle } from "@/data/key-battles";
 import ReturningCandidates from "@/components/ui/ReturningCandidates";
 import CompareCandidates from "@/components/ui/CompareCandidates";
 import { CompareProvider } from "@/contexts/CompareContext";
-import { CandidateData } from "@/data/candidates-scraped";
 
 function HomeContent() {
   const searchParams = useSearchParams();
@@ -25,7 +23,6 @@ function HomeContent() {
   const [selectedDistrict, setSelectedDistrict] = useState<string | undefined>();
   const [selectedConstituency, setSelectedConstituency] = useState<string | undefined>();
   const [selectedBattle, setSelectedBattle] = useState<KeyBattle | null>(null);
-  const [selectedCandidate, setSelectedCandidate] = useState<CandidateData | null>(null);
 
   const handleDistrictClick = useCallback((districtId: string) => {
     setSelectedDistrict(districtId);
@@ -64,15 +61,8 @@ function HomeContent() {
     };
     window.addEventListener("search-select", handler);
 
-    const candidateHandler = (e: Event) => {
-      const candidate = (e as CustomEvent).detail as CandidateData;
-      setSelectedCandidate(candidate);
-    };
-    window.addEventListener("candidate-detail", candidateHandler);
-
     return () => {
       window.removeEventListener("search-select", handler);
-      window.removeEventListener("candidate-detail", candidateHandler);
     };
   }, []);
 
@@ -230,13 +220,6 @@ function HomeContent() {
         <BattleDossierModal
           battle={selectedBattle}
           onClose={() => setSelectedBattle(null)}
-        />
-      )}
-
-      {selectedCandidate && (
-        <CandidateModal
-          candidate={selectedCandidate}
-          onClose={() => setSelectedCandidate(null)}
         />
       )}
 
