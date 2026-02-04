@@ -232,7 +232,7 @@ const NepalMap = memo(function NepalMap({
         >
           <div className="font-bold text-gray-900">{tooltip.content.name}</div>
           <div className="text-sm text-gray-600">{tooltip.content.province} प्रदेश</div>
-          <div className="text-xs text-blue-600 mt-1 font-medium">
+          <div className="text-sm text-blue-600 mt-1 font-medium">
             हेर्नुहोस् →
           </div>
         </button>
