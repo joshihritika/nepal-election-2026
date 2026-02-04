@@ -22,8 +22,10 @@ const CANDIDATE_PHOTOS: Record<string, string> = {
   "रवीन्द्र मिश्र": "https://assets-api.kathmandupost.com/thumb.php?src=https://assets-cdn.kathmandupost.com/uploads/source/news/2022/third-party/thumb-1653465369.jpg&w=900&height=601",
   // Gagan Thapa
   "गगन थापा": "https://enlokaantar.prixacdn.net/media/gallery_folder/Gagan_Thapa_5Hcxj6DB0H.jpg",
+  "गगन कुमार थापा": "https://enlokaantar.prixacdn.net/media/gallery_folder/Gagan_Thapa_5Hcxj6DB0H.jpg",
   // Amresh Kumar Singh
   "अमरेश कुमार सिंह": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dr._Amresh_Kumar_Singh.jpg",
+  "अमरेश कुमार सिह": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dr._Amresh_Kumar_Singh.jpg",
   // Harka Raj Rai
   "हर्क राज राई": "https://wegeexfuvagvyntbtcyu.supabase.co/storage/v1/object/public/user-content/politicians/808ac4bd-087f-4a1a-b036-7ade6351d1a7-5wdm6md4q9o.jpg",
 };
