@@ -67,14 +67,15 @@ const NepalMap = memo(function NepalMap({
 
   const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
 
-  // Mobile pinch-to-zoom state
+  // Mobile pinch-to-zoom and pan state
   const [zoom, setZoom] = useState<ZoomState>({ scale: 1, translateX: 0, translateY: 0 });
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const lastTouchDistance = useRef<number | null>(null);
-  const lastTouchCenter = useRef<{ x: number; y: number } | null>(null);
+  const lastTouchPos = useRef<{ x: number; y: number } | null>(null);
   const isPinching = useRef(false);
+  const isDragging = useRef(false);
 
-  // Handle pinch zoom on mobile
+  // Handle pinch zoom and pan on mobile
   useEffect(() => {
     const container = mapContainerRef.current;
     if (!container) return;
@@ -95,60 +96,95 @@ const NepalMap = memo(function NepalMap({
 
     const handleTouchStart = (e: TouchEvent) => {
       if (e.touches.length === 2) {
+        // Pinch start
         isPinching.current = true;
+        isDragging.current = false;
         lastTouchDistance.current = getDistance(e.touches);
-        lastTouchCenter.current = getCenter(e.touches);
+        lastTouchPos.current = getCenter(e.touches);
         e.preventDefault();
+      } else if (e.touches.length === 1) {
+        // Single finger - start drag if zoomed in
+        setZoom((prev) => {
+          if (prev.scale > 1) {
+            isDragging.current = true;
+            lastTouchPos.current = {
+              x: e.touches[0].clientX,
+              y: e.touches[0].clientY,
+            };
+          }
+          return prev;
+        });
       }
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       if (e.touches.length === 2 && isPinching.current) {
+        // Pinch zoom + pan
         e.preventDefault();
 
         const newDistance = getDistance(e.touches);
         const newCenter = getCenter(e.touches);
 
-        if (lastTouchDistance.current && lastTouchCenter.current) {
+        if (lastTouchDistance.current && lastTouchPos.current) {
           const scaleDelta = newDistance / lastTouchDistance.current;
 
           setZoom((prev) => {
             const newScale = Math.min(Math.max(prev.scale * scaleDelta, 1), 3);
 
-            // Adjust translation when zooming
-            let newTranslateX = prev.translateX;
-            let newTranslateY = prev.translateY;
-
             // Pan while pinching
-            if (lastTouchCenter.current) {
-              newTranslateX += (newCenter.x - lastTouchCenter.current.x) / prev.scale;
-              newTranslateY += (newCenter.y - lastTouchCenter.current.y) / prev.scale;
-            }
+            let newTranslateX = prev.translateX + (newCenter.x - lastTouchPos.current!.x);
+            let newTranslateY = prev.translateY + (newCenter.y - lastTouchPos.current!.y);
 
             // Reset translation if zoomed out to 1
             if (newScale === 1) {
               newTranslateX = 0;
               newTranslateY = 0;
+            } else {
+              // Limit translation based on zoom level
+              const maxTranslateX = (newScale - 1) * 200;
+              const maxTranslateY = (newScale - 1) * 100;
+              newTranslateX = Math.min(Math.max(newTranslateX, -maxTranslateX), maxTranslateX);
+              newTranslateY = Math.min(Math.max(newTranslateY, -maxTranslateY), maxTranslateY);
             }
-
-            // Limit translation
-            const maxTranslate = (newScale - 1) * 150;
-            newTranslateX = Math.min(Math.max(newTranslateX, -maxTranslate), maxTranslate);
-            newTranslateY = Math.min(Math.max(newTranslateY, -maxTranslate), maxTranslate);
 
             return { scale: newScale, translateX: newTranslateX, translateY: newTranslateY };
           });
         }
 
         lastTouchDistance.current = newDistance;
-        lastTouchCenter.current = newCenter;
+        lastTouchPos.current = newCenter;
+      } else if (e.touches.length === 1 && isDragging.current && lastTouchPos.current) {
+        // Single finger drag to pan when zoomed in
+        e.preventDefault();
+
+        const touch = e.touches[0];
+        const deltaX = touch.clientX - lastTouchPos.current.x;
+        const deltaY = touch.clientY - lastTouchPos.current.y;
+
+        setZoom((prev) => {
+          if (prev.scale <= 1) return prev;
+
+          let newTranslateX = prev.translateX + deltaX;
+          let newTranslateY = prev.translateY + deltaY;
+
+          // Limit translation based on zoom level
+          const maxTranslateX = (prev.scale - 1) * 200;
+          const maxTranslateY = (prev.scale - 1) * 100;
+          newTranslateX = Math.min(Math.max(newTranslateX, -maxTranslateX), maxTranslateX);
+          newTranslateY = Math.min(Math.max(newTranslateY, -maxTranslateY), maxTranslateY);
+
+          return { ...prev, translateX: newTranslateX, translateY: newTranslateY };
+        });
+
+        lastTouchPos.current = { x: touch.clientX, y: touch.clientY };
       }
     };
 
     const handleTouchEnd = () => {
       isPinching.current = false;
+      isDragging.current = false;
       lastTouchDistance.current = null;
-      lastTouchCenter.current = null;
+      lastTouchPos.current = null;
     };
 
     container.addEventListener("touchstart", handleTouchStart, { passive: false });
