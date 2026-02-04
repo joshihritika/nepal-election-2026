@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, memo, useEffect } from "react";
+import { useState, useCallback, memo } from "react";
 import { DISTRICT_PATHS } from "@/data/district-paths";
 
 interface TooltipState {
@@ -13,12 +13,6 @@ interface TooltipState {
     province: string;
     hq: string;
   } | null;
-}
-
-interface ZoomState {
-  scale: number;
-  translateX: number;
-  translateY: number;
 }
 
 interface NepalMapProps {
@@ -66,128 +60,6 @@ const NepalMap = memo(function NepalMap({
   });
 
   const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
-
-  // Mobile pinch-to-zoom and pan state
-  const [zoom, setZoom] = useState<ZoomState>({ scale: 1, translateX: 0, translateY: 0 });
-  const mapContainerRef = useRef<HTMLDivElement>(null);
-  const zoomRef = useRef<ZoomState>({ scale: 1, translateX: 0, translateY: 0 });
-  const touchStateRef = useRef({
-    lastDistance: 0,
-    lastX: 0,
-    lastY: 0,
-    isPinching: false,
-    isDragging: false,
-  });
-
-  // Sync ref with state
-  useEffect(() => {
-    zoomRef.current = zoom;
-  }, [zoom]);
-
-  // Handle pinch zoom and pan on mobile
-  useEffect(() => {
-    const container = mapContainerRef.current;
-    if (!container) return;
-
-    const getDistance = (t1: Touch, t2: Touch) => {
-      return Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
-    };
-
-    const handleTouchStart = (e: TouchEvent) => {
-      const ts = touchStateRef.current;
-
-      if (e.touches.length === 2) {
-        ts.isPinching = true;
-        ts.isDragging = false;
-        ts.lastDistance = getDistance(e.touches[0], e.touches[1]);
-        ts.lastX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-        ts.lastY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
-        e.preventDefault();
-      } else if (e.touches.length === 1 && zoomRef.current.scale > 1) {
-        ts.isDragging = true;
-        ts.isPinching = false;
-        ts.lastX = e.touches[0].clientX;
-        ts.lastY = e.touches[0].clientY;
-        e.preventDefault();
-      }
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      const ts = touchStateRef.current;
-      const currentZoom = zoomRef.current;
-
-      if (e.touches.length === 2 && ts.isPinching) {
-        e.preventDefault();
-
-        const newDistance = getDistance(e.touches[0], e.touches[1]);
-        const newX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-        const newY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
-
-        const scaleDelta = newDistance / ts.lastDistance;
-        let newScale = Math.min(Math.max(currentZoom.scale * scaleDelta, 1), 3);
-
-        // Calculate new translation
-        let newTranslateX = currentZoom.translateX + (newX - ts.lastX);
-        let newTranslateY = currentZoom.translateY + (newY - ts.lastY);
-
-        // Reset if zoomed out
-        if (newScale <= 1.05) {
-          newScale = 1;
-          newTranslateX = 0;
-          newTranslateY = 0;
-        } else {
-          // Limit pan based on zoom - allow more movement
-          const maxX = (newScale - 1) * 150;
-          const maxY = (newScale - 1) * 80;
-          newTranslateX = Math.max(-maxX, Math.min(maxX, newTranslateX));
-          newTranslateY = Math.max(-maxY, Math.min(maxY, newTranslateY));
-        }
-
-        ts.lastDistance = newDistance;
-        ts.lastX = newX;
-        ts.lastY = newY;
-
-        setZoom({ scale: newScale, translateX: newTranslateX, translateY: newTranslateY });
-      } else if (e.touches.length === 1 && ts.isDragging && currentZoom.scale > 1) {
-        e.preventDefault();
-
-        const touch = e.touches[0];
-        const deltaX = touch.clientX - ts.lastX;
-        const deltaY = touch.clientY - ts.lastY;
-
-        let newTranslateX = currentZoom.translateX + deltaX;
-        let newTranslateY = currentZoom.translateY + deltaY;
-
-        // Limit pan based on zoom
-        const maxX = (currentZoom.scale - 1) * 150;
-        const maxY = (currentZoom.scale - 1) * 80;
-        newTranslateX = Math.max(-maxX, Math.min(maxX, newTranslateX));
-        newTranslateY = Math.max(-maxY, Math.min(maxY, newTranslateY));
-
-        ts.lastX = touch.clientX;
-        ts.lastY = touch.clientY;
-
-        setZoom(prev => ({ ...prev, translateX: newTranslateX, translateY: newTranslateY }));
-      }
-    };
-
-    const handleTouchEnd = () => {
-      touchStateRef.current.isPinching = false;
-      touchStateRef.current.isDragging = false;
-    };
-
-    container.addEventListener("touchstart", handleTouchStart, { passive: false });
-    container.addEventListener("touchmove", handleTouchMove, { passive: false });
-    container.addEventListener("touchend", handleTouchEnd);
-    container.addEventListener("touchcancel", handleTouchEnd);
-
-    return () => {
-      container.removeEventListener("touchstart", handleTouchStart);
-      container.removeEventListener("touchmove", handleTouchMove);
-      container.removeEventListener("touchend", handleTouchEnd);
-      container.removeEventListener("touchcancel", handleTouchEnd);
-    };
-  }, []);
 
   const handleDistrictClick = useCallback(
     (district: typeof DISTRICT_PATHS[0]) => {
@@ -255,32 +127,12 @@ const NepalMap = memo(function NepalMap({
 
   return (
     <div className={`relative bg-white rounded-xl ${className}`}>
-      {/* Zoom controls for mobile */}
-      {zoom.scale > 1 && (
-        <button
-          onClick={() => setZoom({ scale: 1, translateX: 0, translateY: 0 })}
-          className="absolute top-2 right-2 z-10 sm:hidden bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium text-gray-600 shadow-md border border-gray-200"
-        >
-          Reset Zoom
-        </button>
-      )}
-      <div
-        ref={mapContainerRef}
-        className="overflow-hidden touch-none"
-        style={{ borderRadius: "inherit" }}
+      <svg
+        viewBox="0 0 800 400"
+        className="w-full h-full"
+        style={{ minWidth: "580px", minHeight: "280px" }}
+        preserveAspectRatio="xMidYMid meet"
       >
-        <svg
-          viewBox="0 0 800 400"
-          className="w-full h-full"
-          style={{
-            minWidth: "580px",
-            minHeight: "280px",
-            transform: `translate(${zoom.translateX}px, ${zoom.translateY}px) scale(${zoom.scale})`,
-            transformOrigin: "center center",
-            willChange: zoom.scale > 1 ? "transform" : "auto",
-          }}
-          preserveAspectRatio="xMidYMid meet"
-        >
         {/* Background */}
         <rect x="0" y="0" width="800" height="400" fill="#f8fafc" />
 
@@ -309,13 +161,7 @@ const NepalMap = memo(function NepalMap({
         </g>
 
 
-        </svg>
-      </div>
-
-      {/* Zoom hint for mobile */}
-      <div className="sm:hidden text-center text-xs text-gray-400 py-1">
-        Pinch to zoom
-      </div>
+      </svg>
 
       {/* Tooltip - clickable to open district details */}
       {tooltip.show && tooltip.content && (
