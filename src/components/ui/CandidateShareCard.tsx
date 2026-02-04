@@ -1,8 +1,22 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { toPng } from "html-to-image";
 import { CandidateData } from "@/data/candidates-scraped";
+
+// Convert image URL to base64 data URL via server proxy to bypass CORS
+async function imageToDataUrl(url: string): Promise<string | null> {
+  try {
+    const response = await fetch(`/api/image-proxy?url=${encodeURIComponent(url)}`);
+    if (!response.ok) {
+      return null;
+    }
+    const data = await response.json();
+    return data.dataUrl || null;
+  } catch {
+    return null;
+  }
+}
 
 const PARTY_COLORS: Record<string, string> = {
   "नेपाली काँग्रेस": "#2563EB",
@@ -46,12 +60,25 @@ export default function CandidateShareCard({
   const cardRef = useRef<HTMLDivElement>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [showCard, setShowCard] = useState(false);
+  const [photoDataUrl, setPhotoDataUrl] = useState<string | null>(null);
+  const [isLoadingPhoto, setIsLoadingPhoto] = useState(false);
 
   const partyColor = getPartyColor(candidate.party);
   const partyShort = getPartyShort(candidate.party);
 
+  // Convert photo to data URL when modal opens to avoid CORS issues
+  useEffect(() => {
+    if (showCard && photo && !photoDataUrl) {
+      setIsLoadingPhoto(true);
+      imageToDataUrl(photo).then((dataUrl) => {
+        setPhotoDataUrl(dataUrl);
+        setIsLoadingPhoto(false);
+      });
+    }
+  }, [showCard, photo, photoDataUrl]);
+
   const handleDownload = async () => {
-    if (!cardRef.current) return;
+    if (!cardRef.current || isLoadingPhoto) return;
 
     setIsGenerating(true);
     try {
@@ -129,13 +156,22 @@ export default function CandidateShareCard({
 
                   {/* Photo or Initial */}
                   <div className="mb-3">
-                    {photo ? (
+                    {isLoadingPhoto ? (
+                      <div
+                        className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg bg-gray-200"
+                        style={{ border: `4px solid ${partyColor}` }}
+                      >
+                        <svg className="w-6 h-6 animate-spin text-gray-400" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        </svg>
+                      </div>
+                    ) : photoDataUrl ? (
                       <img
-                        src={photo}
+                        src={photoDataUrl}
                         alt={candidate.name}
                         className="w-24 h-24 rounded-full object-cover shadow-lg"
                         style={{ border: `4px solid ${partyColor}` }}
-                        crossOrigin="anonymous"
                       />
                     ) : (
                       <div
