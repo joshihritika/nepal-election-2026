@@ -6,6 +6,7 @@ import { CandidateData } from "@/data/candidates-scraped";
 import { getEnrichment } from "@/data/candidate-enrichments";
 import { getHistory } from "@/data/candidate-history";
 import Header from "@/components/layout/Header";
+import CandidateShareCard from "@/components/ui/CandidateShareCard";
 
 const PARTY_COLORS: Record<string, string> = {
   "नेपाली काँग्रेस": "#2563EB",
@@ -124,6 +125,15 @@ export default function CandidateProfileClient({
                 </div>
                 <div className="text-sm text-gray-500 mt-1">
                   {candidate.district} निर्वाचन क्षेत्र नं. {candidate.constituency}
+                </div>
+
+                {/* Share Card Button */}
+                <div className="mt-3">
+                  <CandidateShareCard
+                    candidate={candidate}
+                    photo={photo}
+                    isFirstTime={history.length === 0}
+                  />
                 </div>
               </div>
             </div>
