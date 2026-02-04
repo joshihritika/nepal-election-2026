@@ -160,37 +160,21 @@ const NepalMap = memo(function NepalMap({
     <div className={`relative bg-white rounded-xl ${className}`}>
       {/* Fixed label for touch devices - clickable to open district details */}
       {tappedDistrict && (
-        <div className="flex items-center justify-between gap-2 bg-blue-50 border-b border-blue-200 rounded-t-xl">
-          <button
-            onClick={() => {
-              if (onDistrictClick) {
-                onDistrictClick(tappedDistrict.id);
-              }
-            }}
-            className="flex-1 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm min-w-0 px-3 sm:px-4 py-2 sm:py-2.5 text-left hover:bg-blue-100 transition-colors"
-          >
-            <span className="font-bold text-gray-900 truncate">{tappedDistrict.name}</span>
-            <span className="text-gray-500 flex-shrink-0">•</span>
-            <span className="text-gray-600 truncate">{tappedDistrict.province}</span>
-            {tappedDistrict.hq && (
-              <>
-                <span className="text-gray-500 hidden sm:inline flex-shrink-0">•</span>
-                <span className="text-gray-500 hidden sm:inline text-xs truncate">सदरमुकाम: {tappedDistrict.hq}</span>
-              </>
-            )}
-            <span className="text-blue-600 flex-shrink-0 sm:hidden ml-auto">ट्याप गर्नुहोस् →</span>
-          </button>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setTappedDistrict(null);
-            }}
-            className="text-gray-400 hover:text-gray-600 text-lg leading-none flex-shrink-0 p-2 pr-3 hover:bg-blue-100 transition-colors"
-            aria-label="Close"
-          >
-            ×
-          </button>
-        </div>
+        <button
+          onClick={() => {
+            if (onDistrictClick) {
+              onDistrictClick(tappedDistrict.id);
+            }
+          }}
+          className="w-full flex items-center justify-between gap-2 bg-blue-50 border-b border-blue-200 rounded-t-xl px-3 py-2 hover:bg-blue-100 transition-colors"
+        >
+          <div className="flex items-center gap-1.5 text-sm">
+            <span className="font-bold text-gray-900">{tappedDistrict.name}</span>
+            <span className="text-gray-400">•</span>
+            <span className="text-gray-600">{tappedDistrict.province}</span>
+          </div>
+          <span className="text-blue-600 text-sm font-medium flex-shrink-0">हेर्नुहोस् →</span>
+        </button>
       )}
       <svg
         viewBox="0 0 800 400"
