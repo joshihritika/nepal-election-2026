@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, memo } from "react";
+import { useState, useCallback, useRef, memo, useEffect } from "react";
 import { DISTRICT_PATHS } from "@/data/district-paths";
 
 interface TooltipState {
@@ -13,6 +13,12 @@ interface TooltipState {
     province: string;
     hq: string;
   } | null;
+}
+
+interface ZoomState {
+  scale: number;
+  translateX: number;
+  translateY: number;
 }
 
 interface NepalMapProps {
@@ -60,6 +66,101 @@ const NepalMap = memo(function NepalMap({
   });
 
   const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
+
+  // Mobile pinch-to-zoom state
+  const [zoom, setZoom] = useState<ZoomState>({ scale: 1, translateX: 0, translateY: 0 });
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+  const lastTouchDistance = useRef<number | null>(null);
+  const lastTouchCenter = useRef<{ x: number; y: number } | null>(null);
+  const isPinching = useRef(false);
+
+  // Handle pinch zoom on mobile
+  useEffect(() => {
+    const container = mapContainerRef.current;
+    if (!container) return;
+
+    const getDistance = (touches: TouchList) => {
+      return Math.hypot(
+        touches[0].clientX - touches[1].clientX,
+        touches[0].clientY - touches[1].clientY
+      );
+    };
+
+    const getCenter = (touches: TouchList) => {
+      return {
+        x: (touches[0].clientX + touches[1].clientX) / 2,
+        y: (touches[0].clientY + touches[1].clientY) / 2,
+      };
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 2) {
+        isPinching.current = true;
+        lastTouchDistance.current = getDistance(e.touches);
+        lastTouchCenter.current = getCenter(e.touches);
+        e.preventDefault();
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length === 2 && isPinching.current) {
+        e.preventDefault();
+
+        const newDistance = getDistance(e.touches);
+        const newCenter = getCenter(e.touches);
+
+        if (lastTouchDistance.current && lastTouchCenter.current) {
+          const scaleDelta = newDistance / lastTouchDistance.current;
+
+          setZoom((prev) => {
+            const newScale = Math.min(Math.max(prev.scale * scaleDelta, 1), 3);
+
+            // Adjust translation when zooming
+            let newTranslateX = prev.translateX;
+            let newTranslateY = prev.translateY;
+
+            // Pan while pinching
+            if (lastTouchCenter.current) {
+              newTranslateX += (newCenter.x - lastTouchCenter.current.x) / prev.scale;
+              newTranslateY += (newCenter.y - lastTouchCenter.current.y) / prev.scale;
+            }
+
+            // Reset translation if zoomed out to 1
+            if (newScale === 1) {
+              newTranslateX = 0;
+              newTranslateY = 0;
+            }
+
+            // Limit translation
+            const maxTranslate = (newScale - 1) * 150;
+            newTranslateX = Math.min(Math.max(newTranslateX, -maxTranslate), maxTranslate);
+            newTranslateY = Math.min(Math.max(newTranslateY, -maxTranslate), maxTranslate);
+
+            return { scale: newScale, translateX: newTranslateX, translateY: newTranslateY };
+          });
+        }
+
+        lastTouchDistance.current = newDistance;
+        lastTouchCenter.current = newCenter;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      isPinching.current = false;
+      lastTouchDistance.current = null;
+      lastTouchCenter.current = null;
+    };
+
+    container.addEventListener("touchstart", handleTouchStart, { passive: false });
+    container.addEventListener("touchmove", handleTouchMove, { passive: false });
+    container.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchmove", handleTouchMove);
+      container.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, []);
 
   const handleDistrictClick = useCallback(
     (district: typeof DISTRICT_PATHS[0]) => {
@@ -127,12 +228,31 @@ const NepalMap = memo(function NepalMap({
 
   return (
     <div className={`relative bg-white rounded-xl ${className}`}>
-      <svg
-        viewBox="0 0 800 400"
-        className="w-full h-full"
-        style={{ minWidth: "580px", minHeight: "280px" }}
-        preserveAspectRatio="xMidYMid meet"
+      {/* Zoom controls for mobile */}
+      {zoom.scale > 1 && (
+        <button
+          onClick={() => setZoom({ scale: 1, translateX: 0, translateY: 0 })}
+          className="absolute top-2 right-2 z-10 sm:hidden bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium text-gray-600 shadow-md border border-gray-200"
+        >
+          Reset Zoom
+        </button>
+      )}
+      <div
+        ref={mapContainerRef}
+        className="overflow-hidden touch-none"
+        style={{ borderRadius: "inherit" }}
       >
+        <svg
+          viewBox="0 0 800 400"
+          className="w-full h-full transition-transform duration-100"
+          style={{
+            minWidth: "580px",
+            minHeight: "280px",
+            transform: `scale(${zoom.scale}) translate(${zoom.translateX}px, ${zoom.translateY}px)`,
+            transformOrigin: "center center",
+          }}
+          preserveAspectRatio="xMidYMid meet"
+        >
         {/* Background */}
         <rect x="0" y="0" width="800" height="400" fill="#f8fafc" />
 
@@ -161,7 +281,13 @@ const NepalMap = memo(function NepalMap({
         </g>
 
 
-      </svg>
+        </svg>
+      </div>
+
+      {/* Zoom hint for mobile */}
+      <div className="sm:hidden text-center text-xs text-gray-400 py-1">
+        Pinch to zoom
+      </div>
 
       {/* Tooltip - clickable to open district details */}
       {tooltip.show && tooltip.content && (
@@ -179,7 +305,7 @@ const NepalMap = memo(function NepalMap({
         >
           <div className="font-bold text-gray-900">{tooltip.content.name}</div>
           <div className="text-sm text-gray-600">{tooltip.content.province} प्रदेश</div>
-          <div className="text-sm sm:text-xs text-blue-600 mt-1 font-medium">
+          <div className="text-base sm:text-xs text-blue-600 mt-1 font-medium">
             हेर्नुहोस् →
           </div>
         </button>
