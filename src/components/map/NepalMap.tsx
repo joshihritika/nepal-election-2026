@@ -158,10 +158,17 @@ const NepalMap = memo(function NepalMap({
 
   return (
     <div className={`relative bg-white rounded-xl ${className}`}>
-      {/* Fixed label for touch devices */}
+      {/* Fixed label for touch devices - clickable to open district details */}
       {tappedDistrict && (
-        <div className="flex items-center justify-between gap-2 bg-blue-50 border-b border-blue-200 px-3 sm:px-4 py-1.5 sm:py-2 rounded-t-xl">
-          <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm min-w-0">
+        <div className="flex items-center justify-between gap-2 bg-blue-50 border-b border-blue-200 rounded-t-xl">
+          <button
+            onClick={() => {
+              if (onDistrictClick) {
+                onDistrictClick(tappedDistrict.id);
+              }
+            }}
+            className="flex-1 flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm min-w-0 px-3 sm:px-4 py-2 sm:py-2.5 text-left hover:bg-blue-100 transition-colors"
+          >
             <span className="font-bold text-gray-900 truncate">{tappedDistrict.name}</span>
             <span className="text-gray-500 flex-shrink-0">•</span>
             <span className="text-gray-600 truncate">{tappedDistrict.province}</span>
@@ -171,11 +178,14 @@ const NepalMap = memo(function NepalMap({
                 <span className="text-gray-500 hidden sm:inline text-xs truncate">सदरमुकाम: {tappedDistrict.hq}</span>
               </>
             )}
-            <span className="text-blue-600 flex-shrink-0 sm:hidden">· फेरि ट्याप गर्नुहोस्</span>
-          </div>
+            <span className="text-blue-600 flex-shrink-0 sm:hidden ml-auto">ट्याप गर्नुहोस् →</span>
+          </button>
           <button
-            onClick={() => setTappedDistrict(null)}
-            className="text-gray-400 hover:text-gray-600 text-lg leading-none flex-shrink-0 p-1"
+            onClick={(e) => {
+              e.stopPropagation();
+              setTappedDistrict(null);
+            }}
+            className="text-gray-400 hover:text-gray-600 text-lg leading-none flex-shrink-0 p-2 pr-3 hover:bg-blue-100 transition-colors"
             aria-label="Close"
           >
             ×
