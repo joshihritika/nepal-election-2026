@@ -7,6 +7,7 @@ interface TooltipState {
   show: boolean;
   x: number;
   y: number;
+  districtId: string | null;
   content: {
     name: string;
     province: string;
@@ -54,6 +55,7 @@ const NepalMap = memo(function NepalMap({
     show: false,
     x: 0,
     y: 0,
+    districtId: null,
     content: null,
   });
 
@@ -111,6 +113,7 @@ const NepalMap = memo(function NepalMap({
         show: true,
         x: evt.clientX,
         y: evt.clientY,
+        districtId: district.id,
         content: {
           name: district.name,
           province: provinceNames[district.province],
@@ -213,10 +216,15 @@ const NepalMap = memo(function NepalMap({
 
       </svg>
 
-      {/* Tooltip */}
+      {/* Tooltip - clickable to open district details */}
       {tooltip.show && tooltip.content && (
-        <div
-          className="fixed z-50 pointer-events-none bg-white rounded-lg shadow-xl border border-gray-200 px-4 py-3"
+        <button
+          onClick={() => {
+            if (tooltip.districtId && onDistrictClick) {
+              onDistrictClick(tooltip.districtId);
+            }
+          }}
+          className="fixed z-50 bg-white rounded-lg shadow-xl border border-gray-200 px-4 py-3 text-left hover:bg-gray-50 transition-colors cursor-pointer"
           style={{
             left: tooltip.x + 15,
             top: tooltip.y - 10,
@@ -224,13 +232,10 @@ const NepalMap = memo(function NepalMap({
         >
           <div className="font-bold text-gray-900">{tooltip.content.name}</div>
           <div className="text-sm text-gray-600">{tooltip.content.province} प्रदेश</div>
-          {tooltip.content.hq && (
-            <div className="text-xs text-gray-500 mt-1">सदरमुकाम: {tooltip.content.hq}</div>
-          )}
-          <div className="text-xs text-blue-600 mt-1">
-            निर्वाचन क्षेत्र हेर्न क्लिक गर्नुहोस्
+          <div className="text-xs text-blue-600 mt-1 font-medium">
+            हेर्नुहोस् →
           </div>
-        </div>
+        </button>
       )}
 
 
