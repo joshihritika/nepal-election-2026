@@ -42,6 +42,21 @@ function getCandidatePhoto(name: string): string | undefined {
   return CANDIDATE_PHOTOS[name];
 }
 
+// Convert slug to proper English name (e.g., "kp-sharma-oli" -> "KP Sharma Oli")
+function slugToEnglishName(slug: string): string {
+  return slug
+    .split("-")
+    .map((word) => {
+      // Keep common abbreviations uppercase
+      if (["kp", "dr", "mr", "ms", "mrs"].includes(word.toLowerCase())) {
+        return word.toUpperCase();
+      }
+      // Capitalize first letter of each word
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
+}
+
 // Generate static params for all candidates using slugs
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -69,23 +84,27 @@ export async function generateMetadata({
 
   const enrichment = getEnrichment(candidate.id);
   const photo = getCandidatePhoto(candidate.name);
+  const englishName = slugToEnglishName(slug);
 
-  const title = `${candidate.name} - निर्वाचन २०८२ प्रोफाइल र इतिहास | नेपाल निर्वाचन`;
+  const title = `${candidate.name} (${englishName}) - Election 2082 Profile & History | Nepal Election`;
   const description = enrichment?.summary
-    ? enrichment.summary
-    : `${candidate.district} ${candidate.constituency} निर्वाचन क्षेत्रबाट ${candidate.party}का उम्मेदवार ${candidate.name}को विस्तृत निर्वाचन इतिहास, पार्टी इतिहास र २०७४/२०७९ को परिणाम हेर्नुहोस्। नेपाल निर्वाचन २०८२ को लागि जानकारी।`;
+    ? `${enrichment.summary} ${candidate.name} (${englishName}) - Nepal Election 2082.`
+    : `Explore the election history of ${candidate.name} (${englishName}) from ${candidate.district}-${candidate.constituency}. View 2074/2079 results, party history for Nepal Election 2082. ${candidate.district} ${candidate.constituency} निर्वाचन क्षेत्रबाट ${candidate.party}का उम्मेदवार।`;
 
   const metadata: Metadata = {
     title,
     description,
     keywords: [
       candidate.name,
+      englishName,
       candidate.party,
       candidate.district,
       `${candidate.district} ${candidate.constituency}`,
       "नेपाल निर्वाचन २०८२",
+      "Nepal election 2082",
       "Nepal election 2026",
       "उम्मेदवार प्रोफाइल",
+      "candidate profile",
     ],
     openGraph: {
       title,
@@ -114,7 +133,7 @@ export async function generateMetadata({
           url: photo,
           width: 800,
           height: 800,
-          alt: `${candidate.name} - ${candidate.party}`,
+          alt: `${candidate.name} (${englishName}) - ${candidate.party}`,
         },
       ],
     };
