@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { KeyBattle } from "@/data/key-battles";
 
 interface BattleDossierModalProps {
@@ -8,53 +8,13 @@ interface BattleDossierModalProps {
   onClose: () => void;
 }
 
-function getStorageKey(battleId: string) {
-  return `poll-${battleId}`;
-}
-
-function getVotes(battleId: string): Record<string, number> {
-  if (typeof window === "undefined") return {};
-  try {
-    const raw = localStorage.getItem(getStorageKey(battleId) + "-votes");
-    return raw ? JSON.parse(raw) : {};
-  } catch {
-    return {};
-  }
-}
-
-function hasVoted(battleId: string): boolean {
-  if (typeof window === "undefined") return false;
-  return localStorage.getItem(getStorageKey(battleId) + "-voted") === "true";
-}
-
-function castVote(battleId: string, candidateName: string) {
-  const votes = getVotes(battleId);
-  votes[candidateName] = (votes[candidateName] || 0) + 1;
-  localStorage.setItem(getStorageKey(battleId) + "-votes", JSON.stringify(votes));
-  localStorage.setItem(getStorageKey(battleId) + "-voted", "true");
-}
-
 export default function BattleDossierModal({ battle, onClose }: BattleDossierModalProps) {
-  const [voted, setVoted] = useState(false);
-  const [votes, setVotes] = useState<Record<string, number>>({});
-
   useEffect(() => {
     document.body.style.overflow = "hidden";
-    setVoted(hasVoted(battle.id));
-    setVotes(getVotes(battle.id));
     return () => {
       document.body.style.overflow = "";
     };
-  }, [battle.id]);
-
-  const handleVote = (candidateName: string) => {
-    if (voted) return;
-    castVote(battle.id, candidateName);
-    setVoted(true);
-    setVotes(getVotes(battle.id));
-  };
-
-  const totalVotes = Object.values(votes).reduce((a, b) => a + b, 0);
+  }, []);
 
   return (
     <>
@@ -194,7 +154,7 @@ export default function BattleDossierModal({ battle, onClose }: BattleDossierMod
             </section>
 
             {/* Stakes */}
-            <section>
+            <section className="pb-4">
               <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
                 दाउमा के छ?
               </h4>
@@ -208,81 +168,6 @@ export default function BattleDossierModal({ battle, onClose }: BattleDossierMod
                   </li>
                 ))}
               </ul>
-            </section>
-
-            {/* Voter Sentiment Poll */}
-            <section className="pb-4">
-              <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                तपाईंको मत
-              </h4>
-              <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-                <p className="text-sm text-gray-600 mb-4">
-                  यो प्रतिस्पर्धामा कसले जित्छ जस्तो लाग्छ?
-                </p>
-
-                {!voted ? (
-                  <div className="grid grid-cols-2 gap-3">
-                    {battle.candidates.map((candidate) => (
-                      <button
-                        key={candidate.name}
-                        onClick={() => handleVote(candidate.name)}
-                        className="py-3 px-4 rounded-xl border-2 border-gray-200 hover:border-gray-400 transition-all text-center hover:shadow-md"
-                      >
-                        {candidate.image ? (
-                          <img
-                            src={candidate.image}
-                            alt={candidate.name}
-                            className="w-10 h-10 rounded-full mx-auto object-cover"
-                            style={{ border: `2px solid ${candidate.partyColor}` }}
-                          />
-                        ) : (
-                          <div
-                            className="w-10 h-10 rounded-full mx-auto flex items-center justify-center text-white text-sm font-bold"
-                            style={{ backgroundColor: candidate.partyColor }}
-                          >
-                            {candidate.name.charAt(0)}
-                          </div>
-                        )}
-                        <div className="font-semibold text-gray-900 mt-2 text-sm">
-                          {candidate.name}
-                        </div>
-                        <div className="text-xs text-gray-500">{candidate.partyShort}</div>
-                      </button>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="space-y-3">
-                    {battle.candidates.map((candidate) => {
-                      const count = votes[candidate.name] || 0;
-                      const pct = totalVotes > 0 ? Math.round((count / totalVotes) * 100) : 0;
-                      return (
-                        <div key={candidate.name}>
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-sm font-medium text-gray-900">
-                              {candidate.name}
-                              <span className="text-gray-400 ml-1">({candidate.partyShort})</span>
-                            </span>
-                            <span className="text-sm font-bold text-gray-900">{pct}%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                            <div
-                              className="h-full rounded-full transition-all duration-500"
-                              style={{
-                                width: `${pct}%`,
-                                backgroundColor: candidate.partyColor,
-                              }}
-                            />
-                          </div>
-                          <div className="text-xs text-gray-400 mt-0.5">{count} मत</div>
-                        </div>
-                      );
-                    })}
-                    <p className="text-xs text-gray-400 text-center pt-2">
-                      कुल {totalVotes} जनाले मत दिनुभएको छ
-                    </p>
-                  </div>
-                )}
-              </div>
             </section>
           </div>
         </div>
