@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense, useState, useCallback, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Header from "@/components/layout/Header";
 import ElectionCountdown from "@/components/ui/ElectionCountdown";
 import DistrictPanel from "@/components/ui/DistrictPanel";
@@ -18,45 +18,51 @@ import { CompareProvider } from "@/contexts/CompareContext";
 
 function HomeContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const selectedProvince = searchParams.get("prov") || undefined;
 
-  const [selectedDistrict, setSelectedDistrict] = useState<string | undefined>();
-  const [selectedConstituency, setSelectedConstituency] = useState<string | undefined>();
+  // Get district and constituency from URL params for proper back navigation
+  const selectedDistrict = searchParams.get("district") || undefined;
+  const selectedConstituency = searchParams.get("constituency") || undefined;
   const [selectedBattle, setSelectedBattle] = useState<KeyBattle | null>(null);
 
+  // Update URL with district/constituency selection
+  const updateUrl = useCallback((district?: string, constituency?: string) => {
+    const params = new URLSearchParams();
+    if (selectedProvince) params.set("prov", selectedProvince);
+    if (district) params.set("district", district);
+    if (constituency) params.set("constituency", constituency);
+
+    const queryString = params.toString();
+    router.push(queryString ? `/?${queryString}` : "/", { scroll: false });
+  }, [router, selectedProvince]);
+
   const handleDistrictClick = useCallback((districtId: string) => {
-    setSelectedDistrict(districtId);
-    setSelectedConstituency(undefined);
-  }, []);
+    updateUrl(districtId, undefined);
+  }, [updateUrl]);
 
   const handleClosePanel = useCallback(() => {
-    setSelectedDistrict(undefined);
-    setSelectedConstituency(undefined);
-  }, []);
+    updateUrl(undefined, undefined);
+  }, [updateUrl]);
 
   const handleBackPanel = useCallback(() => {
     if (selectedConstituency) {
-      setSelectedConstituency(undefined);
+      updateUrl(selectedDistrict, undefined);
     } else {
-      setSelectedDistrict(undefined);
+      updateUrl(undefined, undefined);
     }
-  }, [selectedConstituency]);
+  }, [selectedConstituency, selectedDistrict, updateUrl]);
 
   const handleSelectConstituency = useCallback((num: string) => {
-    setSelectedConstituency(num);
-  }, []);
+    updateUrl(selectedDistrict, num);
+  }, [selectedDistrict, updateUrl]);
 
   // Listen for search selection events
   useEffect(() => {
     const handler = (e: Event) => {
       const detail = (e as CustomEvent).detail;
       if (detail.districtId) {
-        setSelectedDistrict(detail.districtId);
-        if (detail.constituencyNum) {
-          setSelectedConstituency(String(detail.constituencyNum));
-        } else {
-          setSelectedConstituency(undefined);
-        }
+        updateUrl(detail.districtId, detail.constituencyNum ? String(detail.constituencyNum) : undefined);
       }
     };
     window.addEventListener("search-select", handler);
@@ -64,7 +70,7 @@ function HomeContent() {
     return () => {
       window.removeEventListener("search-select", handler);
     };
-  }, []);
+  }, [updateUrl]);
 
   return (
     <CompareProvider>
@@ -113,8 +119,7 @@ function HomeContent() {
             <SearchBar />
           </div>
           <LocationFilter onSelect={(districtId, constituencyNum) => {
-            setSelectedDistrict(districtId);
-            setSelectedConstituency(constituencyNum);
+            updateUrl(districtId, constituencyNum);
           }} />
         </div>
 
