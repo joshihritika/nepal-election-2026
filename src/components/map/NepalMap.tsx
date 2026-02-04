@@ -70,131 +70,122 @@ const NepalMap = memo(function NepalMap({
   // Mobile pinch-to-zoom and pan state
   const [zoom, setZoom] = useState<ZoomState>({ scale: 1, translateX: 0, translateY: 0 });
   const mapContainerRef = useRef<HTMLDivElement>(null);
-  const lastTouchDistance = useRef<number | null>(null);
-  const lastTouchPos = useRef<{ x: number; y: number } | null>(null);
-  const isPinching = useRef(false);
-  const isDragging = useRef(false);
+  const zoomRef = useRef<ZoomState>({ scale: 1, translateX: 0, translateY: 0 });
+  const touchStateRef = useRef({
+    lastDistance: 0,
+    lastX: 0,
+    lastY: 0,
+    isPinching: false,
+    isDragging: false,
+  });
+
+  // Sync ref with state
+  useEffect(() => {
+    zoomRef.current = zoom;
+  }, [zoom]);
 
   // Handle pinch zoom and pan on mobile
   useEffect(() => {
     const container = mapContainerRef.current;
     if (!container) return;
 
-    const getDistance = (touches: TouchList) => {
-      return Math.hypot(
-        touches[0].clientX - touches[1].clientX,
-        touches[0].clientY - touches[1].clientY
-      );
-    };
-
-    const getCenter = (touches: TouchList) => {
-      return {
-        x: (touches[0].clientX + touches[1].clientX) / 2,
-        y: (touches[0].clientY + touches[1].clientY) / 2,
-      };
+    const getDistance = (t1: Touch, t2: Touch) => {
+      return Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
     };
 
     const handleTouchStart = (e: TouchEvent) => {
+      const ts = touchStateRef.current;
+
       if (e.touches.length === 2) {
-        // Pinch start
-        isPinching.current = true;
-        isDragging.current = false;
-        lastTouchDistance.current = getDistance(e.touches);
-        lastTouchPos.current = getCenter(e.touches);
+        ts.isPinching = true;
+        ts.isDragging = false;
+        ts.lastDistance = getDistance(e.touches[0], e.touches[1]);
+        ts.lastX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        ts.lastY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
         e.preventDefault();
-      } else if (e.touches.length === 1) {
-        // Single finger - start drag if zoomed in
-        setZoom((prev) => {
-          if (prev.scale > 1) {
-            isDragging.current = true;
-            lastTouchPos.current = {
-              x: e.touches[0].clientX,
-              y: e.touches[0].clientY,
-            };
-          }
-          return prev;
-        });
+      } else if (e.touches.length === 1 && zoomRef.current.scale > 1) {
+        ts.isDragging = true;
+        ts.isPinching = false;
+        ts.lastX = e.touches[0].clientX;
+        ts.lastY = e.touches[0].clientY;
+        e.preventDefault();
       }
     };
 
     const handleTouchMove = (e: TouchEvent) => {
-      if (e.touches.length === 2 && isPinching.current) {
-        // Pinch zoom + pan
+      const ts = touchStateRef.current;
+      const currentZoom = zoomRef.current;
+
+      if (e.touches.length === 2 && ts.isPinching) {
         e.preventDefault();
 
-        const newDistance = getDistance(e.touches);
-        const newCenter = getCenter(e.touches);
+        const newDistance = getDistance(e.touches[0], e.touches[1]);
+        const newX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+        const newY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
 
-        if (lastTouchDistance.current && lastTouchPos.current) {
-          const scaleDelta = newDistance / lastTouchDistance.current;
+        const scaleDelta = newDistance / ts.lastDistance;
+        let newScale = Math.min(Math.max(currentZoom.scale * scaleDelta, 1), 3);
 
-          setZoom((prev) => {
-            const newScale = Math.min(Math.max(prev.scale * scaleDelta, 1), 3);
+        // Calculate new translation
+        let newTranslateX = currentZoom.translateX + (newX - ts.lastX);
+        let newTranslateY = currentZoom.translateY + (newY - ts.lastY);
 
-            // Pan while pinching
-            let newTranslateX = prev.translateX + (newCenter.x - lastTouchPos.current!.x);
-            let newTranslateY = prev.translateY + (newCenter.y - lastTouchPos.current!.y);
-
-            // Reset translation if zoomed out to 1
-            if (newScale === 1) {
-              newTranslateX = 0;
-              newTranslateY = 0;
-            } else {
-              // Limit translation based on zoom level
-              const maxTranslateX = (newScale - 1) * 200;
-              const maxTranslateY = (newScale - 1) * 100;
-              newTranslateX = Math.min(Math.max(newTranslateX, -maxTranslateX), maxTranslateX);
-              newTranslateY = Math.min(Math.max(newTranslateY, -maxTranslateY), maxTranslateY);
-            }
-
-            return { scale: newScale, translateX: newTranslateX, translateY: newTranslateY };
-          });
+        // Reset if zoomed out
+        if (newScale <= 1.05) {
+          newScale = 1;
+          newTranslateX = 0;
+          newTranslateY = 0;
+        } else {
+          // Limit pan based on zoom - allow more movement
+          const maxX = (newScale - 1) * 150;
+          const maxY = (newScale - 1) * 80;
+          newTranslateX = Math.max(-maxX, Math.min(maxX, newTranslateX));
+          newTranslateY = Math.max(-maxY, Math.min(maxY, newTranslateY));
         }
 
-        lastTouchDistance.current = newDistance;
-        lastTouchPos.current = newCenter;
-      } else if (e.touches.length === 1 && isDragging.current && lastTouchPos.current) {
-        // Single finger drag to pan when zoomed in
+        ts.lastDistance = newDistance;
+        ts.lastX = newX;
+        ts.lastY = newY;
+
+        setZoom({ scale: newScale, translateX: newTranslateX, translateY: newTranslateY });
+      } else if (e.touches.length === 1 && ts.isDragging && currentZoom.scale > 1) {
         e.preventDefault();
 
         const touch = e.touches[0];
-        const deltaX = touch.clientX - lastTouchPos.current.x;
-        const deltaY = touch.clientY - lastTouchPos.current.y;
+        const deltaX = touch.clientX - ts.lastX;
+        const deltaY = touch.clientY - ts.lastY;
 
-        setZoom((prev) => {
-          if (prev.scale <= 1) return prev;
+        let newTranslateX = currentZoom.translateX + deltaX;
+        let newTranslateY = currentZoom.translateY + deltaY;
 
-          let newTranslateX = prev.translateX + deltaX;
-          let newTranslateY = prev.translateY + deltaY;
+        // Limit pan based on zoom
+        const maxX = (currentZoom.scale - 1) * 150;
+        const maxY = (currentZoom.scale - 1) * 80;
+        newTranslateX = Math.max(-maxX, Math.min(maxX, newTranslateX));
+        newTranslateY = Math.max(-maxY, Math.min(maxY, newTranslateY));
 
-          // Limit translation based on zoom level
-          const maxTranslateX = (prev.scale - 1) * 200;
-          const maxTranslateY = (prev.scale - 1) * 100;
-          newTranslateX = Math.min(Math.max(newTranslateX, -maxTranslateX), maxTranslateX);
-          newTranslateY = Math.min(Math.max(newTranslateY, -maxTranslateY), maxTranslateY);
+        ts.lastX = touch.clientX;
+        ts.lastY = touch.clientY;
 
-          return { ...prev, translateX: newTranslateX, translateY: newTranslateY };
-        });
-
-        lastTouchPos.current = { x: touch.clientX, y: touch.clientY };
+        setZoom(prev => ({ ...prev, translateX: newTranslateX, translateY: newTranslateY }));
       }
     };
 
     const handleTouchEnd = () => {
-      isPinching.current = false;
-      isDragging.current = false;
-      lastTouchDistance.current = null;
-      lastTouchPos.current = null;
+      touchStateRef.current.isPinching = false;
+      touchStateRef.current.isDragging = false;
     };
 
     container.addEventListener("touchstart", handleTouchStart, { passive: false });
     container.addEventListener("touchmove", handleTouchMove, { passive: false });
     container.addEventListener("touchend", handleTouchEnd);
+    container.addEventListener("touchcancel", handleTouchEnd);
 
     return () => {
       container.removeEventListener("touchstart", handleTouchStart);
       container.removeEventListener("touchmove", handleTouchMove);
       container.removeEventListener("touchend", handleTouchEnd);
+      container.removeEventListener("touchcancel", handleTouchEnd);
     };
   }, []);
 
@@ -280,12 +271,13 @@ const NepalMap = memo(function NepalMap({
       >
         <svg
           viewBox="0 0 800 400"
-          className="w-full h-full transition-transform duration-100"
+          className="w-full h-full"
           style={{
             minWidth: "580px",
             minHeight: "280px",
-            transform: `scale(${zoom.scale}) translate(${zoom.translateX}px, ${zoom.translateY}px)`,
+            transform: `translate(${zoom.translateX}px, ${zoom.translateY}px) scale(${zoom.scale})`,
             transformOrigin: "center center",
+            willChange: zoom.scale > 1 ? "transform" : "auto",
           }}
           preserveAspectRatio="xMidYMid meet"
         >
