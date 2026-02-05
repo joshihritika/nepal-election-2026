@@ -21,13 +21,14 @@ function HomeContent() {
   const router = useRouter();
   const selectedProvince = searchParams.get("prov") || undefined;
 
-  // Get district and constituency from URL params for proper back navigation
+  // Get district, constituency, and candidate from URL params for proper back navigation
   const selectedDistrict = searchParams.get("district") || undefined;
   const selectedConstituency = searchParams.get("constituency") || undefined;
+  const selectedCandidate = searchParams.get("candidate") || undefined;
   const [selectedBattle, setSelectedBattle] = useState<KeyBattle | null>(null);
 
-  // Update URL with district/constituency selection
-  const updateUrl = useCallback((district?: string, constituency?: string) => {
+  // Update URL with district/constituency/candidate selection
+  const updateUrl = useCallback((district?: string, constituency?: string, candidate?: string) => {
     const params = new URLSearchParams(window.location.search);
 
     // Update or remove district param
@@ -44,6 +45,13 @@ function HomeContent() {
       params.delete("constituency");
     }
 
+    // Update or remove candidate param
+    if (candidate) {
+      params.set("candidate", candidate);
+    } else {
+      params.delete("candidate");
+    }
+
     const queryString = params.toString();
     const newUrl = queryString ? `/?${queryString}` : "/";
 
@@ -52,31 +60,40 @@ function HomeContent() {
   }, [router]);
 
   const handleDistrictClick = useCallback((districtId: string) => {
-    updateUrl(districtId, undefined);
+    updateUrl(districtId, undefined, undefined);
   }, [updateUrl]);
 
   const handleClosePanel = useCallback(() => {
-    updateUrl(undefined, undefined);
+    updateUrl(undefined, undefined, undefined);
   }, [updateUrl]);
 
   const handleBackPanel = useCallback(() => {
-    if (selectedConstituency) {
-      updateUrl(selectedDistrict, undefined);
+    if (selectedCandidate) {
+      // From candidate detail → back to candidate list
+      updateUrl(selectedDistrict, selectedConstituency, undefined);
+    } else if (selectedConstituency) {
+      // From candidate list → back to constituency list
+      updateUrl(selectedDistrict, undefined, undefined);
     } else {
-      updateUrl(undefined, undefined);
+      // From constituency list → close panel
+      updateUrl(undefined, undefined, undefined);
     }
-  }, [selectedConstituency, selectedDistrict, updateUrl]);
+  }, [selectedCandidate, selectedConstituency, selectedDistrict, updateUrl]);
 
   const handleSelectConstituency = useCallback((num: string) => {
-    updateUrl(selectedDistrict, num);
+    updateUrl(selectedDistrict, num, undefined);
   }, [selectedDistrict, updateUrl]);
+
+  const handleSelectCandidate = useCallback((candidateId: string) => {
+    updateUrl(selectedDistrict, selectedConstituency, candidateId);
+  }, [selectedDistrict, selectedConstituency, updateUrl]);
 
   // Listen for search selection events
   useEffect(() => {
     const handler = (e: Event) => {
       const detail = (e as CustomEvent).detail;
       if (detail.districtId) {
-        updateUrl(detail.districtId, detail.constituencyNum ? String(detail.constituencyNum) : undefined);
+        updateUrl(detail.districtId, detail.constituencyNum ? String(detail.constituencyNum) : undefined, undefined);
       }
     };
     window.addEventListener("search-select", handler);
@@ -133,7 +150,7 @@ function HomeContent() {
             <SearchBar />
           </div>
           <LocationFilter onSelect={(districtId, constituencyNum) => {
-            updateUrl(districtId, constituencyNum);
+            updateUrl(districtId, constituencyNum, undefined);
           }} />
         </div>
 
@@ -162,9 +179,11 @@ function HomeContent() {
             <DistrictPanel
               districtId={selectedDistrict}
               constituencyNum={selectedConstituency}
+              candidateSlug={selectedCandidate}
               onClose={handleClosePanel}
               onBack={handleBackPanel}
               onSelectConstituency={handleSelectConstituency}
+              onSelectCandidate={handleSelectCandidate}
             />
           )}
         </div>
