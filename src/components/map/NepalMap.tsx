@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, memo } from "react";
+import { useState, useCallback, useRef, memo } from "react";
 import { DISTRICT_PATHS } from "@/data/district-paths";
 
 interface TooltipState {
@@ -61,19 +61,74 @@ const NepalMap = memo(function NepalMap({
 
   const [hoveredDistrict, setHoveredDistrict] = useState<string | null>(null);
 
+  // Use a ref to track active tooltip district to avoid closure issues
+  const activeTooltipDistrictRef = useRef<string | null>(null);
+
+  // Track last touch time to ignore simulated mouse events
+  const lastTouchTimeRef = useRef<number>(0);
+
+  // Open district details
+  const openDistrict = useCallback((districtId: string) => {
+    if (onDistrictClick) {
+      onDistrictClick(districtId);
+    }
+    activeTooltipDistrictRef.current = null;
+    setHoveredDistrict(null);
+    setTooltip(prev => ({ ...prev, show: false }));
+  }, [onDistrictClick]);
+
+  // Show tooltip for a district
+  const showTooltip = useCallback((district: typeof DISTRICT_PATHS[0], x: number, y: number) => {
+    setHoveredDistrict(district.id);
+    activeTooltipDistrictRef.current = district.id;
+    setTooltip({
+      show: true,
+      x,
+      y,
+      districtId: district.id,
+      content: {
+        name: district.name,
+        province: provinceNames[district.province],
+        hq: district.hq,
+      },
+    });
+  }, []);
+
+  // Handle touch start - record the time
+  const handleTouchStart = useCallback(() => {
+    lastTouchTimeRef.current = Date.now();
+  }, []);
+
+  // Handle click on district
   const handleDistrictClick = useCallback(
-    (district: typeof DISTRICT_PATHS[0]) => {
-      // On desktop, click opens immediately
-      // On touch devices, the tooltip is clickable
-      if (onDistrictClick) {
-        onDistrictClick(district.id);
+    (district: typeof DISTRICT_PATHS[0], evt: React.MouseEvent) => {
+      evt.stopPropagation();
+
+      // Check if this click came from a touch (within 500ms of last touch)
+      const isFromTouch = Date.now() - lastTouchTimeRef.current < 500;
+
+      if (isFromTouch) {
+        // Touch device: first tap shows tooltip, second tap on same opens
+        if (activeTooltipDistrictRef.current === district.id) {
+          openDistrict(district.id);
+        } else {
+          showTooltip(district, evt.clientX, evt.clientY);
+        }
+      } else {
+        // Desktop: click opens directly
+        openDistrict(district.id);
       }
     },
-    [onDistrictClick]
+    [openDistrict, showTooltip]
   );
 
-  const handleDistrictMouseEnter = useCallback(
+  // Handle mouse enter (desktop hover for tooltip)
+  const handleMouseEnter = useCallback(
     (district: typeof DISTRICT_PATHS[0], evt: React.MouseEvent) => {
+      // Ignore simulated mouse events from touch (within 500ms of last touch)
+      const isFromTouch = Date.now() - lastTouchTimeRef.current < 500;
+      if (isFromTouch) return;
+
       setHoveredDistrict(district.id);
       setTooltip({
         show: true,
@@ -90,18 +145,40 @@ const NepalMap = memo(function NepalMap({
     []
   );
 
+  // Handle mouse leave (desktop)
   const handleMouseLeave = useCallback(() => {
+    // Ignore if we have an active touch tooltip
+    if (activeTooltipDistrictRef.current) return;
+
     setHoveredDistrict(null);
     setTooltip((prev) => ({ ...prev, show: false }));
   }, []);
 
+  // Handle mouse move (desktop)
   const handleMouseMove = useCallback((evt: React.MouseEvent) => {
+    // Ignore if we have an active touch tooltip
+    if (activeTooltipDistrictRef.current) return;
+
     setTooltip((prev) => ({
       ...prev,
       x: evt.clientX,
       y: evt.clientY,
     }));
   }, []);
+
+  // Handle click on SVG background to close tooltip
+  const handleBackgroundClick = useCallback(() => {
+    activeTooltipDistrictRef.current = null;
+    setHoveredDistrict(null);
+    setTooltip((prev) => ({ ...prev, show: false }));
+  }, []);
+
+  // Handle tooltip button click
+  const handleTooltipClick = useCallback(() => {
+    if (tooltip.districtId) {
+      openDistrict(tooltip.districtId);
+    }
+  }, [tooltip.districtId, openDistrict]);
 
   const getDistrictColor = (district: typeof DISTRICT_PATHS[0]) => {
     const pId = `p${district.province}`;
@@ -132,6 +209,8 @@ const NepalMap = memo(function NepalMap({
         className="w-full h-full"
         style={{ minWidth: "580px", minHeight: "280px" }}
         preserveAspectRatio="xMidYMid meet"
+        onClick={handleBackgroundClick}
+        onTouchStart={handleTouchStart}
       >
         {/* Background */}
         <rect x="0" y="0" width="800" height="400" fill="#f8fafc" />
@@ -151,26 +230,21 @@ const NepalMap = memo(function NepalMap({
                 stroke={isSelected ? "#1E40AF" : isHovered ? "#ffffff" : "rgba(255,255,255,0.6)"}
                 strokeWidth={isSelected ? 2 : isHovered ? 1.5 : 0.5}
                 className="cursor-pointer"
-                onClick={() => handleDistrictClick(district)}
-                onMouseEnter={(e) => handleDistrictMouseEnter(district, e)}
+                onTouchStart={handleTouchStart}
+                onClick={(e) => handleDistrictClick(district, e)}
+                onMouseEnter={(e) => handleMouseEnter(district, e)}
                 onMouseLeave={handleMouseLeave}
                 onMouseMove={handleMouseMove}
               />
             );
           })}
         </g>
-
-
       </svg>
 
       {/* Tooltip - clickable to open district details */}
       {tooltip.show && tooltip.content && (
         <button
-          onClick={() => {
-            if (tooltip.districtId && onDistrictClick) {
-              onDistrictClick(tooltip.districtId);
-            }
-          }}
+          onClick={handleTooltipClick}
           className="fixed z-50 bg-white rounded-lg shadow-xl border border-gray-200 px-4 py-3 text-left hover:bg-gray-50 transition-colors cursor-pointer"
           style={{
             left: tooltip.x + 15,
@@ -184,8 +258,6 @@ const NepalMap = memo(function NepalMap({
           </div>
         </button>
       )}
-
-
     </div>
   );
 });

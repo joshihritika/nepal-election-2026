@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useEffect, useState } from "react";
+import Link from "next/link";
 import { getDistrictById, getProvinceById } from "@/data/districts";
 import { getCandidates, getConstituencies, CANDIDATES, CandidateData } from "@/data/candidates-scraped";
 import { getEnrichment } from "@/data/candidate-enrichments";
 import { getHistory } from "@/data/candidate-history";
+import { getSlugFromId } from "@/lib/slug";
 import ScrapedCandidateCard from "./ScrapedCandidateCard";
 import CompareModal from "./CompareModal";
 import CandidateShareCard from "./CandidateShareCard";
@@ -235,11 +237,25 @@ export default function DistrictPanel({ districtId, constituencyNum, candidateSl
                     )}
                   </div>
                   <div className="text-sm text-gray-600 mb-2">{selectedCandidate.party}</div>
-                  <CandidateShareCard
-                    candidate={selectedCandidate}
-                    photo={candidatePhoto}
-                    isFirstTime={candidateHistory.length === 0}
-                  />
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <CandidateShareCard
+                      candidate={selectedCandidate}
+                      photo={candidatePhoto}
+                      isFirstTime={candidateHistory.length === 0}
+                    />
+                    {getSlugFromId(selectedCandidate.id) && (
+                      <Link
+                        href={`/candidate/${getSlugFromId(selectedCandidate.id)}`}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
+                        target="_blank"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Full Profile
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
 
