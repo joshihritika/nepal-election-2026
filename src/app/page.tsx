@@ -28,14 +28,28 @@ function HomeContent() {
 
   // Update URL with district/constituency selection
   const updateUrl = useCallback((district?: string, constituency?: string) => {
-    const params = new URLSearchParams();
-    if (selectedProvince) params.set("prov", selectedProvince);
-    if (district) params.set("district", district);
-    if (constituency) params.set("constituency", constituency);
+    const params = new URLSearchParams(window.location.search);
+
+    // Update or remove district param
+    if (district) {
+      params.set("district", district);
+    } else {
+      params.delete("district");
+    }
+
+    // Update or remove constituency param
+    if (constituency) {
+      params.set("constituency", constituency);
+    } else {
+      params.delete("constituency");
+    }
 
     const queryString = params.toString();
-    router.push(queryString ? `/?${queryString}` : "/", { scroll: false });
-  }, [router, selectedProvince]);
+    const newUrl = queryString ? `/?${queryString}` : "/";
+
+    // Push to browser history so back button works
+    router.push(newUrl, { scroll: false });
+  }, [router]);
 
   const handleDistrictClick = useCallback((districtId: string) => {
     updateUrl(districtId, undefined);
